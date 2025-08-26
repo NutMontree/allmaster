@@ -4,7 +4,7 @@ export const QuickStart = () => {
       <h3 className=" text-black text-2xl font-semibold mt-8 dark:text-white" >Quick Start</h3>
       <div className="p-6 rounded-md border mt-6 border-black/10 dark:border-white/20">
         <h6 className="dark:text-white text-lg font-medium">1. Requirements</h6>
-        <p className="text-base font-medium text-midnight_text dark:text-white dark:text-opacity-50">Before proceeding, you need to have the latest stable <a href="https://nodejs.org/" className="text-primary" >node.js</a> </p>
+        <p className="text-base font-medium text-midnight_text dark:text-white dark:text-opacity-50">Before proceeding, you need to have the latest stable <a href="https://nodejs.org/" className="text-[#EFBF04]" >node.js</a> </p>
         <h6 className="mt-4 mb-2 dark:text-white text-dark font-medium text-base">Recommended environment:</h6>
         <ul className="list-disc ps-6" >
           <li>node js 20+</li>

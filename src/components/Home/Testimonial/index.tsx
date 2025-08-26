@@ -46,7 +46,7 @@ const Testimonial = () => {
             <div className="container max-w-8xl mx-auto px-5 2xl:px-0">
                 <div>
                     <p className="text-white text-base font-semibold flex gap-2">
-                        <Icon icon="ph:house-simple-fill" className="text-2xl text-primary" />
+                        <Icon icon="ph:house-simple-fill" className="text-2xl text-[#EFBF04]" />
                         Testimonials
                     </p>
                     <h2 className="lg:text-52 text-40 font-medium text-white">
@@ -65,7 +65,7 @@ const Testimonial = () => {
                                 <div className="lg:flex items-center gap-11">
                                     <div className="flex items-start gap-11 lg:pr-20">
                                         <div>
-                                            <Icon icon="ph:house-simple" width={32} height={32} className="text-primary" />
+                                            <Icon icon="ph:house-simple" width={32} height={32} className="text-[#EFBF04]" />
                                         </div>
                                         <div>
                                             <h4 className="text-white lg:text-3xl text-2xl">{item.review}</h4>

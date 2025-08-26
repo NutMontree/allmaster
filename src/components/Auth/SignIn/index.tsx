@@ -67,7 +67,7 @@ const Signin = ({ signInOpen }: { signInOpen?: any }) => {
             required
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            className="w-full rounded-2xl border placeholder:text-gray-400 border-black/10 dark:border-white/20 border-solid bg-transparent px-5 py-3 text-base text-dark outline-none transition  focus:border-primary focus-visible:shadow-none dark:border-border_color dark:text-white dark:focus:border-primary"
+            className="w-full rounded-2xl border placeholder:text-gray-400 border-black/10 dark:border-white/20 border-solid bg-transparent px-5 py-3 text-base text-dark outline-none transition  focus:border-[#EFBF04] focus-visible:shadow-none dark:border-border_color dark:text-white dark:focus:border-[#EFBF04]"
           />
         </div>
         <div className="mb-[22px]">
@@ -77,13 +77,13 @@ const Signin = ({ signInOpen }: { signInOpen?: any }) => {
             value={password}
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full rounded-2xl border border-black/10 dark:border-white/20 border-solid bg-transparent px-5 py-3 text-base text-dark outline-none transition  focus:border-primary focus-visible:shadow-none dark:border-border_color dark:text-white dark:focus:border-primary"
+            className="w-full rounded-2xl border border-black/10 dark:border-white/20 border-solid bg-transparent px-5 py-3 text-base text-dark outline-none transition  focus:border-[#EFBF04] focus-visible:shadow-none dark:border-border_color dark:text-white dark:focus:border-[#EFBF04]"
           />
         </div>
         <div className="mb-9">
           <button
             type="submit"
-            className="flex w-full cursor-pointer items-center justify-center rounded-2xl border border-primary bg-primary hover:bg-transparent hover:text-primary px-5 py-3 text-base text-white transition duration-300 ease-in-out "
+            className="flex w-full cursor-pointer items-center justify-center rounded-2xl border border-[#EFBF04] bg-[#EFBF04] hover:bg-transparent hover:text-[#EFBF04] px-5 py-3 text-base text-white transition duration-300 ease-in-out "
           >
             Sign In
           </button>
@@ -94,14 +94,14 @@ const Signin = ({ signInOpen }: { signInOpen?: any }) => {
       <div className="text-center">
         <Link
           href="/"
-          className="mb-2 text-base text-dark hover:text-primary dark:text-white dark:hover:text-primary"
+          className="mb-2 text-base text-dark hover:text-[#EFBF04] dark:text-white dark:hover:text-[#EFBF04]"
         >
           Forget Password?
         </Link>
       </div>
       <p className="text-body-secondary text-base text-center">
         Not a member yet?{" "}
-        <Link href="/" className="text-primary hover:underline">
+        <Link href="/" className="text-[#EFBF04] hover:underline">
           Sign Up
         </Link>
       </p>

@@ -137,7 +137,7 @@ export default function Details() {
                                 airy atmosphere while providing stunning views of the outdoor space.
                             </p>
                             <p className='text-dark dark:text-white text-xm '>
-                                The primary suite serves as a private retreat with a spa-like ensuite bathroom and a spacious walk-in closet.
+                                The [#EFBF04] suite serves as a private retreat with a spa-like ensuite bathroom and a spacious walk-in closet.
                                 each additional bedroom is thoughtfully designed with comfort and style in mind, offering ample space and modern
                                 finishes. the home’s three bathrooms feature high-end fixtures, custom vanities, and elegant tiling.
                             </p>
@@ -181,12 +181,12 @@ export default function Details() {
                         </iframe>
                     </div>
                     <div className="lg:col-span-4 col-span-12">
-                        <div className="bg-primary/10 p-8 rounded-2xl relative z-10 overflow-hidden">
+                        <div className="bg-[#EFBF04]/10 p-8 rounded-2xl relative z-10 overflow-hidden">
                             <h4 className='text-dark text-3xl font-medium dark:text-white'>
                                 {item?.rate}
                             </h4>
                             <p className='text-sm text-dark/50 dark:text-white'>Discounted Price</p>
-                            <Link href="#" className='py-4 px-8 bg-primary text-white rounded-full w-full block text-center hover:bg-dark duration-300 text-base mt-8 hover:cursor-pointer'>
+                            <Link href="#" className='py-4 px-8 bg-[#EFBF04] text-white rounded-full w-full block text-center hover:bg-dark duration-300 text-base mt-8 hover:cursor-pointer'>
                                 Get in touch
                             </Link>
                             <div className="absolute right-0 top-4 -z-[1]">
@@ -195,7 +195,7 @@ export default function Details() {
                         </div>
                         {testimonials.slice(0, 1).map((item, index) => (
                             <div key={index} className="border p-10 rounded-2xl border-dark/10 dark:border-white/20 mt-10 flex flex-col gap-6">
-                                <Icon icon="ph:house-simple" width={44} height={44} className="text-primary" />
+                                <Icon icon="ph:house-simple" width={44} height={44} className="text-[#EFBF04]" />
                                 <p className='text-xm text-dark dark:text-white'>{item.review}</p>
                                 <div className="flex items-center gap-6">
                                     <Image src={item.image} alt={item.name} width={400} height={500} className='w-20 h-20 rounded-2xl' unoptimized={true} />

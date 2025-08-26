@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="flex lg:flex-row flex-col items-center lg:gap-10 gap-3">
             <div className="flex gap-2 lg:order-1 order-2">
               <input type="email" placeholder="Enter Your Email" className="rounded-full py-4 px-6 bg-white/10 placeholder:text-white text-white focus-visible:outline-0" />
-              <button className="text-dark bg-white py-4 px-8 font-semibold rounded-full hover:bg-primary hover:text-white duration-300 hover:cursor-pointer">
+              <button className="text-dark bg-white py-4 px-8 font-semibold rounded-full hover:bg-[#EFBF04] hover:text-white duration-300 hover:cursor-pointer">
                 Subscribe
               </button>
             </div>
@@ -24,13 +24,13 @@ const Footer = () => {
           </div>
           <div className="flex items-center gap-6">
             <Link href="#">
-              <Icon icon="ph:x-logo-bold" width={24} height={24} className="text-white hover:text-primary duration-300" />
+              <Icon icon="ph:x-logo-bold" width={24} height={24} className="text-white hover:text-[#EFBF04] duration-300" />
             </Link>
             <Link href="#">
-              <Icon icon="ph:facebook-logo-bold" width={24} height={24} className="text-white hover:text-primary duration-300" />
+              <Icon icon="ph:facebook-logo-bold" width={24} height={24} className="text-white hover:text-[#EFBF04] duration-300" />
             </Link>
             <Link href="#">
-              <Icon icon="ph:instagram-logo-bold" width={24} height={24} className="text-white hover:text-primary duration-300" />
+              <Icon icon="ph:instagram-logo-bold" width={24} height={24} className="text-white hover:text-[#EFBF04] duration-300" />
             </Link>
           </div>
         </div>
@@ -41,7 +41,7 @@ const Footer = () => {
                 Begin your path to
                 success contact us today.
               </h2>
-              <Link href="/contactus" className="bg-primary text-base font-semibold py-4 px-8 rounded-full text-white hover:bg-white hover:text-dark duration-300 hover:cursor-pointer">
+              <Link href="/contactus" className="bg-[#EFBF04] text-base font-semibold py-4 px-8 rounded-full text-white hover:bg-white hover:text-dark duration-300 hover:cursor-pointer">
                 Get In Touch
               </Link>
             </div>
@@ -71,13 +71,13 @@ const Footer = () => {
         </div>
         <div className="flex justify-between md:flex-nowrap flex-wrap items-center py-6 gap-6">
           <p className="text-white/40 text-sm ">
-            ©2025 Homely - Design & Developed by <Link href="https://getnextjstemplates.com/" className="hover:text-primary" target="_blanck">GetNextJs Templates</Link>
+            ©2025 Homely - Design & Developed by <Link href="https://getnextjstemplates.com/" className="hover:text-[#EFBF04]" target="_blanck">GetNextJs Templates</Link>
           </p>
           <div className="flex gap-8 items-center">
-            <Link href="#" className="text-white/40 hover:text-primary text-sm">
+            <Link href="#" className="text-white/40 hover:text-[#EFBF04] text-sm">
               Terms of service
             </Link>
-            <Link href="#" className="text-white/40 hover:text-primary text-sm">
+            <Link href="#" className="text-white/40 hover:text-[#EFBF04] text-sm">
               Privacy policy
             </Link>
           </div>

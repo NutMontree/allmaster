@@ -18,7 +18,7 @@ const HeroSub: FC<HeroSubProps> = ({ title, description, badge }) => {
                             icon={'ph:house-simple-fill'}
                             width={20}
                             height={20}
-                            className='text-primary'
+                            className='text-[#EFBF04]'
                         />
                     </span>
                     <p className='text-base font-semibold text-dark/75 dark:text-white/75'>

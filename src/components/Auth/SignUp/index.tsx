@@ -68,7 +68,7 @@ const SignUp = ({ signUpOpen }: { signUpOpen?: any }) => {
             placeholder="Name"
             name="name"
             required
-            className="w-full rounded-md border border-black/10 dark:border-white/20 border-solid bg-transparent px-5 py-3 text-base text-dark outline-none transition placeholder:text-gray-300 focus:border-primary focus-visible:shadow-none dark:text-white dark:focus:border-primary"
+            className="w-full rounded-md border border-black/10 dark:border-white/20 border-solid bg-transparent px-5 py-3 text-base text-dark outline-none transition placeholder:text-gray-300 focus:border-[#EFBF04] focus-visible:shadow-none dark:text-white dark:focus:border-[#EFBF04]"
           />
         </div>
         <div className="mb-[22px]">
@@ -77,7 +77,7 @@ const SignUp = ({ signUpOpen }: { signUpOpen?: any }) => {
             placeholder="Email"
             name="email"
             required
-            className="w-full rounded-md border border-black/10 dark:border-white/20 border-solid bg-transparent px-5 py-3 text-base text-dark outline-none transition placeholder:text-gray-300 focus:border-primary focus-visible:shadow-none dark:text-white dark:focus:border-primary"
+            className="w-full rounded-md border border-black/10 dark:border-white/20 border-solid bg-transparent px-5 py-3 text-base text-dark outline-none transition placeholder:text-gray-300 focus:border-[#EFBF04] focus-visible:shadow-none dark:text-white dark:focus:border-[#EFBF04]"
           />
         </div>
         <div className="mb-[22px]">
@@ -86,13 +86,13 @@ const SignUp = ({ signUpOpen }: { signUpOpen?: any }) => {
             placeholder="Password"
             name="password"
             required
-            className="w-full rounded-md border border-black/10 dark:border-white/20 border-solid bg-transparent px-5 py-3 text-base text-dark outline-none transition placeholder:text-gray-300 focus:border-primary focus-visible:shadow-none dark:text-white dark:focus:border-primary"
+            className="w-full rounded-md border border-black/10 dark:border-white/20 border-solid bg-transparent px-5 py-3 text-base text-dark outline-none transition placeholder:text-gray-300 focus:border-[#EFBF04] focus-visible:shadow-none dark:text-white dark:focus:border-[#EFBF04]"
           />
         </div>
         <div className="mb-9">
           <button
             type="submit"
-            className="flex w-full cursor-pointer items-center justify-center rounded-md bg-primary px-5 py-3 text-base text-white transition duration-300 ease-in-out hover:!bg-darkprimary dark:hover:!bg-darkprimary"
+            className="flex w-full cursor-pointer items-center justify-center rounded-md bg-[#EFBF04] px-5 py-3 text-base text-white transition duration-300 ease-in-out hover:!bg-dark[#EFBF04] dark:hover:!bg-dark[#EFBF04]"
           >
             Sign Up
           </button>
@@ -101,11 +101,11 @@ const SignUp = ({ signUpOpen }: { signUpOpen?: any }) => {
 
       <p className="text-center mb-4 text-base">
         By creating an account you are agree with our{" "}
-        <Link href="/" className="text-primary hover:underline">
+        <Link href="/" className="text-[#EFBF04] hover:underline">
           Privacy
         </Link>{" "}
         and{" "}
-        <Link href="/" className="text-primary hover:underline">
+        <Link href="/" className="text-[#EFBF04] hover:underline">
           Policy
         </Link>
       </p>
@@ -114,7 +114,7 @@ const SignUp = ({ signUpOpen }: { signUpOpen?: any }) => {
         Already have an account?
         <Link
           href="/"
-          className="pl-2 text-primary hover:bg-darkprimary hover:underline"
+          className="pl-2 text-[#EFBF04] hover:bg-dark[#EFBF04] hover:underline"
         >
           Sign In
         </Link>

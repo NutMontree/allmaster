@@ -27,19 +27,19 @@ const GetInTouch: React.FC = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-full py-5 bg-primary rounded-b-2xl overflow-hidden">
+                <div className="w-full py-5 bg-[#EFBF04] rounded-b-2xl overflow-hidden">
                     <div className="flex items-center gap-40 animate-slide">
                         <p className='text-white whitespace-nowrap relative after:absolute after:w-20 after:h-px after:bg-white after:top-3 after:-right-32'>
-                            GET A FREE PROPERTY VALUATION—SELL YOUR HOME WITH CONFIDENCE!
+                            ค้นหารายการนับพันในทำเลทองในราคาสุดคุ้ม!
                         </p>
                         <p className='text-white whitespace-nowrap relative after:absolute after:w-20 after:h-px after:bg-white after:top-3 after:-right-32'>
-                            BROWSE THOUSANDS OF LISTINGS IN PRIME LOCATIONS AT GREAT PRICES!
+                            ค้นหารายการนับพันในทำเลทองในราคาสุดคุ้ม!
                         </p>
                         <p className='text-white whitespace-nowrap relative after:absolute after:w-20 after:h-px after:bg-white after:top-3 after:-right-32'>
-                            GET A FREE PROPERTY VALUATION—SELL YOUR HOME WITH CONFIDENCE!
+                            ค้นหารายการนับพันในทำเลทองในราคาสุดคุ้ม!
                         </p>
                         <p className='text-white whitespace-nowrap relative after:absolute after:w-20 after:h-px after:bg-white after:top-3 after:-right-32'>
-                            BROWSE THOUSANDS OF LISTINGS IN PRIME LOCATIONS AT GREAT PRICES!
+                            ค้นหารายการนับพันในทำเลทองในราคาสุดคุ้ม!
                         </p>
                     </div>
                 </div>

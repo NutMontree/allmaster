@@ -37,7 +37,7 @@ const PropertyCard: React.FC<{ item: PropertyHomes }> = ({ item }) => {
           <div className='flex flex-col mobile:flex-row gap-5 mobile:gap-0 justify-between mb-6'>
             <div>
               <Link href={`/properties/${slug}`}>
-                <h3 className='text-xl font-medium text-black dark:text-white duration-300 group-hover:text-primary'>
+                <h3 className='text-xl font-medium text-black dark:text-white duration-300 group-hover:text-[#EFBF04]'>
                   {name}
                 </h3>
               </Link>
@@ -46,7 +46,7 @@ const PropertyCard: React.FC<{ item: PropertyHomes }> = ({ item }) => {
               </p>
             </div>
             <div>
-              <button className='text-base font-normal text-primary px-5 py-2 rounded-full bg-primary/10'>
+              <button className='text-base font-normal text-[#EFBF04] px-5 py-2 rounded-full bg-[#EFBF04]/10'>
                 ${rate}
               </button>
             </div>

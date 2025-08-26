@@ -24,7 +24,7 @@ const FAQ: React.FC = () => {
                     </div>
                     <div className='lg:px-12'>
                         <p className="text-dark/75 dark:text-white/75 text-base font-semibold flex gap-2">
-                            <Icon icon="ph:house-simple-fill" className="text-2xl text-primary " />
+                            <Icon icon="ph:house-simple-fill" className="text-2xl text-[#EFBF04] " />
                             FAQs
                         </p>
                         <h2 className='lg:text-52 text-40 leading-[1.2] font-medium text-dark dark:text-white'>

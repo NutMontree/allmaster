@@ -73,7 +73,7 @@ const FeaturedProperty: React.FC = () => {
           <div className="flex flex-col gap-10">
             <div>
               <p className="text-dark/75 dark:text-white/75 text-base font-semibold flex gap-2">
-                <Icon icon="ph:house-simple-fill" className="text-2xl text-primary " />
+                <Icon icon="ph:house-simple-fill" className="text-2xl text-[#EFBF04] " />
                 Featured property
               </p>
               <h2 className="lg:text-52 text-40 font-medium text-dark dark:text-white">
@@ -178,7 +178,7 @@ const FeaturedProperty: React.FC = () => {
               </div>
             </div>
             <div className="flex gap-10">
-              <Link href="/contactus" className="py-4 px-8 bg-primary hover:bg-dark duration-300 rounded-full text-white">
+              <Link href="/contactus" className="py-4 px-8 bg-[#EFBF04] hover:bg-dark duration-300 rounded-full text-white">
                 Get in touch
               </Link>
               <div>

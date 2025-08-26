@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Metadata } from "next";
 export const metadata: Metadata = {
-    title: "Contact Us | Homely",
+  title: "Contact Us | Homely",
 };
 
 export default function ContactUs() {
@@ -16,7 +16,7 @@ export default function ContactUs() {
               icon={'ph:house-simple-fill'}
               width={20}
               height={20}
-              className='text-primary'
+              className='text-[#EFBF04]'
             />
           </span>
           <p className='text-base font-semibold text-badge dark:text-white/90'>
@@ -58,7 +58,7 @@ export default function ContactUs() {
               <Link href={'/'} className='w-fit'>
                 <div className='flex items-center gap-4 group w-fit'>
                   <Icon icon={'ph:phone'} width={32} height={32} />
-                  <p className='text-sm xs:text-base mobile:text-xm font-normal group-hover:text-primary'>
+                  <p className='text-sm xs:text-base mobile:text-xm font-normal group-hover:text-[#EFBF04]'>
                     +1 0239 0310 1122
                   </p>
                 </div>
@@ -66,7 +66,7 @@ export default function ContactUs() {
               <Link href={'/'} className='w-fit'>
                 <div className='flex items-center gap-4 group w-fit'>
                   <Icon icon={'ph:envelope-simple'} width={32} height={32} />
-                  <p className='text-sm xs:text-base mobile:text-xm font-normal group-hover:text-primary'>
+                  <p className='text-sm xs:text-base mobile:text-xm font-normal group-hover:text-[#EFBF04]'>
                     support@gleamer.com
                   </p>
                 </div>
@@ -90,7 +90,7 @@ export default function ContactUs() {
                     autoComplete='username'
                     placeholder='Name*'
                     required
-                    className='px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-primary focus:outline w-full'
+                    className='px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-[#EFBF04] focus:outline w-full'
                   />
                   <input
                     type='number'
@@ -99,7 +99,7 @@ export default function ContactUs() {
                     autoComplete='mobile'
                     placeholder='Phone number*'
                     required
-                    className='px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-primary focus:outline w-full'
+                    className='px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-[#EFBF04] focus:outline w-full'
                   />
                 </div>
                 <input
@@ -109,7 +109,7 @@ export default function ContactUs() {
                   autoComplete='email'
                   placeholder='Email address*'
                   required
-                  className='px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-primary focus:outline'
+                  className='px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-[#EFBF04] focus:outline'
                 />
                 <textarea
                   rows={8}
@@ -118,8 +118,8 @@ export default function ContactUs() {
                   id='message'
                   placeholder='Write here your message'
                   required
-                  className='px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-2xl outline-primary focus:outline'></textarea>
-                <button className='px-8 py-4 rounded-full bg-primary text-white text-base font-semibold w-full mobile:w-fit hover:cursor-pointer hover:bg-dark duration-300'>
+                  className='px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-2xl outline-[#EFBF04] focus:outline'></textarea>
+                <button className='px-8 py-4 rounded-full bg-[#EFBF04] text-white text-base font-semibold w-full mobile:w-fit hover:cursor-pointer hover:bg-dark duration-300'>
                   Send message
                 </button>
               </div>

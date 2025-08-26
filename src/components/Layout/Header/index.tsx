@@ -88,9 +88,9 @@ const Header: React.FC = () => {
             <div className={`hidden md:block`}>
               <Link href='#' className={`text-base text-inherit flex items-center gap-2 border-r pr-6 ${isHomepage
                 ? sticky
-                  ? 'text-dark dark:text-white hover:text-primary border-dark dark:border-white'
-                  : 'text-white hover:text-primary'
-                : 'text-dark hover:text-primary'
+                  ? 'text-dark dark:text-white hover:text-[#EFBF04] border-dark dark:border-white'
+                  : 'text-white hover:text-[#EFBF04]'
+                : 'text-dark hover:text-[#EFBF04]'
                 }`}
               >
                 <Icon icon={'ph:phone-bold'} width={24} height={24} />
@@ -156,10 +156,10 @@ const Header: React.FC = () => {
                   <NavLink key={index} item={item} onClick={() => setNavbarOpen(false)} />
                 ))}
                 <li className='flex items-center gap-4'>
-                  <Link href="/signin" className='py-4 px-8 bg-primary text-base leading-4 block w-fit text-white rounded-full border border-primary font-semibold mt-3 hover:bg-transparent hover:text-primary duration-300'>
+                  <Link href="/signin" className='py-4 px-8 bg-[#EFBF04] text-base leading-4 block w-fit text-white rounded-full border border-[#EFBF04] font-semibold mt-3 hover:bg-transparent hover:text-[#EFBF04] duration-300'>
                     Sign In
                   </Link>
-                  <Link href="/" className='py-4 px-8 bg-transparent border border-primary text-base leading-4 block w-fit text-primary rounded-full font-semibold mt-3 hover:bg-primary hover:text-white duration-300'>
+                  <Link href="/" className='py-4 px-8 bg-transparent border border-[#EFBF04] text-base leading-4 block w-fit text-[#EFBF04] rounded-full font-semibold mt-3 hover:bg-[#EFBF04] hover:text-white duration-300'>
                     Sign up
                   </Link>
                 </li>
@@ -171,10 +171,10 @@ const Header: React.FC = () => {
             <p className='text-base sm:text-xm font-normal text-white/40'>
               Contact
             </p>
-            <Link href="#" className='text-base sm:text-xm font-medium text-inherit hover:text-primary'>
+            <Link href="#" className='text-base sm:text-xm font-medium text-inherit hover:text-[#EFBF04]'>
               Nutmontree29@gmail.com
             </Link>
-            <Link href="#" className='text-base sm:text-xm font-medium text-inherit hover:text-primary'>
+            <Link href="#" className='text-base sm:text-xm font-medium text-inherit hover:text-[#EFBF04]'>
               085-595-3326
             </Link>
           </div>

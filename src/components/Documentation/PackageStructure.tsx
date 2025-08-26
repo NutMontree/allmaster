@@ -25,7 +25,7 @@ export const PackageStructure = () => {
               <span className="font-medium text-dark dark:text-white/50">
                 <Icon
                   icon="tabler:folder"
-                  className="text-primary text-base inline-block me-2"
+                  className="text-[#EFBF04] text-base inline-block me-2"
                 />
                 packages
               </span>
@@ -41,7 +41,7 @@ export const PackageStructure = () => {
                           <span className="font-medium text-dark dark:text-white/50">
                             <Icon
                               icon="tabler:folder"
-                              className="text-primary text-base inline-block me-2"
+                              className="text-[#EFBF04] text-base inline-block me-2"
                             />
                             markdown
                           </span>
@@ -53,7 +53,7 @@ export const PackageStructure = () => {
                           <span className="font-medium text-dark dark:text-white/50">
                             <Icon
                               icon="tabler:folder"
-                              className="text-primary text-base inline-block me-2"
+                              className="text-[#EFBF04] text-base inline-block me-2"
                             />
                             public
                           </span>
@@ -65,7 +65,7 @@ export const PackageStructure = () => {
                           <span className="font-medium text-dark dark:text-white/50">
                             <Icon
                               icon="tabler:folder"
-                              className="text-primary text-base inline-block me-2"
+                              className="text-[#EFBF04] text-base inline-block me-2"
                             />
                             src
                           </span>
@@ -87,7 +87,7 @@ export const PackageStructure = () => {
                                 <span className="font-medium text-dark dark:text-white/50">
                                   <Icon
                                     icon="tabler:folder"
-                                    className="text-primary text-base inline-block me-2"
+                                    className="text-[#EFBF04] text-base inline-block me-2"
                                   />
                                   app
                                 </span>
@@ -109,7 +109,7 @@ export const PackageStructure = () => {
                                       <span className="font-medium text-dark dark:text-white/50">
                                         <Icon
                                           icon="tabler:folder"
-                                          className="text-primary text-base inline-block me-2"
+                                          className="text-[#EFBF04] text-base inline-block me-2"
                                         />
                                         (site)
                                       </span>{" "}
@@ -137,7 +137,7 @@ export const PackageStructure = () => {
                                             <span className="font-medium text-dark dark:text-white/50">
                                               <Icon
                                                 icon="tabler:folder"
-                                                className="text-primary text-base inline-block me-2"
+                                                className="text-[#EFBF04] text-base inline-block me-2"
                                               />
                                               blog
                                             </span>
@@ -151,7 +151,7 @@ export const PackageStructure = () => {
                                             <span className="font-medium text-dark dark:text-white/50">
                                               <Icon
                                                 icon="tabler:folder"
-                                                className="text-primary text-base inline-block me-2"
+                                                className="text-[#EFBF04] text-base inline-block me-2"
                                               />
                                               cause
                                             </span>
@@ -165,7 +165,7 @@ export const PackageStructure = () => {
                                             <span className="font-medium text-dark dark:text-white/50">
                                               <Icon
                                                 icon="tabler:folder"
-                                                className="text-primary text-base inline-block me-2"
+                                                className="text-[#EFBF04] text-base inline-block me-2"
                                               />
                                               contact
                                             </span>
@@ -179,7 +179,7 @@ export const PackageStructure = () => {
                                             <span className="font-medium text-dark dark:text-white/50">
                                               <Icon
                                                 icon="tabler:folder"
-                                                className="text-primary text-base inline-block me-2"
+                                                className="text-[#EFBF04] text-base inline-block me-2"
                                               />
                                               documentation
                                             </span>
@@ -193,7 +193,7 @@ export const PackageStructure = () => {
                                             <span className="font-medium text-dark dark:text-white/50">
                                               <Icon
                                                 icon="tabler:folder"
-                                                className="text-primary text-base inline-block me-2"
+                                                className="text-[#EFBF04] text-base inline-block me-2"
                                               />
                                               events
                                             </span>
@@ -209,7 +209,7 @@ export const PackageStructure = () => {
                                       <span className="font-medium text-dark dark:text-white/50">
                                         <Icon
                                           icon="tabler:folder"
-                                          className="text-primary text-base inline-block me-2"
+                                          className="text-[#EFBF04] text-base inline-block me-2"
                                         />
                                         api
                                       </span>
@@ -256,7 +256,7 @@ export const PackageStructure = () => {
                                 <span className="font-medium text-dark dark:text-white/50">
                                   <Icon
                                     icon="tabler:folder"
-                                    className="text-primary text-base inline-block me-2"
+                                    className="text-[#EFBF04] text-base inline-block me-2"
                                   />
                                   components
                                 </span>{" "}
@@ -271,7 +271,7 @@ export const PackageStructure = () => {
                                 <span className="font-medium text-dark dark:text-white/50">
                                   <Icon
                                     icon="tabler:folder"
-                                    className="text-primary text-base inline-block me-2"
+                                    className="text-[#EFBF04] text-base inline-block me-2"
                                   />
                                   styles
                                 </span>
@@ -283,7 +283,7 @@ export const PackageStructure = () => {
                                 <span className="font-medium text-dark dark:text-white/50">
                                   <Icon
                                     icon="tabler:folder"
-                                    className="text-primary text-base inline-block me-2"
+                                    className="text-[#EFBF04] text-base inline-block me-2"
                                   />
                                   types
                                 </span>
@@ -295,7 +295,7 @@ export const PackageStructure = () => {
                                 <span className="font-medium text-dark dark:text-white/50">
                                   <Icon
                                     icon="tabler:folder"
-                                    className="text-primary text-base inline-block me-2"
+                                    className="text-[#EFBF04] text-base inline-block me-2"
                                   />
                                   utils
                                 </span>
@@ -308,7 +308,7 @@ export const PackageStructure = () => {
                         <div className="flex items-center gap-3">
                           <p className="text-xl text-black dark:text-white/50" >|—</p>
                           <span className="font-medium text-dark dark:text-white/50">
-                            <i className="ti ti-file me-2 text-primary font-bold" />
+                            <i className="ti ti-file me-2 text-[#EFBF04] font-bold" />
                             next.config.mjs
                           </span>
                         </div>
@@ -317,7 +317,7 @@ export const PackageStructure = () => {
                         <div className="flex items-center gap-3">
                           <p className="text-xl text-black dark:text-white/50" >|—</p>
                           <span className="font-medium text-dark dark:text-white/50">
-                            <i className="ti ti-file me-2 text-primary font-bold" />
+                            <i className="ti ti-file me-2 text-[#EFBF04] font-bold" />
                             postcss.config.mjs
                           </span>
                         </div>
@@ -326,7 +326,7 @@ export const PackageStructure = () => {
                         <div className="flex items-center gap-3">
                           <p className="text-xl text-black dark:text-white/50" >|—</p>
                           <span className="font-medium text-dark dark:text-white/50">
-                            <i className="ti ti-file me-2 text-primary font-bold" />
+                            <i className="ti ti-file me-2 text-[#EFBF04] font-bold" />
                             package.json
                           </span>
                         </div>
@@ -335,7 +335,7 @@ export const PackageStructure = () => {
                         <div className="flex items-center gap-3">
                           <p className="text-xl text-black dark:text-white/50" >|—</p>
                           <span className="font-medium text-dark dark:text-white/50">
-                            <i className="ti ti-file me-2 text-primary font-bold" />
+                            <i className="ti ti-file me-2 text-[#EFBF04] font-bold" />
                             tailwind.config.ts
                           </span>
                         </div>
@@ -344,7 +344,7 @@ export const PackageStructure = () => {
                         <div className="flex items-center gap-3">
                           <p className="text-xl text-black dark:text-white/50" >|—</p>
                           <span className="font-medium text-dark dark:text-white/50">
-                            <i className="ti ti-file me-2 text-primary font-bold" />
+                            <i className="ti ti-file me-2 text-[#EFBF04] font-bold" />
                             tsconfig.json
                           </span>
                         </div>
