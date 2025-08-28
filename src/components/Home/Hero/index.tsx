@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
           <div className='relative text-white dark:text-dark text-center md:text-start z-10'>
             <p className='text-inherit text-xm font-medium'>Sisaket Kantharalak</p>
             <h1 className='text-inherit text-6xl sm:text-9xl font-semibold -tracking-wider md:max-w-45p mt-4 mb-6'>
-              Futuristic Haven
+              All-in-One Expert
             </h1>
             <div className='flex flex-col xs:flex-row justify-center md:justify-start gap-4'>
               <Link href="/contactus" className='px-8 py-4 border border-white dark:border-dark bg-white dark:bg-dark text-dark dark:text-white duration-300 dark:hover:text-dark hover:bg-transparent hover:text-white text-base font-semibold rounded-full hover:cursor-pointer'>

@@ -25,7 +25,7 @@ const Categories = () => {
       </div>
       <div className="container max-w-8xl mx-auto px-5 2xl:px-0 relative z-10">
         <div className="grid grid-cols-12 items-center gap-10">
-          <div className="lg:col-span-6 col-span-12">
+          <div className="lg:col-span-6 col-span-10">
             <p className="text-dark/75 dark:text-white/75 text-base font-semibold flex gap-2.5">
               <Icon icon="ph:house-simple-fill" className="text-2xl text-[#EFBF04] " />
               หมวดหมู่
@@ -37,14 +37,15 @@ const Categories = () => {
               การออกแบบเว็บไซต์จะต้องคำนึงถึงหลัก UX/UI เข้ามาเป็นองค์ความรู้ในการออกแบบด้วย เพราะจะช่วยทำให้ง่ายต่อการใช้งานไม่ว่าจะจากอุปกรณ์ไหนก็ตาม การมีเว็บไซต์ที่ดีสามารถช่วยเพิ่มยอดขายและช่วยทำให้ให้คนจดจำ Brand เราได้
             </p>
             <Link href="/properties" className="py-4 px-8 bg-[#EFBF04] text-base leading-4 block w-fit text-white rounded-full font-semibold mt-8 hover:bg-dark duration-300">
-              View properties
+              ดูหมวดหมู่ทั้งหมด
             </Link>
           </div>
-          <div className="lg:col-span-6 col-span-12">
+          <div className="lg:col-span-6 col-span-10">
             <div className="relative rounded-2xl overflow-hidden group">
               <Link href="/residential-homes">
                 <Image
-                  src="/images/categories/villas.jpg"
+                  // src="/images/categories/villas.jpg"
+                  src="/images/categories/m1.webp"
                   alt="villas"
                   width={680}
                   height={386}
@@ -52,28 +53,28 @@ const Categories = () => {
                   unoptimized={true}
                 />
               </Link>
-              <Link href="/residential-homes" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-10 pb-10 group-hover:top-0 duration-500">
+              <Link href="/residential-homes" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0 duration-500">
                 <div className="flex justify-end mt-6 mr-6">
                   <div className="bg-white text-dark rounded-full w-fit p-4">
                     <Icon icon="ph:arrow-right" width={24} height={24} />
                   </div>
                 </div>
-                <div className="flex flex-col gap-2.5">
+                <div className="flex flex-col gap-2.5 pr-6">
                   <h3 className="text-white text-2xl">
-                    Residential Homes
+                    ktltc.vercel.app
                   </h3>
                   <p className="text-white/80 text-base leading-6">
-                    Experience elegance and comfort with our exclusive luxury villas, designed  for sophisticated living.
+                    หน้าเว็บไซต์หลักของวิทยาลัยเทคนิคกันทรลักษ์ ที่นำเสนอข้อมูลเกี่ยวกับภารกิจ การใช้เทคโนโลยีในการพัฒนาการเรียนรู้ และช่องทางการติดต่อ โดยสื่อสารผ่านช่องทางต่าง ๆ
                   </p>
                 </div>
               </Link>
             </div>
           </div>
-          <div className="lg:col-span-6 col-span-12">
+          <div className="lg:col-span-6 col-span-10">
             <div className="relative rounded-2xl overflow-hidden group">
               <Link href="/luxury-villa">
                 <Image
-                  src="/images/categories/luxury-villa.jpg"
+                  src="/images/categories/m2.webp"
                   alt="villas"
                   width={680}
                   height={386}
@@ -81,28 +82,29 @@ const Categories = () => {
                   unoptimized={true}
                 />
               </Link>
-              <Link href="/luxury-villa" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-10 pb-10 group-hover:top-0 duration-500">
+              <Link href="/luxury-villa" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0 duration-500">
                 <div className="flex justify-end mt-6 mr-6">
                   <div className="bg-white text-dark rounded-full w-fit p-4">
                     <Icon icon="ph:arrow-right" width={24} height={24} />
                   </div>
                 </div>
-                <div className="flex flex-col gap-2.5">
+                <div className="flex flex-col gap-2.5 pr-6">
                   <h3 className="text-white text-2xl">
-                    Luxury villas
+                    ktltcp.vercel.app
+
                   </h3>
                   <p className="text-white/80 text-base leading-6">
-                    Experience elegance and comfort with our exclusive luxury villas, designed for sophisticated living.
+                    หน้าเว็บไซต์ประจำงานวางแผนและงบประมาณ ที่ให้ข้อมูลเกี่ยวกับงานวางแผนและงบประมาณของวิทยาลัยเทคนิคกันทรลักษ์
                   </p>
                 </div>
               </Link>
             </div>
           </div>
-          <div className="lg:col-span-3 col-span-6">
+          <div className="lg:col-span-3 col-span-5">
             <div className="relative rounded-2xl overflow-hidden group">
               <Link href="/appartment">
                 <Image
-                  src="/images/categories/appartment.jpg"
+                  src="/images/categories/m3.webp"
                   alt="villas"
                   width={320}
                   height={386}
@@ -110,24 +112,24 @@ const Categories = () => {
                   unoptimized={true}
                 />
               </Link>
-              <Link href="/appartment" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-10 pb-10 group-hover:top-0 duration-500">
-                <div className="flex justify-end mt-6 mr-6">
+              <Link href="/appartment" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0  ">
+                <div className="flex justify-end">
                   <div className="bg-white text-dark rounded-full w-fit p-4">
                     <Icon icon="ph:arrow-right" width={24} height={24} />
                   </div>
                 </div>
                 <div className="flex flex-col gap-2.5">
                   <h3 className="text-white text-2xl">
-                    Appartment
+                    sonklin.vercel.app
                   </h3>
                   <p className="text-white/80 text-base leading-6">
-                    Experience elegance and comfort with our exclusive luxury villas, designed  for sophisticated living.
+                    ร้านซ่อนกลิ่น เว็บ E-Commerce สำหรับร้านค้า ที่จำหน่าย น้ำอาหาร เครื่องดื่ม และ ขนมไทย
                   </p>
                 </div>
               </Link>
             </div>
           </div>
-          <div className="lg:col-span-3 col-span-6">
+          <div className="lg:col-span-3 col-span-5">
             <div className="relative rounded-2xl overflow-hidden group">
               <Link href="/office-spaces">
                 <Image
@@ -139,7 +141,7 @@ const Categories = () => {
                   unoptimized={true}
                 />
               </Link>
-              <Link href="/office-spaces" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-10 pb-10 group-hover:top-0 duration-500">
+              <Link href="/office-spaces" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0 duration-500">
                 <div className="flex justify-end mt-6 mr-6">
                   <div className="bg-white text-dark rounded-full w-fit p-4">
                     <Icon icon="ph:arrow-right" width={24} height={24} />
