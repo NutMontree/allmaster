@@ -28,7 +28,7 @@ const Categories = () => {
           <div className="lg:col-span-6 col-span-10">
             <p className="text-dark/75 dark:text-white/75 text-base font-semibold flex gap-2.5">
               <Icon icon="ph:house-simple-fill" className="text-2xl text-[#EFBF04] " />
-              หมวดหมู่
+              Works
             </p>
             <h2 className="lg:text-52 text-40 mt-4 mb-2 lg:max-w-full font-medium leading-[1.2] text-dark dark:text-white">
               รับทำเว็บไซต์ ออกแบบเว็บไซต์ เพิ่มความน่าเชื่อถือ
@@ -36,13 +36,13 @@ const Categories = () => {
             <p className="text-dark/50 dark:text-white/50 text-lg lg:max-w-full leading-[1.3] md:max-w-3/4">
               การออกแบบเว็บไซต์จะต้องคำนึงถึงหลัก UX/UI เข้ามาเป็นองค์ความรู้ในการออกแบบด้วย เพราะจะช่วยทำให้ง่ายต่อการใช้งานไม่ว่าจะจากอุปกรณ์ไหนก็ตาม การมีเว็บไซต์ที่ดีสามารถช่วยเพิ่มยอดขายและช่วยทำให้ให้คนจดจำ Brand เราได้
             </p>
-            <Link href="/properties" className="py-4 px-8 bg-[#EFBF04] text-base leading-4 block w-fit text-white rounded-full font-semibold mt-8 hover:bg-dark duration-300">
-              ดูหมวดหมู่ทั้งหมด
+            <Link href="/properties" target="_blank" className="py-4 px-8 bg-[#EFBF04] text-base leading-4 block w-fit text-white rounded-full font-semibold mt-8 hover:bg-dark duration-300">
+              ดูผลงานของเรา
             </Link>
           </div>
           <div className="lg:col-span-6 col-span-10">
             <div className="relative rounded-2xl overflow-hidden group">
-              <Link href="/residential-homes">
+              <Link href="https://ktltc.vercel.app" target="_blank">
                 <Image
                   // src="/images/categories/villas.jpg"
                   src="/images/categories/m1.webp"
@@ -53,7 +53,7 @@ const Categories = () => {
                   unoptimized={true}
                 />
               </Link>
-              <Link href="/residential-homes" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0 duration-500">
+              <Link href="https://ktltc.vercel.app" target="_blank" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0 duration-500">
                 <div className="flex justify-end mt-6 mr-6">
                   <div className="bg-white text-dark rounded-full w-fit p-4">
                     <Icon icon="ph:arrow-right" width={24} height={24} />
@@ -72,7 +72,7 @@ const Categories = () => {
           </div>
           <div className="lg:col-span-6 col-span-10">
             <div className="relative rounded-2xl overflow-hidden group">
-              <Link href="/luxury-villa">
+              <Link href="https://ktltcp.vercel.app" target="_blank">
                 <Image
                   src="/images/categories/m2.webp"
                   alt="villas"
@@ -82,7 +82,7 @@ const Categories = () => {
                   unoptimized={true}
                 />
               </Link>
-              <Link href="/luxury-villa" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0 duration-500">
+              <Link href="https://ktltcp.vercel.app" target="_blank" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0 duration-500">
                 <div className="flex justify-end mt-6 mr-6">
                   <div className="bg-white text-dark rounded-full w-fit p-4">
                     <Icon icon="ph:arrow-right" width={24} height={24} />
@@ -102,7 +102,7 @@ const Categories = () => {
           </div>
           <div className="lg:col-span-3 col-span-5">
             <div className="relative rounded-2xl overflow-hidden group">
-              <Link href="/appartment">
+              <Link href="https://sonklin.vercel.app" target="_blank">
                 <Image
                   src="/images/categories/m3.webp"
                   alt="villas"
@@ -112,7 +112,7 @@ const Categories = () => {
                   unoptimized={true}
                 />
               </Link>
-              <Link href="/appartment" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0  ">
+              <Link href="https://sonklin.vercel.app" target="_blank" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0  ">
                 <div className="flex justify-end">
                   <div className="bg-white text-dark rounded-full w-fit p-4">
                     <Icon icon="ph:arrow-right" width={24} height={24} />
@@ -131,17 +131,17 @@ const Categories = () => {
           </div>
           <div className="lg:col-span-3 col-span-5">
             <div className="relative rounded-2xl overflow-hidden group">
-              <Link href="/office-spaces">
+              <Link href="https://sonklin.vercel.app" target="_blank">
                 <Image
-                  src="/images/categories/office.jpg"
-                  alt="office"
+                  src="/images/categories/m3.webp"
+                  alt="m3"
                   width={320}
                   height={386}
                   className="w-full"
                   unoptimized={true}
                 />
               </Link>
-              <Link href="/office-spaces" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0 duration-500">
+              <Link href="https://sonklin.vercel.app" target="_blank" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0 duration-500">
                 <div className="flex justify-end mt-6 mr-6">
                   <div className="bg-white text-dark rounded-full w-fit p-4">
                     <Icon icon="ph:arrow-right" width={24} height={24} />
@@ -149,10 +149,10 @@ const Categories = () => {
                 </div>
                 <div className="flex flex-col gap-2.5">
                   <h3 className="text-white text-2xl">
-                    Office Spaces
+                    sonklin.vercel.app
                   </h3>
                   <p className="text-white/80 text-base leading-6">
-                    Experience elegance and comfort with our exclusive luxury villas, designed  for sophisticated living.
+                    ร้านซ่อนกลิ่น เว็บ E-Commerce สำหรับร้านค้า ที่จำหน่าย น้ำอาหาร เครื่องดื่ม และ ขนมไทย
                   </p>
                 </div>
               </Link>
