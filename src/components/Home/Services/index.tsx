@@ -42,7 +42,7 @@ const Categories = () => {
           </div>
           <div className="lg:col-span-6 col-span-10">
             <div className="relative rounded-2xl overflow-hidden group">
-              <Link href="https://ktltc.vercel.app" target="_blank">
+              <div>
                 <Image
                   // src="/images/categories/villas.jpg"
                   src="/images/categories/m1.webp"
@@ -52,12 +52,12 @@ const Categories = () => {
                   className="w-full"
                   unoptimized={true}
                 />
-              </Link>
-              <Link href="https://ktltc.vercel.app" target="_blank" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0 duration-500">
+              </div>
+              <div className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0 duration-500">
                 <div className="flex justify-end mt-6 mr-6">
-                  <div className="bg-white text-dark rounded-full w-fit p-4">
+                  {/* <div className="bg-white text-dark rounded-full w-fit p-4">
                     <Icon icon="ph:arrow-right" width={24} height={24} />
-                  </div>
+                  </div> */}
                 </div>
                 <div className="flex flex-col gap-2.5 pr-6">
                   <h3 className="text-white text-2xl">
@@ -67,12 +67,12 @@ const Categories = () => {
                     หน้าเว็บไซต์หลักของวิทยาลัยเทคนิคกันทรลักษ์ ที่นำเสนอข้อมูลเกี่ยวกับภารกิจ การใช้เทคโนโลยีในการพัฒนาการเรียนรู้ และช่องทางการติดต่อ โดยสื่อสารผ่านช่องทางต่าง ๆ
                   </p>
                 </div>
-              </Link>
+              </div>
             </div>
           </div>
           <div className="lg:col-span-6 col-span-10">
             <div className="relative rounded-2xl overflow-hidden group">
-              <Link href="https://ktltcp.vercel.app" target="_blank">
+              <div>
                 <Image
                   src="/images/categories/m2.webp"
                   alt="villas"
@@ -81,12 +81,12 @@ const Categories = () => {
                   className="w-full"
                   unoptimized={true}
                 />
-              </Link>
-              <Link href="https://ktltcp.vercel.app" target="_blank" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0 duration-500">
+              </div>
+              <div className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0 duration-500">
                 <div className="flex justify-end mt-6 mr-6">
-                  <div className="bg-white text-dark rounded-full w-fit p-4">
+                  {/* <div className="bg-white text-dark rounded-full w-fit p-4">
                     <Icon icon="ph:arrow-right" width={24} height={24} />
-                  </div>
+                  </div> */}
                 </div>
                 <div className="flex flex-col gap-2.5 pr-6">
                   <h3 className="text-white text-2xl">
@@ -94,15 +94,15 @@ const Categories = () => {
 
                   </h3>
                   <p className="text-white/80 text-base leading-6">
-                    หน้าเว็บไซต์ประจำงานวางแผนและงบประมาณ ที่ให้ข้อมูลเกี่ยวกับงานวางแผนและงบประมาณของวิทยาลัยเทคนิคกันทรลักษ์
+                    หน้าเว็บไซต์หลักของวิทยาลัยเทคนิคกันทรลักษ์ ที่นำเสนอข้อมูลเกี่ยวกับภารกิจ การใช้เทคโนโลยีในการพัฒนาการเรียนรู้ และช่องทางการติดต่อ โดยสื่อสารผ่านช่องทางต่าง ๆ
                   </p>
                 </div>
-              </Link>
+              </div>
             </div>
           </div>
           <div className="lg:col-span-3 col-span-5">
             <div className="relative rounded-2xl overflow-hidden group">
-              <Link href="https://sonklin.vercel.app" target="_blank">
+              <div>
                 <Image
                   src="/images/categories/m3.webp"
                   alt="villas"
@@ -111,41 +111,41 @@ const Categories = () => {
                   className="w-full"
                   unoptimized={true}
                 />
-              </Link>
-              <Link href="https://sonklin.vercel.app" target="_blank" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0  ">
+              </div>
+              <div className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0  ">
                 <div className="flex justify-end">
-                  <div className="bg-white text-dark rounded-full w-fit p-4">
+                  {/* <div className="bg-white text-dark rounded-full w-fit p-4">
                     <Icon icon="ph:arrow-right" width={24} height={24} />
-                  </div>
+                  </div> */}
                 </div>
                 <div className="flex flex-col gap-2.5">
                   <h3 className="text-white text-2xl">
                     sonklin.vercel.app
                   </h3>
                   <p className="text-white/80 text-base leading-6">
-                    ร้านซ่อนกลิ่น เว็บ E-Commerce สำหรับร้านค้า ที่จำหน่าย น้ำอาหาร เครื่องดื่ม และ ขนมไทย
+                    หน้าเว็บไซต์ประจำงานวางแผนและงบประมาณ ที่ให้ข้อมูลเกี่ยวกับงานวางแผนและงบประมาณของวิทยาลัยเทคนิคกันทรลักษ์
                   </p>
                 </div>
-              </Link>
+              </div>
             </div>
           </div>
           <div className="lg:col-span-3 col-span-5">
             <div className="relative rounded-2xl overflow-hidden group">
-              <Link href="https://sonklin.vercel.app" target="_blank">
+              <div>
                 <Image
-                  src="/images/categories/m3.webp"
+                  src="/images/categories/m4.webp"
                   alt="m3"
                   width={320}
                   height={386}
                   className="w-full"
                   unoptimized={true}
                 />
-              </Link>
-              <Link href="https://sonklin.vercel.app" target="_blank" className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0 duration-500">
+              </div>
+              <div className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0 duration-500">
                 <div className="flex justify-end mt-6 mr-6">
-                  <div className="bg-white text-dark rounded-full w-fit p-4">
+                  {/* <div className="bg-white text-dark rounded-full w-fit p-4">
                     <Icon icon="ph:arrow-right" width={24} height={24} />
-                  </div>
+                  </div> */}
                 </div>
                 <div className="flex flex-col gap-2.5">
                   <h3 className="text-white text-2xl">
@@ -155,7 +155,7 @@ const Categories = () => {
                     ร้านซ่อนกลิ่น เว็บ E-Commerce สำหรับร้านค้า ที่จำหน่าย น้ำอาหาร เครื่องดื่ม และ ขนมไทย
                   </p>
                 </div>
-              </Link>
+              </div>
             </div>
           </div>
         </div>
