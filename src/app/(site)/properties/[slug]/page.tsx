@@ -58,7 +58,7 @@ export default function Details() {
                                     alt="Main Property Image"
                                     width={400}
                                     height={500}
-                                    className="rounded-2xl w-full h-540"
+                                    className="rounded-2xl w-full"
                                     unoptimized={true}
                                 />
                             </div>
@@ -136,31 +136,31 @@ export default function Details() {
                             </p>
                         </div>
                         <div className="py-8 mt-8 border-t border-dark/5 dark:border-white/15">
-                            <h3 className='text-xl font-medium'>What this property offers</h3>
+                            <h3 className='text-xl font-medium'>What this Website offers</h3>
                             <div className="grid grid-cols-3 mt-5 gap-6">
                                 <div className="flex items-center gap-2.5">
                                     <Icon icon="ph:aperture" width={24} height={24} className="text-dark dark:text-white" />
-                                    <p className='text-base dark:text-white text-dark'>Smart Home Integration</p>
+                                    <p className='text-base dark:text-white text-dark'>1</p>
                                 </div>
                                 <div className="flex items-center gap-2.5">
                                     <Icon icon="ph:chart-pie-slice" width={24} height={24} className="text-dark dark:text-white" />
-                                    <p className='text-base dark:text-white text-dark'>Spacious Living Areas</p>
+                                    <p className='text-base dark:text-white text-dark'>2</p>
                                 </div>
                                 <div className="flex items-center gap-2.5">
                                     <Icon icon="ph:television-simple" width={24} height={24} className="text-dark dark:text-white" />
-                                    <p className='text-base dark:text-white text-dark'>Energy Efficiency</p>
+                                    <p className='text-base dark:text-white text-dark'>3</p>
                                 </div>
                                 <div className="flex items-center gap-2.5">
                                     <Icon icon="ph:sun" width={24} height={24} className="text-dark dark:text-white" />
-                                    <p className='text-base dark:text-white text-dark'>Natural Light</p>
+                                    <p className='text-base dark:text-white text-dark'>4</p>
                                 </div>
                                 <div className="flex items-center gap-2.5">
                                     <Icon icon="ph:video-camera" width={24} height={24} className="text-dark dark:text-white" />
-                                    <p className='text-base dark:text-white text-dark'>Security Systems</p>
+                                    <p className='text-base dark:text-white text-dark'>5</p>
                                 </div>
                                 <div className="flex items-center gap-2.5">
                                     <Icon icon="ph:cloud" width={24} height={24} className="text-dark dark:text-white" />
-                                    <p className='text-base dark:text-white text-dark'>Outdoor Spaces</p>
+                                    <p className='text-base dark:text-white text-dark'>6</p>
                                 </div>
                             </div>
                         </div>

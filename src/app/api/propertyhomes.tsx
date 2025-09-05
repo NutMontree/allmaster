@@ -23,6 +23,12 @@ export const propertyHomes: PropertyHomes[] = [
       { src: "/images/properties/property2/1.png", },
       { src: "/images/properties/property2/2.png", },
       { src: "/images/properties/property2/3.png", },
+      { src: "/images/properties/property2/4.png", },
+      { src: "/images/properties/property2/5.png", },
+      { src: "/images/properties/property2/6.png", },
+      { src: "/images/properties/property2/7.png", },
+      { src: "/images/properties/property2/8.png", },
+      { src: "/images/properties/property2/9.png", },
     ]
   },
   {
