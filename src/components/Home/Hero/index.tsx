@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
           </div>
         </div>
         <div className='md:absolute bottom-0 md:-right-68   bg-white dark:bg-black py-12 px-8 mobile:px-16 md:pl-16 md:pr-[295px] rounded-2xl md:rounded-none md:rounded-tl-2xl mt-24'>
-          <div className='grid grid-cols-2 sm:grid-cols-4 md:flex gap-16 md:gap-24 sm:text-center dark:text-white text-black'>
+          <div className='grid grid-cols-3 sm:grid-cols-3 md:flex gap-12 md:gap-19 sm:text-center dark:text-white text-black'>
 
             <div className='flex flex-col sm:items-center 2'>
               <Image

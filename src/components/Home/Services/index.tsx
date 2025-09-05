@@ -24,7 +24,7 @@ const Categories = () => {
         />
       </div>
       <div className="container max-w-8xl mx-auto px-5 2xl:px-0 relative z-10">
-        <div className="grid grid-cols-12 items-center gap-10">
+        <div className="grid grid-cols-10 sm:grid-cols-11 md:grid-cols-12 items-center gap-10">
           <div className="lg:col-span-6 col-span-10">
             <p className="text-dark/75 dark:text-white/75 text-base font-semibold flex gap-2.5">
               <Icon icon="ph:house-simple-fill" className="text-2xl text-[#EFBF04] " />
