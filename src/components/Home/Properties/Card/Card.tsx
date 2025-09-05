@@ -4,7 +4,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const PropertyCard: React.FC<{ item: PropertyHomes }> = ({ item }) => {
-  const { name, location, rate, beds, baths, area, slug, images } = item
+  // const { name, location, rate, beds, baths, area, slug, images } = item
+  const { name, location, rate, slug, images } = item
 
   const mainImage = images[0]?.src;
 
@@ -47,11 +48,11 @@ const PropertyCard: React.FC<{ item: PropertyHomes }> = ({ item }) => {
             </div>
             <div>
               <button className='text-base font-normal text-[#EFBF04] px-5 py-2 rounded-full bg-[#EFBF04]/10'>
-                ${rate}
+                ฿{rate}
               </button>
             </div>
           </div>
-          <div className='flex'>
+          {/* <div className='flex'>
             <div className='flex flex-col gap-2 border-e border-black/10 dark:border-white/20 pr-2 xs:pr-4 mobile:pr-8'>
               <Icon icon={'solar:bed-linear'} width={20} height={20} />
               <p className='text-sm mobile:text-base font-normal text-black dark:text-white'>
@@ -74,7 +75,7 @@ const PropertyCard: React.FC<{ item: PropertyHomes }> = ({ item }) => {
                 {area}m<sup>2</sup>
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
