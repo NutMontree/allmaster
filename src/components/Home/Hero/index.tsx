@@ -4,7 +4,7 @@ import Link from 'next/link'
 const Hero: React.FC = () => {
   return (
     <section className='!py-0'>
-      <div className='bg-gradient-to-b from-skyblue via-lightskyblue dark:via-[#4298b0] to-white/10 dark:to-black/10 overflow-hidden relative'>
+      <div className='bg-gradient-to-b from-skyblue via-[#4298b0] dark:via-[#4298b0] to-white/10 dark:to-black/10 overflow-hidden relative'>
         {/* <div className='bg-gradient-to-b from-[#ce718e] via-[#bdb8f5] dark:via-[#b9b5e2] bg-[#6b5ef5] to-white/10 dark:to-black/10 overflow-hidden relative'> */}
         {/* <div className='bg-gradient-to-b from-[#6c1103] via-[#902f0c] dark:via-[#3a0d03] bg-[#0f0902] to-white/10 dark:to-black/10 overflow-hidden relative'> */}
         <div className='container max-w-8xl mx-auto px-5 2xl:px-0 pt-32 md:pt-60 md:pb-68'>
@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
             />
           </div>
         </div>
-        <div className='md:absolute bottom-0 md:-right-68 xl:right-0 bg-white dark:bg-black py-12 px-8 mobile:px-16 md:pl-16 md:pr-[295px] rounded-2xl md:rounded-none md:rounded-tl-2xl mt-24'>
+        <div className='md:absolute bottom-0 md:-right-68   bg-white dark:bg-black py-12 px-8 mobile:px-16 md:pl-16 md:pr-[295px] rounded-2xl md:rounded-none md:rounded-tl-2xl mt-24'>
           <div className='grid grid-cols-2 sm:grid-cols-4 md:flex gap-16 md:gap-24 sm:text-center dark:text-white text-black'>
 
             <div className='flex flex-col sm:items-center 2'>

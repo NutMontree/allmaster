@@ -61,10 +61,10 @@ const Categories = () => {
                 </div>
                 <div className="flex flex-col gap-2.5 pr-6">
                   <h3 className="text-white text-2xl">
-                    ktltc.vercel.app
+                    allmaster.vercel.app
                   </h3>
                   <p className="text-white/80 text-base leading-6">
-                    หน้าเว็บไซต์หลักของวิทยาลัยเทคนิคกันทรลักษ์ ที่นำเสนอข้อมูลเกี่ยวกับภารกิจ การใช้เทคโนโลยีในการพัฒนาการเรียนรู้ และช่องทางการติดต่อ โดยสื่อสารผ่านช่องทางต่าง ๆ
+                    หน้าเว็บไซต์หลักของ AllM Master ที่นำเสนอข้อมูลเกี่ยวกับบริการรับทำเว็บไซต์ ออกแบบเว็บไซต์ ด้วย Next.js โดยทีมงานมืออาชีพ
                   </p>
                 </div>
               </div>
@@ -91,7 +91,6 @@ const Categories = () => {
                 <div className="flex flex-col gap-2.5 pr-6">
                   <h3 className="text-white text-2xl">
                     ktltcp.vercel.app
-
                   </h3>
                   <p className="text-white/80 text-base leading-6">
                     หน้าเว็บไซต์หลักของวิทยาลัยเทคนิคกันทรลักษ์ ที่นำเสนอข้อมูลเกี่ยวกับภารกิจ การใช้เทคโนโลยีในการพัฒนาการเรียนรู้ และช่องทางการติดต่อ โดยสื่อสารผ่านช่องทางต่าง ๆ
@@ -120,7 +119,7 @@ const Categories = () => {
                 </div>
                 <div className="flex flex-col gap-2.5">
                   <h3 className="text-white text-2xl">
-                    sonklin.vercel.app
+                    ktltcp.vercel.app
                   </h3>
                   <p className="text-white/80 text-base leading-6">
                     หน้าเว็บไซต์ประจำงานวางแผนและงบประมาณ ที่ให้ข้อมูลเกี่ยวกับงานวางแผนและงบประมาณของวิทยาลัยเทคนิคกันทรลักษ์

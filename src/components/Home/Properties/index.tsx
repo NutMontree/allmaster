@@ -21,10 +21,10 @@ const Properties: React.FC = () => {
             </p>
           </div>
           <h2 className='text-40 lg:text-52 font-medium text-black dark:text-white text-center tracking-tight leading-11 mb-2'>
-            Discover inspiring designed homes.
+            Discover inspiring design web.
           </h2>
           <p className='text-xm font-normal text-black/50 dark:text-white/50 text-center'>
-            Curated homes where elegance, style, and comfort unite.
+            Curated website where elegance, style, and comfort unite.
           </p>
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10'>
