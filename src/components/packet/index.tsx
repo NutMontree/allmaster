@@ -6,7 +6,6 @@ export default function Packet() {
     return (
         <>
             <section>
-                <Image src='/images/icon/correct.webp' width={20} height={20} alt='' />
                 <div className="bg-white dark:bg-dark py-12 px-6 transition-colors duration-300">
                     <div className='container max-w-8xl mx-auto px-5 2xl:px-0'>
                         <div className='mb-16 flex flex-col gap-3 '>
@@ -38,10 +37,10 @@ export default function Packet() {
                                                 ราคายังไม่รวมภาษีมูลค่าเพิ่ม VAT 7%
                                             </p>
                                             <hr className="border-gray-300 mb-4" />
-                                            <div className=''>
+                                            <div className='pb-2'>
                                                 {item.Description.map((dect) => (
-                                                    <div key={dect.describetion} className='flex items-center gap-2 text-gray-600 dark:text-gray-300 mb-2'>
-                                                        <Image src="/images/icon/correct.webp" width={10} height={10} alt="" /> {dect.describetion}
+                                                    <div key={dect.describetion} className='flex items-center gap-2 text-gray-600 dark:text-gray-300 mb-2 px-6 '>
+                                                        <Image src="/images/icon/correct.webp" width={10} height={10} alt="" className='' /> {dect.describetion}
                                                     </div>
                                                 ))}
                                             </div>
