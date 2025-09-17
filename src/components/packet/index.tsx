@@ -51,9 +51,8 @@ export default function Packet() {
                             </div >
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-24">
+                        {/* <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-24">
 
-                            {/* <!-- Starter --> */}
                             <div className="bg-gray-50 dark:bg-dark rounded-2xl shadow-lg p-6 text-center border-2 border-[#ddb056] hover:border-[#ffaa00] relative transition-colors duration-300">
 
                                 <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">Starter</h3>
@@ -94,7 +93,6 @@ export default function Packet() {
 
                             </div>
 
-                            {/* <!-- Silver --> */}
                             <div className="bg-gray-50 dark:bg-dark rounded-2xl shadow-lg p-6 text-center border-2 border-[#ddb056] hover:border-[#ffaa00] relative transition-colors duration-300">
                                 <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">Silver</h3>
                                 <p className="text-gray-500 dark:text-gray-400 mb-4">เหมาะสำหรับธุรกิจเริ่มต้น</p>
@@ -133,7 +131,6 @@ export default function Packet() {
 
                             </div>
 
-                            {/* <!-- Premium --> */}
                             <div className="bg-gray-50 dark:bg-dark rounded-2xl shadow-lg p-6 text-center border-2 border-[#ddb056] hover:border-[#ffaa00] relative transition-colors duration-300">
                                 <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-[#EFBF04] text-black text-xl px-3 py-1 rounded-full">ยอดนิยม</span>
                                 <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">Premium</h3>
@@ -172,7 +169,6 @@ export default function Packet() {
 
                             </div>
 
-                            {/* <!-- E-commerce --> */}
                             <div className="bg-gray-50 dark:bg-dark rounded-2xl shadow-lg p-6 text-center border-2 border-[#ddb056] hover:border-[#ffaa00] relative transition-colors duration-300">
                                 <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">E-commerce</h3>
                                 <p className="text-gray-500 dark:text-gray-400 mb-4">ร้านค้าออนไลน์ พร้อมระบบสั่งซื้อ</p>
@@ -209,7 +205,7 @@ export default function Packet() {
                                 <p className="text-gray-400 text-sm mb-4">ต่ออายุปีละ 4,000฿</p>
 
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* <!-- หมายเหตุราคายังไม่รวม VAT --> */}
                         <div className="mt-24 text-center ">
