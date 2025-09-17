@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @plugin 'tailwindcss-animate';
 
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
+
+@import "./front.css";
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
@@ -123,4 +127,11 @@ section {
 
 .blog-details p {
   @apply text-dark dark:text-white text-xm leading-[1.2];
+}
+
+.text {
+  color: var(--color-gray-500) /* oklch(0.551 0.027 264.364) = #6a7282 */;
+  &:where(.dark, .dark *) {
+    color: var(--color-gray-400) /* oklch(0.707 0.022 261.325) = #99a1af */;
+  }
 }

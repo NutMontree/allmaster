@@ -1,11 +1,21 @@
 import type { Metadata } from 'next'
 import { Bricolage_Grotesque } from 'next/font/google'
-import './globals.css'
+import '@/styles/globals.css'
 import Header from '@/components/Layout/Header'
 import Footer from '@/components/Layout/Footer'
 import { ThemeProvider } from 'next-themes'
 import NextTopLoader from 'nextjs-toploader';
 import SessionProviderComp from '@/components/nextauth/SessionProvider'
+import { Fira_Code as FontMono, Inter as FontSans } from "next/font/google";
+import { Prompt } from "next/font/google";
+
+export const prompt = Prompt({
+  subsets: ["thai"],
+  variable: "--font-sans",
+  weight: "400",
+  style: "normal",
+});
+
 
 const font = Bricolage_Grotesque({ subsets: ["latin"] });
 

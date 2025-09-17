@@ -6,6 +6,7 @@ import Testimonial from '@/components/Home/Testimonial'
 import BlogSmall from '@/components/shared/Blog'
 import GetInTouch from '@/components/Home/GetInTouch'
 import FAQ from '@/components/Home/FAQs'
+import Packet from '@/components/packet'
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
       <Hero />
       <Services />
       <Properties />
-      <FeaturedProperty />
+      <Packet />
+      {/* <FeaturedProperty /> */}
       <Testimonial />
       <BlogSmall />
       <GetInTouch />

@@ -27,7 +27,7 @@ const Categories = () => {
         <div className="grid grid-cols-10 sm:grid-cols-11 md:grid-cols-12 items-center gap-10">
           <div className="lg:col-span-6 col-span-10">
             <p className="text-dark/75 dark:text-white/75 text-base font-semibold flex gap-2.5">
-              <Icon icon="ph:house-simple-fill" className="text-2xl text-[#EFBF04] " />
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#EFBF04" viewBox="0 0 256 256"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM68,96A12,12,0,1,1,80,84,12,12,0,0,1,68,96Zm40,0a12,12,0,1,1,12-12A12,12,0,0,1,108,96Z"></path></svg>
               Works
             </p>
             <h2 className="lg:text-52 text-40 mt-4 mb-2 lg:max-w-full font-medium leading-[1.2] text-dark dark:text-white">
