@@ -27,13 +27,13 @@ export default function Packet() {
                         </div>
 
                         <div>
-                            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 py-24'>
+                            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6'>
                                 {packetData.dataItems.map((item) => (
                                     <>
                                         <div className="bg-gray-50 dark:bg-dark rounded-2xl shadow-lg p-2 border-2 border-[#ddb056] hover:border-[#ffaa00] relative transition-colors duration-300">
-                                            <div className="stext-center text-sm rounded-full px-2 py-2 mb-4">{item.subtitle}</div>
+                                            <div className="stext-center text-sm rounded-full px-2 py-2 mb-4 text-center">{item.subtitle}</div>
                                             <div className='text-2xl font-bold text-center mb-4'>{item.title}</div>
-                                            <div className='text-3xl font-bold text-yellow-600 dark:text-yellow-400 mb-4'>{item.price}</div>
+                                            <div className='text-3xl font-bold text-yellow-600 dark:text-yellow-400 mb-4 text-center'>{item.price}</div>
                                             <p className="text-sm text-center text-gray-500 mb-4">
                                                 ราคายังไม่รวมภาษีมูลค่าเพิ่ม VAT 7%
                                             </p>
