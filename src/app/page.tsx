@@ -15,7 +15,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Works />
-      <Properties />
+      {/* <Properties /> */}
       <Packet />
       {/* <FeaturedProperty /> */}
       <Testimonial />
