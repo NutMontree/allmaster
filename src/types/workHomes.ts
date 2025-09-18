@@ -1,4 +1,4 @@
-export type PropertyHomes = {
+export type WorkHomes = {
   name: string
   slug: string
   location: string
@@ -10,9 +10,9 @@ export type PropertyHomes = {
   // beds: number.
   // baths: number
   // area: number
-  images: PropertyImage[]
+  images: WorkImage[]
 }
 
-interface PropertyImage {
+interface WorkImage {
   src: string;
 }

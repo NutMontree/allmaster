@@ -7,7 +7,7 @@ export const packetData = {
             subtitle: "เหมาะสำหรับโปรโมทธุรกิจ ขายสินค้า / บริการ",
             price: "15,000฿",
             Description: [
-                { describetion: "ออกแบบเว็บไซต์จำนวน 1 หน้าหลัก" },
+                { describetion: "ออกแบบเว็บไซต์จำนวน 1 " },
                 { describetion: "รองรับการแสดงผลทุกหน้าจอ" },
                 { describetion: "ฟรี โดเมน (Domain)" },
                 { describetion: "พื้นที่เก็บข้อมูล 5 GB" },
@@ -16,8 +16,8 @@ export const packetData = {
                 { describetion: "ฟรี แบบฟอร์มติดต่อสอบถาม" },
                 { describetion: "มีระบบจัดการหลังบ้าน แก้ไขข้อมูลได้ด้วยตัวเอง" },
                 { describetion: "เว็บไซต์รองรับการทำ SEO" },
-                { describetion: "แก่ไขงานได้ไม่เกิน 5 ครั้ง" },
-                { describetion: "ดุแลระบบความปลอดภัยตลอดอายุการใช้งาน" },
+                { describetion: "แก้ไขงานได้ไม่เกิน 5 ครั้ง" },
+                { describetion: "ดูแลระบบความปลอดภัยตลอดอายุการใช้งาน" },
                 { describetion: "ต่ออายุปีละ 3,000 บาท" },
             ]
         },
@@ -26,7 +26,7 @@ export const packetData = {
             subtitle: "เหมาะสำหรับธุรกิจ องค์กร / บริการ",
             price: "25,900฿",
             Description: [
-                { describetion: "ออกแบบเว็บไซต์จำนวน 3-5 หน้าหลัก" },
+                { describetion: "ออกแบบเว็บไซต์จำนวน 3-5 " },
                 { describetion: "Sub Menu 3-5 หน้า" },
                 { describetion: "รองรับการแสดงผลทุกหน้าจอ" },
                 { describetion: "ฟรี โดเมน (Domain)" },
@@ -36,8 +36,8 @@ export const packetData = {
                 { describetion: "ฟรี แบบฟอร์มติดต่อสอบถาม" },
                 { describetion: "มีระบบจัดการหลังบ้าน แก้ไขข้อมูลได้ด้วยตัวเอง" },
                 { describetion: "เว็บไซต์รองรับการทำ SEO" },
-                { describetion: "แก่ไขงานได้ไม่เกิน 5 ครั้ง" },
-                { describetion: "ดุแลระบบความปลอดภัยตลอดอายุการใช้งาน" },
+                { describetion: "แก้ไขงานได้ไม่เกิน 5 ครั้ง" },
+                { describetion: "ดูแลระบบความปลอดภัยตลอดอายุการใช้งาน" },
                 { describetion: "ต่ออายุปีละ 3,500 บาท" },
             ]
         },
@@ -46,7 +46,7 @@ export const packetData = {
             subtitle: "เหมาะสำหรับธุรกิจ แสดงรายละเอียดสินค้า / บริการ",
             price: "34,900฿",
             Description: [
-                { describetion: "ออกแบบเว็บไซต์จำนวน 4-8 หน้าหลัก" },
+                { describetion: "ออกแบบเว็บไซต์จำนวน 4-8 " },
                 { describetion: "Sub Menu 8-10 หน้า" },
                 { describetion: "รองรับการแสดงผลทุกหน้าจอ" },
                 { describetion: "ฟรี โดเมน (Domain)" },
@@ -60,8 +60,8 @@ export const packetData = {
                 { describetion: "เพิ่มลบสินค้าได้ด้วยตัวเอง" },
                 { describetion: "มีระบบหมวดหมู่" },
                 { describetion: "เว็บไซต์รองรับการทำ SEO" },
-                { describetion: "แก่ไขงานได้ไม่เกิน 5 ครั้ง" },
-                { describetion: "ดุแลระบบความปลอดภัยตลอดอายุการใช้งาน" },
+                { describetion: "แก้ไขงานได้ไม่เกิน 5 ครั้ง" },
+                { describetion: "ดูแลระบบความปลอดภัยตลอดอายุการใช้งาน" },
                 { describetion: "ต่ออายุปีละ 4,000 บาท" },
             ]
         },
@@ -70,7 +70,7 @@ export const packetData = {
             subtitle: "เหมาะสำหรับร้านค้า แบบครบวงจร",
             price: "43,000฿",
             Description: [
-                { describetion: "ออกแบบเว็บไซต์จำนวน 4-8 หน้าหลัก" },
+                { describetion: "ออกแบบเว็บไซต์จำนวน 5-10 " },
                 { describetion: "Sub Menu 8-10 หน้า" },
                 { describetion: "รองรับการแสดงผลทุกหน้าจอ" },
                 { describetion: "ฟรี โดเมน (Domain)" },
@@ -91,8 +91,8 @@ export const packetData = {
                 { describetion: "ระบบจัดการสถานะ Order" },
                 { describetion: "รองรับการชำระเงินแบบบัตรเครดิต/โอนเงินเข้าบัญชีธนาคาร และแบบฟอร์มแจ้งการโอนเงิน" },
                 { describetion: "เว็บไซต์รองรับการทำ SEO" },
-                { describetion: "แก่ไขงานได้ไม่เกิน 5 ครั้ง" },
-                { describetion: "ดุแลระบบความปลอดภัยตลอดอายุการใช้งาน" },
+                { describetion: "แก้ไขงานได้ไม่เกิน 5 ครั้ง" },
+                { describetion: "ดูแลระบบความปลอดภัยตลอดอายุการใช้งาน" },
                 { describetion: "ต่ออายุปีละ 4,500 บาท" },
             ]
         },

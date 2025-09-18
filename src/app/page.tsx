@@ -7,12 +7,14 @@ import BlogSmall from '@/components/shared/Blog'
 import GetInTouch from '@/components/Home/GetInTouch'
 import FAQ from '@/components/Home/FAQs'
 import Packet from '@/components/packet'
+import Works from '@/components/Home/Works'
 
 export default function Home() {
   return (
     <main>
       <Hero />
       <Services />
+      <Works />
       <Properties />
       <Packet />
       {/* <FeaturedProperty /> */}

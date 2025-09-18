@@ -4,7 +4,7 @@ const GetInTouch: React.FC = () => {
     return (
         <section>
             <div className='container max-w-8xl mx-auto px-5 2xl:px-0'>
-                <div className="relative rounded-t-2xl overflow-hidden">
+                {/* <div className="relative rounded-t-2xl overflow-hidden">
                     <video
                         className="w-full absolute top-0 left-0 object-cover -z-10"
                         autoPlay
@@ -26,20 +26,38 @@ const GetInTouch: React.FC = () => {
                             </Link>
                         </div>
                     </div>
-                </div>
-                <div className="w-full py-5 bg-[#EFBF04] rounded-b-2xl overflow-hidden">
+                </div> */}
+                <div className="w-full py-5 bg-[#EFBF04] rounded-3xl overflow-hidden">
                     <div className="flex items-center gap-40 animate-slide">
                         <p className='text-white whitespace-nowrap relative after:absolute after:w-20 after:h-px after:bg-white after:top-3 after:-right-32'>
-                            ค้นหารายการนับพันในทำเลทองในราคาสุดคุ้ม!
+                            "All-in-One Expert"
                         </p>
                         <p className='text-white whitespace-nowrap relative after:absolute after:w-20 after:h-px after:bg-white after:top-3 after:-right-32'>
-                            ค้นหารายการนับพันในทำเลทองในราคาสุดคุ้ม!
+                            AllM Master
                         </p>
                         <p className='text-white whitespace-nowrap relative after:absolute after:w-20 after:h-px after:bg-white after:top-3 after:-right-32'>
-                            ค้นหารายการนับพันในทำเลทองในราคาสุดคุ้ม!
+                            "All-in-One Expert"
                         </p>
                         <p className='text-white whitespace-nowrap relative after:absolute after:w-20 after:h-px after:bg-white after:top-3 after:-right-32'>
-                            ค้นหารายการนับพันในทำเลทองในราคาสุดคุ้ม!
+                            AllM Master
+                        </p>
+                        <p className='text-white whitespace-nowrap relative after:absolute after:w-20 after:h-px after:bg-white after:top-3 after:-right-32'>
+                            "All-in-One Expert"
+                        </p>
+                        <p className='text-white whitespace-nowrap relative after:absolute after:w-20 after:h-px after:bg-white after:top-3 after:-right-32'>
+                            AllM Master
+                        </p>
+                        <p className='text-white whitespace-nowrap relative after:absolute after:w-20 after:h-px after:bg-white after:top-3 after:-right-32'>
+                            "All-in-One Expert"
+                        </p>
+                        <p className='text-white whitespace-nowrap relative after:absolute after:w-20 after:h-px after:bg-white after:top-3 after:-right-32'>
+                            AllM Master
+                        </p>
+                        <p className='text-white whitespace-nowrap relative after:absolute after:w-20 after:h-px after:bg-white after:top-3 after:-right-32'>
+                            "All-in-One Expert"
+                        </p>
+                        <p className='text-white whitespace-nowrap relative after:absolute after:w-20 after:h-px after:bg-white after:top-3 after:-right-32'>
+                            AllM Master
                         </p>
                     </div>
                 </div>

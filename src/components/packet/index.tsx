@@ -6,7 +6,7 @@ export default function Packet() {
     return (
         <>
             <section>
-                <div className="bg-white dark:bg-dark py-12 px-6 transition-colors duration-300">
+                <div className="bg-white dark:bg-dark px-6 transition-colors duration-300">
                     <div className='container max-w-8xl mx-auto px-5 2xl:px-0'>
                         <div className='mb-16 flex flex-col gap-3 '>
                             <div className='flex gap-2.5 items-center justify-center'>
@@ -218,7 +218,7 @@ export default function Packet() {
                             {/* <!-- ปุ่ม Line --> */}
                             <a href="https://line.me/ti/p/yourlineid" target="_blank"
                                 className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold py-6 px-6 rounded-xl shadow-md transition-colors duration-300">
-                                <Image src="/images/icon/line.webp" width={55} height={55} alt="Line" />
+                                <Image src="/images/icon/line.webp" width={35} height={35} alt="Logo" className="w-8 h-8 mr-4" />
                                 ติดต่อผ่าน Line
                             </a>
 
@@ -232,6 +232,6 @@ export default function Packet() {
                     </div>
                 </div>
             </section >
-        </>
+        </> 
     )
 }
