@@ -19,7 +19,7 @@ export default function Home() {
       <Packet />
       {/* <FeaturedProperty /> */}
       <Testimonial />
-      <BlogSmall />
+      {/* <BlogSmall /> */}
       <GetInTouch />
       <FAQ />
     </main>

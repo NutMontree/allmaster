@@ -10,9 +10,24 @@ import {
 const FAQ: React.FC = () => {
     return (
         <section id='faqs'>
+
+
+            <div>
+                <div className='bg-red-300'>
+                    <div className='grid grid-cols-2 gap-8'>5
+                        <div>
+                            <div>1</div>
+                            <div>2</div>
+                        </div>
+                    </div>
+                    <div>3</div>
+                </div>
+            </div>
+
+
             <div className='container max-w-8xl mx-auto px-5 2xl:px-0'>
                 <div className="grid lg:grid-cols-2 gap-10 ">
-                    <div className='lg:mx-0 mx-auto'>
+                    {/* <div className='lg:mx-0 mx-auto'>
                         <Image
                             src="/images/faqs/faq-image.png"
                             alt='image'
@@ -21,7 +36,40 @@ const FAQ: React.FC = () => {
                             className='lg:w-full'
                             unoptimized={true}
                         />
+                    </div> */}
+
+                    <div className='lg:mx-0 mx-auto'>
+                        <div className='grid grid-cols-2 gap-8'>
+                            <div className='grid gap-8'>
+                                <Image
+                                    src="/images/faqs/4.webp"
+                                    alt='image'
+                                    width={800}
+                                    height={800}
+                                    className='rounded-[22px] lg:w-full h-full'
+                                    unoptimized={true}
+                                />
+                                <Image
+                                    src="/images/faqs/3.webp"
+                                    alt='image'
+                                    width={800}
+                                    height={800}
+                                    className='rounded-[22px] lg:w-full h-full'
+                                    unoptimized={true}
+                                />
+                            </div>
+
+                            <Image
+                                src="/images/faqs/1.webp"
+                                alt='image'
+                                width={680}
+                                height={644}
+                                className='rounded-[22px] lg:w-full'
+                                unoptimized={true}
+                            />
+                        </div>
                     </div>
+
                     <div className='lg:px-12'>
                         <p className="text-dark/75 dark:text-white/75 text-base font-semibold flex gap-2">
                             {/* <Icon icon="ph:house-simple-fill" className="text-2xl text-[#EFBF04] " /> */}
