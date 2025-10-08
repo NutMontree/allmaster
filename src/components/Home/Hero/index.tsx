@@ -23,17 +23,30 @@ const Hero: React.FC = () => {
             </div>
           </div>
           {/* <div className='hidden md:block absolute -top-2 -right-68'> */}
-          <div className='hidden md:block absolute -top-2 -right-0'>
+          <div className='hidden md:block absolute -top-1 -right-30 '>
             <Image
               // src={'https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXg2Mnh0am51ZWcwYXpsZnNpMXpyMzZjano3ZHJ3M3J5ZWJydHRnaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/orpzVliYWTMgaEgYHx/giphy.gif'}
               src={'https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDl1dmw3Mno1ZmtpOWN5c2Yxd2FteWd1MWgzdnA3ZnJ3ejN5ajBpeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ZaQQA6XQ7DvsPWZUdP/giphy.gif'}
               alt='heroImg'
-              width={500}
+              width={900}
               height={1016}
               priority={false}
               unoptimized={true}
             />
           </div>
+          <div className='hidden md:block absolute -top-1 -right-35 '>
+            <div>
+              <Image
+                src={'/images/icon/allm.png'}
+                alt='sofa'
+                width={900}
+                height={1016}
+                className='block dark:hidden'
+                unoptimized={true}
+              />
+            </div>
+          </div>
+
         </div>
         <div className='md:absolute bottom-0 md:-right-68   bg-white dark:bg-black py-12 px-8 mobile:px-16 md:pl-16 md:pr-[295px] rounded-2xl md:rounded-none md:rounded-tl-2xl mt-24'>
           <div className='grid grid-cols-3 sm:grid-cols-3 md:flex gap-12 md:gap-19 sm:text-center dark:text-white text-black'>
