@@ -1,7 +1,88 @@
 import { describe } from "node:test";
 
+export const packetBasicData = {
+    dataItems: [
+        {
+            title: "One Page Website",
+            subtitle: "เหมาะสำหรับโปรโมทธุรกิจ ขายสินค้า / บริการ",
+            price: "2,500฿",
+            Description: [
+                { describetion: "ออกแบบเว็บไซต์จำนวน 1 หน้า" },
+                { describetion: "รองรับการแสดงผลทุกหน้าจอ" },
+                { describetion: "ฟรี โดเมน (Domain) " },
+                // { describetion: "พื้นที่เก็บข้อมูล 5 GB" },
+                { describetion: "ฟรี รูปภาพประกอบเว็บไซต์" },
+                { describetion: "ฟรี ช่องทางการติดต่อ" },
+                { describetion: "ฟรี แบบฟอร์มติดต่อสอบถาม" },
+                // { describetion: "มีระบบจัดการหลังบ้าน แก้ไขข้อมูลได้ด้วยตัวเอง" },
+                // { describetion: "เว็บไซต์รองรับการทำ SEO" },
+                { describetion: "แก้ไขงานได้ไม่เกิน 3 ครั้ง" },
+                { describetion: "ดูแลระบบความปลอดภัยตลอดอายุการใช้งาน" },
+                // { describetion: "ต่ออายุปีละ 3,000 บาท" },
+            ]
+        },
+        {
+            title: "three Page Website",
+            subtitle: "เหมาะสำหรับโปรโมทธุรกิจ ขายสินค้า / บริการ",
+            price: "3,500฿",
+            Description: [
+                { describetion: "ออกแบบเว็บไซต์จำนวน 3 หน้า" },
+                { describetion: "รองรับการแสดงผลทุกหน้าจอ" },
+                { describetion: "ฟรี โดเมน (Domain) " },
+                // { describetion: "พื้นที่เก็บข้อมูล 5 GB" },
+                { describetion: "ฟรี รูปภาพประกอบเว็บไซต์" },
+                { describetion: "ฟรี ช่องทางการติดต่อ" },
+                { describetion: "ฟรี แบบฟอร์มติดต่อสอบถาม" },
+                // { describetion: "มีระบบจัดการหลังบ้าน แก้ไขข้อมูลได้ด้วยตัวเอง" },
+                // { describetion: "เว็บไซต์รองรับการทำ SEO" },
+                { describetion: "แก้ไขงานได้ไม่เกิน 3 ครั้ง" },
+                { describetion: "ดูแลระบบความปลอดภัยตลอดอายุการใช้งาน" },
+                // { describetion: "ต่ออายุปีละ 3,000 บาท" },
+            ]
+        },
+    ]
+}
+
 export const packetData = {
     dataItems: [
+        {
+            title: "One Page Website",
+            subtitle: "เหมาะสำหรับโปรโมทธุรกิจ ขายสินค้า / บริการ",
+            price: "2,500฿",
+            Description: [
+                { describetion: "ออกแบบเว็บไซต์จำนวน 1 หน้า" },
+                { describetion: "รองรับการแสดงผลทุกหน้าจอ" },
+                { describetion: "ฟรี โดเมน (Domain) " },
+                // { describetion: "พื้นที่เก็บข้อมูล 5 GB" },
+                { describetion: "ฟรี รูปภาพประกอบเว็บไซต์" },
+                { describetion: "ฟรี ช่องทางการติดต่อ" },
+                { describetion: "ฟรี แบบฟอร์มติดต่อสอบถาม" },
+                // { describetion: "มีระบบจัดการหลังบ้าน แก้ไขข้อมูลได้ด้วยตัวเอง" },
+                // { describetion: "เว็บไซต์รองรับการทำ SEO" },
+                { describetion: "แก้ไขงานได้ไม่เกิน 3 ครั้ง" },
+                { describetion: "ดูแลระบบความปลอดภัยตลอดอายุการใช้งาน" },
+                // { describetion: "ต่ออายุปีละ 3,000 บาท" },
+            ]
+        },
+        {
+            title: "three Page Website",
+            subtitle: "เหมาะสำหรับโปรโมทธุรกิจ ขายสินค้า / บริการ",
+            price: "3,500฿",
+            Description: [
+                { describetion: "ออกแบบเว็บไซต์จำนวน 3 หน้า" },
+                { describetion: "รองรับการแสดงผลทุกหน้าจอ" },
+                { describetion: "ฟรี โดเมน (Domain) " },
+                // { describetion: "พื้นที่เก็บข้อมูล 5 GB" },
+                { describetion: "ฟรี รูปภาพประกอบเว็บไซต์" },
+                { describetion: "ฟรี ช่องทางการติดต่อ" },
+                { describetion: "ฟรี แบบฟอร์มติดต่อสอบถาม" },
+                // { describetion: "มีระบบจัดการหลังบ้าน แก้ไขข้อมูลได้ด้วยตัวเอง" },
+                // { describetion: "เว็บไซต์รองรับการทำ SEO" },
+                { describetion: "แก้ไขงานได้ไม่เกิน 3 ครั้ง" },
+                { describetion: "ดูแลระบบความปลอดภัยตลอดอายุการใช้งาน" },
+                // { describetion: "ต่ออายุปีละ 3,000 บาท" },
+            ]
+        },
         {
             title: "Salepage Page Website",
             subtitle: "เหมาะสำหรับโปรโมทธุรกิจ ขายสินค้า / บริการ",

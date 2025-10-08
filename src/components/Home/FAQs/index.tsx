@@ -10,21 +10,6 @@ import {
 const FAQ: React.FC = () => {
     return (
         <section id='faqs'>
-
-
-            <div>
-                <div className='bg-red-300'>
-                    <div className='grid grid-cols-2 gap-8'>5
-                        <div>
-                            <div>1</div>
-                            <div>2</div>
-                        </div>
-                    </div>
-                    <div>3</div>
-                </div>
-            </div>
-
-
             <div className='container max-w-8xl mx-auto px-5 2xl:px-0'>
                 <div className="grid lg:grid-cols-2 gap-10 ">
                     {/* <div className='lg:mx-0 mx-auto'>

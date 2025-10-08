@@ -80,7 +80,7 @@ export default async function Post({ params }: any) {
 
     return (
         <>
-            <section className="relative !pt-44 pb-0!">
+            <section className="relative !pt-44 pb-0! px-4">
                 <div className="container max-w-8xl mx-auto md:px-0 px-4">
                     <div>
                         <div>
@@ -147,7 +147,7 @@ export default async function Post({ params }: any) {
                     </div>
                 </div>
             </section>
-            <section className="pt-12!">
+            <section className="pt-12! px-4">
                 <div className="container max-w-8xl mx-auto px-4">
                     <div className="-mx-4 flex flex-wrap justify-center">
                         <div className="blog-details markdown xl:pr-10">

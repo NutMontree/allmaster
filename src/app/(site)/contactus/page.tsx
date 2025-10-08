@@ -28,8 +28,7 @@ export default function ContactUs() {
             Have questions? ready to help!
           </h3>
           <p className='text-xm font-normal tracking-tight text-black/50 dark:text-white/50 leading-6'>
-            Looking for your dream home or ready to sell? Our expert team offers
-            personalized guidance and market expertise tailored to you.
+            Bring your dream website to life. Our expert team offers personalized web development, combining tailored guidance and market expertise to ensure your site stands out and drives growth.
           </p>
         </div>
       </div>
@@ -38,7 +37,7 @@ export default function ContactUs() {
         <div className='flex flex-col lg:flex-row lg:items-center gap-12'>
           <div className='relative w-fit'>
             <Image
-              src={'/images/contactUs/contactUs.jpg'}
+              src={'/images/contactUs/contactUs.webp'}
               alt='wall'
               width={497}
               height={535}
@@ -50,8 +49,7 @@ export default function ContactUs() {
                 Contact information
               </h5>
               <p className='text-sm xs:text-base mobile:text-xm font-normal text-white/80'>
-                Ready to find your dream home or sell your property? We’re here
-                to help!
+                Ready to launch your dream website or elevate your current platform? We're here to build it!
               </p>
             </div>
             <div className='absolute bottom-6 left-6 lg:bottom-12 lg:left-12 flex flex-col gap-4 text-white'>
@@ -59,7 +57,7 @@ export default function ContactUs() {
                 <div className='flex items-center gap-4 group w-fit'>
                   <Icon icon={'ph:phone'} width={32} height={32} />
                   <p className='text-sm xs:text-base mobile:text-xm font-normal group-hover:text-[#EFBF04]'>
-                    +1 0239 0310 1122
+                    0855953326
                   </p>
                 </div>
               </Link>
@@ -67,14 +65,14 @@ export default function ContactUs() {
                 <div className='flex items-center gap-4 group w-fit'>
                   <Icon icon={'ph:envelope-simple'} width={32} height={32} />
                   <p className='text-sm xs:text-base mobile:text-xm font-normal group-hover:text-[#EFBF04]'>
-                    support@gleamer.com
+                    Nutmontree29@gamil.com
                   </p>
                 </div>
               </Link>
               <div className='flex items-center gap-4'>
                 <Icon icon={'ph:map-pin'} width={32} height={32} />
                 <p className='text-sm xs:text-base mobile:text-xm font-normal'>
-                  Blane Street, Manchester
+                  Kantharalak Sisaket
                 </p>
               </div>
             </div>

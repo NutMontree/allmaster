@@ -1,14 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
-import { packetData } from './data'
+import { packetData, packetBasicData } from './data'
 
 export default function Packet() {
     return (
         <>
             <section>
-                <div className="bg-white dark:bg-dark px-6 transition-colors duration-300">
+                <div className='mb-16 flex flex-col gap-3 '>
                     <div className='container max-w-8xl mx-auto px-5 2xl:px-0'>
-                        <div className='mb-16 flex flex-col gap-3 '>
+                        <div className='mb-16 flex flex-col gap-3'>
                             <div className='flex gap-2.5 items-center justify-center'>
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#EFBF04" viewBox="0 0 256 256"><path d="M238,82.73A8,8,0,0,0,232,80H187.63L134,18.73a8,8,0,0,0-12,0L68.37,80H24a8,8,0,0,0-7.93,9.06L31.14,202.12A16.06,16.06,0,0,0,47,216H209a16.06,16.06,0,0,0,15.86-13.88L239.93,89.06A8,8,0,0,0,238,82.73ZM81.6,184a7.32,7.32,0,0,1-.81,0,8,8,0,0,1-8-7.2l-5.6-56a8,8,0,0,1,15.92-1.6l5.6,56A8,8,0,0,1,81.6,184Zm54.4-8a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0ZM89.63,80,128,36.15,166.37,80Zm99.13,40.8-5.6,56a8,8,0,0,1-7.95,7.2,7.32,7.32,0,0,1-.81,0,8,8,0,0,1-7.16-8.76l5.6-56a8,8,0,0,1,15.92,1.6Z"></path></svg>
@@ -23,10 +23,56 @@ export default function Packet() {
                             <p className='text-xm font-normal text-black/50 dark:text-white/50 text-center'>
                                 สร้างเว็บไซต์ ไม่ซ้ำใครกับเรา! ปรับแต่งเว็บไซต์ให้เหมาะกับแบรนด์และเป้าหมายของคุณ ด้วยบริการออกแบบที่เฉพาะเจาะจงและสร้างสรรค์ ติดต่อขอคำปรึกษาฟรีวันนี้เพื่อเริ่มต้นสร้างเว็บไซต์ของคุณ
                             </p>
+                            <h2 className='text-40 lg:text-24 font-medium text-green-600 dark:text-white text-center tracking-tight leading-11 mb-2'>
+                                Basic Packet
+                            </h2>
+                            <p className='text-xm font-normal text-black/50 dark:text-white/50 text-center'>
+                                ราคาสบายกระเป๋า
+                            </p>
+                        </div>
+
+                        <div className='flex justify-center items-center'>
+                            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6'>
+                                {packetBasicData.dataItems.map((item) => (
+                                    <>
+                                        <div className="bg-gray-50 dark:bg-dark rounded-2xl shadow-lg p-2 border-2 border-[#03fca9] hover:border-[#ff0095]  text-[#ff0095] hover:text-[#03fca9] dark:text-[#ff0095] relative transition-colors duration-300">
+                                            <div className="stext-center text-sm rounded-full px-2 py-2 mb-4 text-center text-black dark:text-white">{item.subtitle}</div>
+                                            <div className='text-2xl font-bold text-center mb-4'>{item.title}</div>
+                                            <div className='text-3xl font-bold mb-4 text-center'>{item.price}</div>
+                                            <p className="text-sm text-center text-gray-500 mb-4">
+                                                ราคายังไม่รวมภาษีมูลค่าเพิ่ม VAT 7%
+                                            </p>
+                                            <hr className="border-gray-300 mb-4" />
+                                            <div className='pb-2'>
+                                                {item.Description.map((dect) => (
+                                                    <div key={dect.describetion} className='flex items-center gap-2 text-gray-600 dark:text-gray-300 mb-2 px-6 '>
+                                                        <Image src="/images/icon/correct.webp" width={10} height={10} alt="" className='' /> {dect.describetion}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+
+                                    </>
+                                ))}
+                            </div >
+                        </div>
+                    </div>
+                </div>
+
+                <div className="bg-white dark:bg-dark px-6 transition-colors duration-300 pt-24">
+                    <div className='container max-w-8xl mx-auto px-5 2xl:px-0'>
+                        <div className='mb-16 flex flex-col gap-3 '>
+                            <div className='flex gap-2.5 items-center justify-center' />
+                            <h2 className='text-40 lg:text-24 font-medium text-black dark:text-white text-center tracking-tight leading-11 mb-2'>
+                                Pro Packet
+                            </h2>
+                            <p className='text-xm font-normal text-black/50 dark:text-white/50 text-center'>
+                                คุณภาพและสามารถฐาน
+                            </p>
                         </div>
 
                         <div>
-                            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6'>
+                            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6'>
                                 {packetData.dataItems.map((item) => (
                                     <>
                                         <div className="bg-gray-50 dark:bg-dark rounded-2xl shadow-lg p-2 border-2 border-[#ddb056] hover:border-[#ffaa00] relative transition-colors duration-300">
@@ -232,6 +278,6 @@ export default function Packet() {
                     </div>
                 </div>
             </section >
-        </> 
+        </>
     )
 }
