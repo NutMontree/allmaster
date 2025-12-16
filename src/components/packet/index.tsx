@@ -1,283 +1,254 @@
-import React from 'react'
-import Image from 'next/image'
-import { packetData, packetBasicData } from './data'
+import React from "react";
+import Image from "next/image";
+import { packetData } from "./data";
+
+// Helper Component สำหรับไอคอนติ๊กถูก (ใช้ SVG เพื่อความคมชัดสูงสุดแทนรูปภาพ)
+const CheckIcon = () => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    className="w-5 h-5 flex-shrink-0 text-yellow-500 mt-0.5"
+  >
+    <circle cx="12" cy="12" r="10" fill="currentColor" fillOpacity="0.2" />
+    <path
+      d="M7 13L10 16L17 8"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 
 export default function Packet() {
-    return (
-        <>
-            <section>
-                <div className='mb-16 flex flex-col gap-3 '>
-                    <div className='container max-w-8xl mx-auto px-5 2xl:px-0'>
-                        <div className='mb-16 flex flex-col gap-3'>
-                            <div className='flex gap-2.5 items-center justify-center'>
-                                <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#EFBF04" viewBox="0 0 256 256"><path d="M238,82.73A8,8,0,0,0,232,80H187.63L134,18.73a8,8,0,0,0-12,0L68.37,80H24a8,8,0,0,0-7.93,9.06L31.14,202.12A16.06,16.06,0,0,0,47,216H209a16.06,16.06,0,0,0,15.86-13.88L239.93,89.06A8,8,0,0,0,238,82.73ZM81.6,184a7.32,7.32,0,0,1-.81,0,8,8,0,0,1-8-7.2l-5.6-56a8,8,0,0,1,15.92-1.6l5.6,56A8,8,0,0,1,81.6,184Zm54.4-8a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0ZM89.63,80,128,36.15,166.37,80Zm99.13,40.8-5.6,56a8,8,0,0,1-7.95,7.2,7.32,7.32,0,0,1-.81,0,8,8,0,0,1-7.16-8.76l5.6-56a8,8,0,0,1,15.92,1.6Z"></path></svg>
-                                </span>
-                                <p className='text-base font-semibold text-dark/75 dark:text-white/75'>
-                                    Packet
-                                </p>
-                            </div>
-                            <h2 className='text-40 lg:text-52 font-medium text-black dark:text-white text-center tracking-tight leading-11 mb-2'>
-                                แพ็กเกจบริการออกแบบและพัฒนาเว็บไซต์ ครบวงจร
-                            </h2>
-                            <p className='text-xm font-normal text-black/50 dark:text-white/50 text-center'>
-                                สร้างเว็บไซต์ ไม่ซ้ำใครกับเรา! ปรับแต่งเว็บไซต์ให้เหมาะกับแบรนด์และเป้าหมายของคุณ ด้วยบริการออกแบบที่เฉพาะเจาะจงและสร้างสรรค์ ติดต่อขอคำปรึกษาฟรีวันนี้เพื่อเริ่มต้นสร้างเว็บไซต์ของคุณ
-                            </p>
-                            <h2 className='text-40 lg:text-24 font-medium text-green-600 dark:text-white text-center tracking-tight leading-11 mb-2'>
-                                Basic Packet
-                            </h2>
-                            <p className='text-xm font-normal text-black/50 dark:text-white/50 text-center'>
-                                ราคาสบายกระเป๋า
-                            </p>
-                        </div>
+  return (
+    <section className="relative py-24 overflow-hidden bg-gray-50 dark:bg-[#0b1120]">
+      {/* --- Background Effects (แสงฟุ้งด้านหลังเพิ่มมิติ) --- */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-yellow-400/20 dark:bg-yellow-500/10 rounded-full blur-[120px] -z-10" />
+      <div className="absolute bottom-0 right-0 w-[600px] h-[400px] bg-blue-400/10 dark:bg-blue-500/10 rounded-full blur-[100px] -z-10" />
 
-                        <div className='flex justify-center items-center'>
-                            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6'>
-                                {packetBasicData.dataItems.map((item) => (
-                                    <>
-                                        <div className="bg-gray-50 dark:bg-dark rounded-2xl shadow-lg p-2 border-2 border-[#03fca9] hover:border-[#ff0095]  text-[#ff0095] hover:text-[#03fca9] dark:text-[#ff0095] relative transition-colors duration-300">
-                                            <div className="stext-center text-sm rounded-full px-2 py-2 mb-4 text-center text-black dark:text-white">{item.subtitle}</div>
-                                            <div className='text-2xl font-bold text-center mb-4'>{item.title}</div>
-                                            <div className='text-3xl font-bold mb-4 text-center'>{item.price}</div>
-                                            <p className="text-sm text-center text-gray-500 mb-4">
-                                                ราคายังไม่รวมภาษีมูลค่าเพิ่ม VAT 7%
-                                            </p>
-                                            <hr className="border-gray-300 mb-4" />
-                                            <div className='pb-2'>
-                                                {item.Description.map((dect) => (
-                                                    <div key={dect.describetion} className='flex items-center gap-2 text-gray-600 dark:text-gray-300 mb-2 px-6 '>
-                                                        <Image src="/images/icon/correct.webp" width={10} height={10} alt="" className='' /> {dect.describetion}
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6">
+        {/* --- Header Section --- */}
+        <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
+          <span className="inline-block py-1.5 px-4 rounded-full bg-yellow-100/80 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 text-xs font-bold tracking-wider uppercase backdrop-blur-sm border border-yellow-200 dark:border-yellow-700/50">
+            Our Pricing
+          </span>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight leading-tight">
+            เลือกแพ็กเกจที่ใช่ <br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-orange-500">
+              เพื่อธุรกิจที่เหนือกว่า
+            </span>
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400 font-light max-w-2xl mx-auto">
+            ยกระดับมาตรฐานเว็บไซต์ของคุณด้วยโซลูชันระดับมืออาชีพ คุ้มค่า ครบครัน
+          </p>
+        </div>
 
-                                    </>
-                                ))}
-                            </div >
-                        </div>
-                    </div>
+        {/* --- Pricing Grid --- */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start relative z-10">
+          {packetData.dataItems.map((item, index) => {
+            // ตรวจสอบว่าเป็น Card ตรงกลางหรือไม่ (เพื่อทำ Highlight)
+            const isPopular = index === 1;
+
+            return (
+              <div
+                key={index}
+                className={`
+                  relative flex flex-col p-8 rounded-[2rem] transition-all duration-500 group
+                  ${
+                    isPopular
+                      ? "bg-gray-900 dark:bg-[#161f32] text-white shadow-2xl shadow-yellow-500/20 lg:-mt-8 lg:mb-8 border border-yellow-500/50 scale-100 lg:scale-105 z-20"
+                      : "bg-white dark:bg-[#1e293b] text-gray-900 dark:text-white border border-gray-100 dark:border-gray-700 hover:border-yellow-300 dark:hover:border-yellow-600/50 shadow-xl shadow-gray-200/50 dark:shadow-none hover:-translate-y-2"
+                  }
+                `}
+              >
+                {/* Badge: Best Value (เฉพาะตัวกลาง) */}
+                {isPopular && (
+                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-yellow-500 to-orange-600 text-white text-sm font-bold px-6 py-2 rounded-full shadow-lg flex items-center gap-2 whitespace-nowrap">
+                    <svg
+                      className="w-4 h-4"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    POPULAR CHOICE
+                  </div>
+                )}
+
+                {/* Card Title & Price */}
+                <div className="mb-8 text-center">
+                  <h3
+                    className={`text-lg font-semibold tracking-wider uppercase mb-4 ${
+                      isPopular
+                        ? "text-yellow-400"
+                        : "text-gray-500 dark:text-gray-400"
+                    }`}
+                  >
+                    {item.subtitle}
+                  </h3>
+                  <div className="flex items-center justify-center gap-1 mb-2">
+                    <span className="text-5xl font-extrabold tracking-tight">
+                      {item.price}
+                    </span>
+                    <span
+                      className={`text-lg font-medium self-end mb-2 ${
+                        isPopular ? "text-gray-400" : "text-gray-400"
+                      }`}
+                    >
+                      ฿
+                    </span>
+                  </div>
+                  <p
+                    className={`text-sm ${
+                      isPopular ? "text-gray-400" : "text-gray-400"
+                    }`}
+                  >
+                    (ไม่รวม VAT 7%)
+                  </p>
                 </div>
 
-                <div className="bg-white dark:bg-dark px-6 transition-colors duration-300 pt-24">
-                    <div className='container max-w-8xl mx-auto px-5 2xl:px-0'>
-                        <div className='mb-16 flex flex-col gap-3 '>
-                            <div className='flex gap-2.5 items-center justify-center' />
-                            <h2 className='text-40 lg:text-24 font-medium text-black dark:text-white text-center tracking-tight leading-11 mb-2'>
-                                Pro Packet
-                            </h2>
-                            <p className='text-xm font-normal text-black/50 dark:text-white/50 text-center'>
-                                คุณภาพและสามารถฐาน
-                            </p>
-                        </div>
+                {/* Divider */}
+                <div
+                  className={`h-px w-full mb-8 ${
+                    isPopular ? "bg-gray-700" : "bg-gray-100 dark:bg-gray-700"
+                  }`}
+                />
 
-                        <div>
-                            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6'>
-                                {packetData.dataItems.map((item) => (
-                                    <>
-                                        <div className="bg-gray-50 dark:bg-dark rounded-2xl shadow-lg p-2 border-2 border-[#ddb056] hover:border-[#ffaa00] relative transition-colors duration-300">
-                                            <div className="stext-center text-sm rounded-full px-2 py-2 mb-4 text-center">{item.subtitle}</div>
-                                            <div className='text-2xl font-bold text-center mb-4'>{item.title}</div>
-                                            <div className='text-3xl font-bold text-yellow-600 dark:text-yellow-400 mb-4 text-center'>{item.price}</div>
-                                            <p className="text-sm text-center text-gray-500 mb-4">
-                                                ราคายังไม่รวมภาษีมูลค่าเพิ่ม VAT 7%
-                                            </p>
-                                            <hr className="border-gray-300 mb-4" />
-                                            <div className='pb-2'>
-                                                {item.Description.map((dect) => (
-                                                    <div key={dect.describetion} className='flex items-center gap-2 text-gray-600 dark:text-gray-300 mb-2 px-6 '>
-                                                        <Image src="/images/icon/correct.webp" width={10} height={10} alt="" className='' /> {dect.describetion}
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
+                {/* Feature List */}
+                <ul className="space-y-4 mb-10 flex-1">
+                  {item.Description.map((dect, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      {/* ใช้ SVG Icon แทน Image เพื่อความคมชัด */}
+                      <CheckIcon />
+                      <span
+                        className={`text-sm leading-6 ${
+                          isPopular
+                            ? "text-gray-300"
+                            : "text-gray-600 dark:text-gray-300"
+                        }`}
+                      >
+                        {dect.describetion}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
 
-                                    </>
-                                ))}
-                            </div >
-                        </div>
+                {/* CTA Button */}
+                <button
+                  className={`
+                    w-full py-4 rounded-xl font-bold text-sm tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1
+                    ${
+                      isPopular
+                        ? "bg-gradient-to-r from-yellow-500 to-orange-500 text-white hover:from-yellow-400 hover:to-orange-400"
+                        : "bg-white text-gray-900 border-2 border-gray-100 hover:border-yellow-400 hover:text-yellow-600 dark:bg-gray-800 dark:text-white dark:border-gray-700 dark:hover:border-yellow-500"
+                    }
+                  `}
+                >
+                  เลือกแพ็กเกจนี้
+                </button>
+              </div>
+            );
+          })}
+        </div>
 
-                        {/* <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-24">
+        {/* --- Footer Note --- */}
+        <div className="mt-16 text-center">
+          <p className="text-gray-400 text-sm">
+            * ราคาค่าบริการรายปีอาจมีการเปลี่ยนแปลง
+            โปรดตรวจสอบเงื่อนไขก่อนชำระเงิน
+          </p>
+        </div>
 
-                            <div className="bg-gray-50 dark:bg-dark rounded-2xl shadow-lg p-6 text-center border-2 border-[#ddb056] hover:border-[#ffaa00] relative transition-colors duration-300">
+        {/* --- Contact Section (Redesigned) --- */}
+        <div className="mt-20 border-t border-gray-200 dark:border-gray-800 pt-16">
+          <div className="max-w-4xl mx-auto text-center">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+              ต้องการคำแนะนำเพิ่มเติม? ปรึกษาเราได้ทันที
+            </h3>
 
-                                <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">Starter</h3>
-                                <p className="text-gray-500 dark:text-gray-400 mb-4">
-                                    Sale page / Landing page</p>
-                                <p className="text-3xl font-bold text-yellow-600 dark:text-yellow-400 mb-4">7,900฿</p>
-                                <ul className="text-left text-sm space-y-2 mb-6 text-gray-600 dark:text-gray-300">
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/incorrect.webp" width={20} height={20} alt="" /> ออกแบบหน้าเว็บไซต์หน้าหลัก
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> จำนวนเพจ: 1 หน้า
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> โดเมน (Domain)
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> พื้นที่เก็บข้อมูล 2GB
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/incorrect.webp" width={20} height={20} alt="" /> สินค้าหรือบริการแยกรายการ
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/incorrect.webp" width={20} height={20} alt="" /> รองรับบทความ ข่าวสาร
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/incorrect.webp" width={20} height={20} alt="" /> ตะกร้าสินค้า สั่งซื้อสินค้าออนไลน์
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> มีระบบจัดการหลังบ้าน
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> ติดตั้ง Google Analytic
-                                    </li>
-
-                                </ul>
-                                <p className="text-gray-400 text-sm mb-4">ต่ออายุปีละ 2,500฿</p>
-
-                            </div>
-
-                            <div className="bg-gray-50 dark:bg-dark rounded-2xl shadow-lg p-6 text-center border-2 border-[#ddb056] hover:border-[#ffaa00] relative transition-colors duration-300">
-                                <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">Silver</h3>
-                                <p className="text-gray-500 dark:text-gray-400 mb-4">เหมาะสำหรับธุรกิจเริ่มต้น</p>
-                                <p className="text-3xl font-bold text-yellow-600 dark:text-yellow-400 mb-4 pt-6">15,900฿</p>
-                                <ul className="text-left text-sm space-y-2 mb-6 text-gray-600 dark:text-gray-300">
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> ออกแบบหน้าเว็บไซต์หน้าหลัก
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> จำนวนเพจ: 5 หน้า
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> โดเมน (Domain)
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> พื้นที่เก็บข้อมูล 4GB
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/incorrect.webp" width={20} height={20} alt="" /> สินค้าหรือบริการแยกรายการ
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/incorrect.webp" width={20} height={20} alt="" /> รองรับบทความ ข่าวสาร
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/incorrect.webp" width={20} height={20} alt="" /> ตะกร้าสินค้า สั่งซื้อสินค้าออนไลน์
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> ระบบจัดการหลังบ้าน
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> Google Analytic
-                                    </li>
-                                </ul>
-                                <p className="text-gray-400 text-sm mb-4">ต่ออายุปีละ 3,000฿</p>
-
-
-                            </div>
-
-                            <div className="bg-gray-50 dark:bg-dark rounded-2xl shadow-lg p-6 text-center border-2 border-[#ddb056] hover:border-[#ffaa00] relative transition-colors duration-300">
-                                <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-[#EFBF04] text-black text-xl px-3 py-1 rounded-full">ยอดนิยม</span>
-                                <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">Premium</h3>
-                                <p className="text-gray-500 dark:text-gray-400 mb-4">เหมาะสำหรับธุรกิจหลายหมวดหมู่</p>
-                                <p className="text-3xl font-bold text-yellow-600 dark:text-yellow-400 mb-4">25,900฿</p>
-                                <ul className="text-left text-sm space-y-2 mb-6 text-gray-600 dark:text-gray-300">
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> ออกแบบหน้าเว็บไซต์หน้าหลัก
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> จำนวนเพจ: 30 หน้า
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> โดเมน (Domain)
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> พื้นที่เก็บข้อมูล 15GB
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> สินค้าหรือบริการแยกรายการ
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> รองรับบทความ ข่าวสาร
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/incorrect.webp" width={20} height={20} alt="" /> ตะกร้าสินค้า สั่งซื้อสินค้าออนไลน์
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> ระบบจัดการหลังบ้าน
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> Google Analytic
-                                    </li>
-                                </ul>
-                                <p className="text-gray-400 text-sm mb-4">ต่ออายุปีละ 3,500฿</p>
-
-                            </div>
-
-                            <div className="bg-gray-50 dark:bg-dark rounded-2xl shadow-lg p-6 text-center border-2 border-[#ddb056] hover:border-[#ffaa00] relative transition-colors duration-300">
-                                <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">E-commerce</h3>
-                                <p className="text-gray-500 dark:text-gray-400 mb-4">ร้านค้าออนไลน์ พร้อมระบบสั่งซื้อ</p>
-                                <p className="text-3xl font-bold text-yellow-600 dark:text-yellow-400 mb-4">35,900฿</p>
-                                <ul className="text-left text-sm space-y-2 mb-6 text-gray-600 dark:text-gray-300">
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> ออกแบบหน้าเว็บไซต์หน้าหลัก
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> จำนวนเพจ: 30 หน้า
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> โดเมน (Domain)
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> พื้นที่เก็บข้อมูล 20GB
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> ลงสินค้า 50 รายการแรก
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> รองรับบทความ ข่าวสาร
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> ตะกร้าสินค้า สั่งซื้อสินค้าออนไลน์
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> ระบบจัดการหลังบ้าน
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Image src="/images/icon/correct.webp" width={20} height={20} alt="" /> Google Analytic
-                                    </li>
-                                </ul>
-                                <p className="text-gray-400 text-sm mb-4">ต่ออายุปีละ 4,000฿</p>
-
-                            </div>
-                        </div> */}
-
-                        {/* <!-- หมายเหตุราคายังไม่รวม VAT --> */}
-                        <div className="mt-24 text-center ">
-                            <p className="text-sm text-yellow-600 dark:text-yellow-400 font-semibold">
-                                ⚠️ หมายเหตุ: ราคายังไม่รวมภาษีมูลค่าเพิ่ม (VAT)
-                            </p>
-                        </div>
-
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-m mx-auto mt-6">
-                            {/* <!-- ปุ่ม Line --> */}
-                            <a href="https://line.me/ti/p/yourlineid" target="_blank"
-                                className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold py-6 px-6 rounded-xl shadow-md transition-colors duration-300">
-                                <Image src="/images/icon/line.webp" width={35} height={35} alt="Logo" className="w-8 h-8 mr-4" />
-                                ติดต่อผ่าน Line
-                            </a>
-
-                            {/* <!-- ปุ่ม Messenger --> */}
-                            <a href="https://m.me/yourfacebookid" target="_blank"
-                                className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-6 px-6 rounded-xl shadow-md transition-colors duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 mr-4" fill="white" viewBox="0 0 256 256"><path d="M146.34,109.66a8,8,0,0,1,0-11.32L180.69,64H160a8,8,0,0,1,0-16h40a8,8,0,0,1,8,8V96a8,8,0,0,1-16,0V75.31l-34.34,34.35a8,8,0,0,1-11.32,0Zm68,56.8-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L126.87,168c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L89.54,41.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,24,88c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,214.37,166.46Z"></path></svg>
-                                ติดต่อผ่าน Messenger
-                            </a>
-                        </div>
-                    </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {/* Line Button */}
+              <a
+                href="https://line.me/ti/p/p-xwfjMXJM"
+                target="_blank"
+                rel="noreferrer"
+                className="group flex items-center justify-between p-5 bg-[#06C755]/10 hover:bg-[#06C755] border border-[#06C755]/20 rounded-2xl transition-all duration-300"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="bg-[#06C755] text-white p-3 rounded-xl group-hover:bg-white group-hover:text-[#06C755] transition-colors">
+                    <Image
+                      src="/images/icon/line.webp"
+                      width={28}
+                      height={28}
+                      alt="Line"
+                      className="w-7 h-7"
+                    />
+                  </div>
+                  <div className="text-left">
+                    <p className="text-xs font-semibold text-[#06C755] group-hover:text-white uppercase tracking-wider">
+                      Add Line
+                    </p>
+                    <p className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-white">
+                      ติดต่อผ่าน Line
+                    </p>
+                  </div>
                 </div>
-            </section >
-        </>
-    )
+                <svg
+                  className="w-6 h-6 text-[#06C755] group-hover:text-white transform group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+
+              {/* Messenger Button */}
+              <a
+                href="https://www.facebook.com/messages/e2ee/t/28110174345295646"
+                target="_blank"
+                rel="noreferrer"
+                className="group flex items-center justify-between p-5 bg-[#0084FF]/10 hover:bg-[#0084FF] border border-[#0084FF]/20 rounded-2xl transition-all duration-300"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="bg-[#0084FF] text-white p-3 rounded-xl group-hover:bg-white group-hover:text-[#0084FF] transition-colors">
+                    <svg className="w-7 h-7 fill-current" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.03 2 11c0 2.87 1.69 5.4 4.29 7.03-.18 1.48-.82 2.76-.84 2.8 0 0 .86.13 3.03-1.07.69.19 1.43.29 2.18.29 5.52 0 10-4.03 10-9S16.52 2 12 2z" />
+                    </svg>
+                  </div>
+                  <div className="text-left">
+                    <p className="text-xs font-semibold text-[#0084FF] group-hover:text-white uppercase tracking-wider">
+                      Chat Now
+                    </p>
+                    <p className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-white">
+                      ติดต่อผ่าน Messenger
+                    </p>
+                  </div>
+                </div>
+                <svg
+                  className="w-6 h-6 text-[#0084FF] group-hover:text-white transform group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
