@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
 
           {/* Hero Image (Right Side) */}
           <div className="w-full md:w-1/2 relative flex justify-center items-center">
-            <div className="relative w-full max-w-[500px] md:max-w-none animate-float">
+            <div className="relative w-full max-w-[500px] md:max-w-none animate-float hidden lg:block">
               <Image
                 src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDl1dmw3Mno1ZmtpOWN5c2Yxd2FteWd1MWgzdnA3ZnJ3ejN5ajBpeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ZaQQA6XQ7DvsPWZUdP/giphy.gif"
                 alt="Hero Illustration"
@@ -66,9 +66,9 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Feature Cards Section (Bottom) */}
-        <div className="relative -mb-16 md:-mb-24 z-20">
-          <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-white/20 dark:border-slate-800 shadow-2xl rounded-[2rem] p-8 md:p-12">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 items-center">
+        <div className="relative -mb-64 md:-mb-72 z-20">
+          <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-white/20 dark:border-slate-800 shadow-2xl rounded-[2rem] ">
+            <div className="grid grid-cols-3 sm:grid-cols-3 items-center">
               {[
                 "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnVxamcxZHhpdnFtOHYzamlnem96bW92NzV0djN1azYxeXRmdHR3NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/98kcZtideBuSDrzDcR/giphy.gif",
                 "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXo0aHlsenZwcTBzem9rOWd1Y3l3eW1odmJhMmt1NHl2N2toNG9xaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/GyHvYnLiEHLjh6Chpw/giphy.gif",
@@ -78,7 +78,7 @@ const Hero: React.FC = () => {
                   key={index}
                   className="group flex flex-col items-center p-4 hover:bg-skyblue/5 rounded-xl transition-colors"
                 >
-                  <div className="relative w-24 h-24 mb-4 transform group-hover:scale-110 transition-transform">
+                  <div className="relative w-36 h-32 mb-4 transform group-hover:scale-110 transition-transform">
                     <Image
                       src={src}
                       alt="feature"
