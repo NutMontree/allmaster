@@ -4,123 +4,138 @@ import { FooterLinks } from "@/app/api/footerlinks";
 
 const Footer = () => {
   return (
-    <footer className="relative z-10 bg-dark ">
-      <div className="container max-w-8xl mx-auto px-5 2xl:px-0">
-        <div className="container mx-auto max-w-8xl pt-14 px-4 sm:px-6 lg:px-0">
-          <div className="flex lg:items-center justify-between items-end lg:gap-11 pb-14 border-b border-white/10 lg:flex-nowrap flex-wrap gap-6">
-            <p className="text-white text-sm lg:max-w-1/5">
-              Stay updated with the latest news, promotions, and exclusive
-              offers.
+    <footer className="relative z-10 bg-[#0A0A0A] pt-20 pb-10">
+      {/* Decorative Blur Background */}
+      <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-[#EFBF04]/5 blur-[120px] -z-10" />
+
+      <div className="container max-w-7xl mx-auto px-6">
+        {/* Top Section: Newsletter & Social */}
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10 pb-16 border-b border-white/5">
+          <div className="max-w-md">
+            <h3 className="text-white text-2xl font-bold mb-3">Newsletter</h3>
+            <p className="text-slate-400 text-sm leading-relaxed">
+              ติดตามข่าวสาร โปรโมชั่น และสิทธิพิเศษก่อนใคร
+              เพียงลงทะเบียนรับข่าวสารจากเรา
             </p>
-            <div className="flex lg:flex-row flex-col items-center lg:gap-10 gap-3">
-              <div className="flex gap-2 lg:order-1 order-2">
-                <input
-                  type="email"
-                  placeholder="Enter Your Email"
-                  className="rounded-full py-4 px-6 bg-white/10 placeholder:text-white text-white focus-visible:outline-0"
-                />
-                <button className="text-dark bg-white py-4 px-8 font-semibold rounded-full hover:bg-[#EFBF04] hover:text-white duration-300 hover:cursor-pointer">
-                  Subscribe
-                </button>
-              </div>
-              <p className="text-white/40 text-sm lg:max-w-[45%] order-1 lg:order-2">
-                By subscribing, you agree to receive our promotional emails. You
-                can unsubscribe at any time.
-              </p>
-            </div>
-            <div className="flex items-center gap-6">
-              <Link href="#">
-                <Icon
-                  icon="ph:x-logo-bold"
-                  width={24}
-                  height={24}
-                  className="text-white hover:text-[#EFBF04] duration-300"
-                />
-              </Link>
-              <Link href="#">
-                <Icon
-                  icon="ph:facebook-logo-bold"
-                  width={24}
-                  height={24}
-                  className="text-white hover:text-[#EFBF04] duration-300"
-                />
-              </Link>
-              <Link href="#">
-                <Icon
-                  icon="ph:instagram-logo-bold"
-                  width={24}
-                  height={24}
-                  className="text-white hover:text-[#EFBF04] duration-300"
-                />
-              </Link>
-            </div>
           </div>
-          <div className="py-16 border-b border-white/10">
-            <div className="grid grid-cols-12 sm:gap-10 gap-y-6">
-              <div className="md:col-span-7 col-span-12">
-                <h2 className="text-white leading-[1.2] text-40 font-medium mb-6 lg:max-w-3/4">
-                  Begin your path to success contact us today.
-                </h2>
-                <Link
-                  href="/contactus"
-                  className="bg-[#EFBF04] text-base font-semibold py-4 px-8 rounded-full text-white hover:bg-white hover:text-dark duration-300 hover:cursor-pointer"
-                >
+
+          <div className="w-full lg:w-auto space-y-4">
+            <div className="flex flex-col sm:flex-row gap-3">
+              <input
+                type="email"
+                placeholder="อีเมลของคุณ"
+                className="w-full sm:w-80 rounded-2xl py-4 px-6 bg-white/5 border border-white/10 text-white placeholder:text-slate-500 focus:outline-none focus:border-[#EFBF04]/50 transition-all"
+              />
+              <button className="bg-[#EFBF04] text-black py-4 px-8 font-bold rounded-2xl hover:bg-white hover:scale-105 duration-300 transition-all shadow-lg shadow-[#EFBF04]/10">
+                Subscribe
+              </button>
+            </div>
+            <p className="text-slate-500 text-[12px] italic">
+              *คุณสามารถยกเลิกการรับข่าวสารได้ทุกเมื่อ
+            </p>
+          </div>
+        </div>
+
+        {/* Middle Section: Links & Contact CTA */}
+        <div className="py-20">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-24">
+            {/* Branding & CTA */}
+            <div className="md:col-span-6 space-y-8">
+              <h2 className="text-white text-4xl md:text-5xl font-extrabold leading-[1.1] tracking-tighter">
+                เริ่มต้นความสำเร็จ <br />
+                <span className="text-[#EFBF04]">ไปกับเราได้ตั้งแต่วันนี้</span>
+              </h2>
+              <Link
+                href="/contactus"
+                className="inline-flex items-center gap-2 group text-white font-bold text-lg"
+              >
+                <span className="bg-white/10 p-4 rounded-full group-hover:bg-[#EFBF04] group-hover:text-black transition-all duration-500">
+                  <Icon icon="solar:phone-calling-bold" width={24} />
+                </span>
+                <span className="border-b-2 border-white/10 group-hover:border-[#EFBF04] pb-1 transition-all">
                   Get In Touch
-                </Link>
-              </div>
-              <div className="md:col-span-3 sm:col-span-6 col-span-12">
-                <div className="flex flex-col gap-4 w-fit">
-                  {FooterLinks.slice(0, 4).map((item, index) => (
-                    <div key={index}>
-                      <Link
-                        href={item.href}
-                        className="text-white/40 text-xm hover:text-white"
-                      >
-                        {item.label}
-                      </Link>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="md:col-span-2 sm:col-span-6 col-span-12">
-                <div className="flex flex-col gap-4 w-fit">
-                  {FooterLinks.slice(4, 8).map((item, index) => (
-                    <div key={index}>
-                      <Link
-                        href={item.href}
-                        className="text-white/40 text-xm hover:text-white"
-                      >
-                        {item.label}
-                      </Link>
-                    </div>
-                  ))}
-                </div>
-              </div>
+                </span>
+              </Link>
+            </div>
+
+            {/* Quick Links Group 1 */}
+            <div className="md:col-span-3 col-span-6">
+              <h4 className="text-white font-bold mb-8 uppercase tracking-widest text-xs opacity-50">
+                Services
+              </h4>
+              <ul className="flex flex-col gap-5">
+                {FooterLinks.slice(0, 4).map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      href={item.href}
+                      className="text-slate-400 hover:text-[#EFBF04] hover:translate-x-1 transition-all inline-block"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Quick Links Group 2 */}
+            <div className="md:col-span-3 col-span-6">
+              <h4 className="text-white font-bold mb-8 uppercase tracking-widest text-xs opacity-50">
+                Support
+              </h4>
+              <ul className="flex flex-col gap-5">
+                {FooterLinks.slice(4, 8).map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      href={item.href}
+                      className="text-slate-400 hover:text-[#EFBF04] hover:translate-x-1 transition-all inline-block"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
-          <div className="flex justify-between md:flex-nowrap flex-wrap items-center py-6 gap-6">
-            <p className="text-white/40 text-sm ">
-              ©2023 AllMaster - Design & Developed by{" "}
+        </div>
+
+        {/* Bottom Section: Copyright & Policy */}
+        <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+          {/* Social Icons */}
+          <div className="flex items-center gap-4 order-2 md:order-1">
+            {[
+              { icon: "ph:facebook-logo-bold", href: "#" },
+              { icon: "ph:instagram-logo-bold", href: "#" },
+              { icon: "ph:x-logo-bold", href: "#" },
+              { icon: "ph:line-segments-bold", href: "#" },
+            ].map((social, i) => (
               <Link
-                href="https://allmaster.vercel.app/"
-                className="hover:text-[#EFBF04]"
-                target="_blanck"
+                key={i}
+                href={social.href}
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 text-white hover:bg-[#EFBF04] hover:text-black transition-all duration-300"
               >
-                AllMaster
+                <Icon icon={social.icon} width={20} />
               </Link>
+            ))}
+          </div>
+
+          <div className="text-center md:text-right order-1 md:order-2 space-y-2">
+            <p className="text-slate-500 text-sm">
+              © {new Date().getFullYear()}{" "}
+              <span className="text-white">AllMaster</span>. All rights
+              reserved.
             </p>
-            <div className="flex gap-8 items-center">
+            <div className="flex gap-6 justify-center md:justify-end">
               <Link
-                href="#"
-                className="text-white/40 hover:text-[#EFBF04] text-sm"
+                href="/termsservice"
+                className="text-xs text-slate-600 hover:text-[#EFBF04]"
               >
-                Terms of service
+                Terms of Service
               </Link>
               <Link
-                href="#"
-                className="text-white/40 hover:text-[#EFBF04] text-sm"
+                href="policy"
+                className="text-xs text-slate-600 hover:text-[#EFBF04]"
               >
-                Privacy policy
+                Privacy Policy
               </Link>
             </div>
           </div>
