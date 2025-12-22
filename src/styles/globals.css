@@ -79,6 +79,38 @@ html {
 section {
   @apply py-24;
 }
+.blog-details a {
+  color: skyblue;
+}
+
+.blog-details a:hover {
+  background-image: linear-gradient(transparent 60%, rgba(0, 0, 0, 0.35) 60%);
+}
+
+.blog-details img {
+  display: block;
+  margin: 32px auto 8px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.blog-details img::after {
+  content: attr(alt);
+  display: block;
+  margin-top: 8px;
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.blog-details h6 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.6);
+  padding-bottom: 24px;
+}
 
 .blog-details p,
 .blog-details hr {

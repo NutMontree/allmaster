@@ -34,7 +34,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     }
     if (field === "content") {
       // You can modify the content here to include images
-      items[field] = processImages(content);
+      items[field] = content;
     }
 
     if (field === "metadata") {
