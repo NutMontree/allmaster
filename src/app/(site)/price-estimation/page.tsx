@@ -533,16 +533,32 @@ const PriceEstimationNew = () => {
                   <input
                     required
                     value={customerInfo.phone}
-                    onChange={(e) =>
+                    onChange={(e) => {
+                      // 1. ลบตัวอักษรที่ไม่ใช่ตัวเลขออก
+                      const onlyNums = e.target.value.replace(/[^0-9]/g, "");
+
+                      // 2. ตัดให้เหลือไม่เกิน 10 หลัก
+                      const limitedNums = onlyNums.slice(0, 10);
+
+                      // 3. บันทึกลง State
                       setCustomerInfo({
                         ...customerInfo,
-                        phone: e.target.value,
-                      })
-                    }
+                        phone: limitedNums,
+                      });
+                    }}
                     type="tel"
+                    maxLength={10} // กันเหนียวไว้อีกชั้น
+                    pattern="^[0-9]{10}$" // สำหรับแจ้งเตือนตอนกด submit ฟอร์ม
                     className="w-full bg-slate-100 dark:bg-white/5 border-none rounded-2xl py-4 px-6 dark:text-white focus:ring-2 focus:ring-[#EFBF04] outline-none transition-all"
-                    placeholder="08x-xxx-xxxx"
+                    placeholder="08xxxxxxxx"
                   />
+                  {/* ตัวเลือกเสริม: แสดงข้อความเตือนเล็กๆ ถ้ายังกรอกไม่ครบ */}
+                  {customerInfo.phone.length > 0 &&
+                    customerInfo.phone.length < 10 && (
+                      <span className="text-[10px] text-red-500 mt-1">
+                        กรุณากรอกให้ครบ 10 หลัก
+                      </span>
+                    )}
                 </div>
                 <div>
                   <label className="block text-xs font-black uppercase tracking-widest text-[#EFBF04] mb-2">

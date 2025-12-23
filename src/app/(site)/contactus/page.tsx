@@ -136,10 +136,18 @@ export default function ContactUs() {
                     className="px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-[#EFBF04] focus:outline w-full bg-transparent dark:text-white"
                   />
                   <input
-                    type="text" // เปลี่ยนเป็น text เพื่อรองรับเลข 0 นำหน้า
+                    type="tel"
                     name="mobile"
-                    placeholder="Phone number*"
+                    placeholder="Phone number (10 digits)*"
                     required
+                    maxLength={10} // จำกัดจำนวนตัวเลขสูงสุด 10 ตัว
+                    pattern="^[0-9]{10}$" // ตรวจสอบว่าต้องเป็นตัวเลข 0-9 จำนวน 10 ตัวเท่านั้น
+                    onInput={(e) => {
+                      // ลบทุกอย่างที่ไม่ใช่ตัวเลขออก และจำกัด 10 หลัก
+                      e.currentTarget.value = e.currentTarget.value
+                        .replace(/[^0-9]/g, "")
+                        .slice(0, 10);
+                    }}
                     className="px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-[#EFBF04] focus:outline w-full bg-transparent dark:text-white"
                   />
                 </div>
