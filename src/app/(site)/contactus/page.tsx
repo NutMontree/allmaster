@@ -1,14 +1,52 @@
+"use client"; // 1. เพิ่มบรรทัดนี้
+
+import React, { useState } from "react"; // 2. เพิ่ม useState
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
-import { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "Contact Us | AllMaster",
-};
+
+// หมายเหตุ: Metadata ต้องแยกไปไว้ในไฟล์ layout.tsx หรือหน้า Server Component อื่น
+// เพราะหน้าที่มี "use client" จะ export metadata ไม่ได้
 
 export default function ContactUs() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // 3. ฟังก์ชันสำหรับส่งข้อมูล
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      username: formData.get("username"),
+      mobile: formData.get("mobile"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const res = await fetch("/api/send-line", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        alert("ส่งข้อความสำเร็จ! ขอบคุณที่ติดต่อเรา");
+        (e.target as HTMLFormElement).reset();
+      } else {
+        alert("เกิดข้อผิดพลาด กรุณาลองใหม่ในภายหลัง");
+      }
+    } catch (error) {
+      alert("ไม่สามารถเชื่อมต่อระบบได้");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="container max-w-8xl mx-auto px-5 2xl:px-0 pt-32 md:pt-44 pb-14 md:pb-28">
+      {/* ... โค้ดเดิมทั้งหมด ... */}
       <div className="mb-16">
         <div className="flex gap-2.5 items-center justify-center mb-3">
           <span>
@@ -34,7 +72,7 @@ export default function ContactUs() {
           </p>
         </div>
       </div>
-      {/* form */}
+
       <div className="border border-black/10 dark:border-white/10 rounded-2xl p-4 shadow-xl dark:shadow-white/10">
         <div className="flex flex-col lg:flex-row lg:items-center gap-12">
           <div className="relative w-fit">
@@ -80,8 +118,10 @@ export default function ContactUs() {
               </div>
             </div>
           </div>
+
           <div className="flex-1/2">
-            <form>
+            {/* 4. เพิ่ม onSubmit */}
+            <form onSubmit={handleSubmit}>
               <div className="flex flex-col gap-8">
                 <div className="flex flex-col lg:flex-row gap-6">
                   <input
@@ -91,7 +131,7 @@ export default function ContactUs() {
                     autoComplete="username"
                     placeholder="Name*"
                     required
-                    className="px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-[#EFBF04] focus:outline w-full"
+                    className="px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-[#EFBF04] focus:outline w-full bg-transparent"
                   />
                   <input
                     type="number"
@@ -100,7 +140,7 @@ export default function ContactUs() {
                     autoComplete="mobile"
                     placeholder="Phone number*"
                     required
-                    className="px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-[#EFBF04] focus:outline w-full"
+                    className="px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-[#EFBF04] focus:outline w-full bg-transparent"
                   />
                 </div>
                 <input
@@ -110,7 +150,7 @@ export default function ContactUs() {
                   autoComplete="email"
                   placeholder="Email address*"
                   required
-                  className="px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-[#EFBF04] focus:outline"
+                  className="px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-[#EFBF04] focus:outline bg-transparent"
                 />
                 <textarea
                   rows={8}
@@ -119,10 +159,15 @@ export default function ContactUs() {
                   id="message"
                   placeholder="Write here your message"
                   required
-                  className="px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-2xl outline-[#EFBF04] focus:outline"
+                  className="px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-2xl outline-[#EFBF04] focus:outline bg-transparent"
                 ></textarea>
-                <button className="px-8 py-4 rounded-full bg-[#EFBF04] text-white text-base font-semibold w-full mobile:w-fit hover:cursor-pointer hover:bg-dark duration-300">
-                  Send message
+
+                {/* 5. ปุ่มรองรับสถานะ Sending */}
+                <button
+                  disabled={isSubmitting}
+                  className="px-8 py-4 rounded-full bg-[#EFBF04] text-white text-base font-semibold w-full mobile:w-fit hover:cursor-pointer hover:bg-black duration-300 disabled:bg-slate-400"
+                >
+                  {isSubmitting ? "Sending..." : "Send message"}
                 </button>
               </div>
             </form>

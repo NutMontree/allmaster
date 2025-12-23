@@ -237,7 +237,10 @@ const PriceEstimationNew = () => {
       // 2. เปิดหน้าแชท Line OA ให้ลูกค้าทักมาหาเรา (User Experience)
       const lineId = process.env.NEXT_PUBLIC_LINE_OA_ID;
       const clientMessage = `สวัสดีครับ ผมสนใจ ${currentPackage?.title} ที่คำนวณไว้ครับ`;
-      const lineUrl = `https://line.me/ti/p/~${lineId}`;
+      //   const lineUrl = `https://line.me/ti/p/~${lineId}`;
+      const lineUrl = `https://line.me/R/oaMessage/${lineId}/?${encodeURIComponent(
+        clientMessage
+      )}`;
 
       window.open(lineUrl, "_blank");
     } catch (err) {
