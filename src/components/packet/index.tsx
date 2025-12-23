@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { packetData } from "./data";
+import Link from "next/link";
 
 // Helper Component สำหรับไอคอนติ๊กถูก (ใช้ SVG เพื่อความคมชัดสูงสุดแทนรูปภาพ)
 const CheckIcon = () => (
@@ -135,18 +136,20 @@ export default function Packet() {
                 </ul>
 
                 {/* CTA Button */}
-                <button
-                  className={`
+                <Link href="/price-estimation">  
+                  <button
+                    className={`
                     w-full py-4 rounded-xl font-bold text-sm tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1
                     ${
                       isPopular
                         ? "bg-gradient-to-r from-yellow-500 to-orange-500 text-white hover:from-yellow-400 hover:to-orange-400"
                         : "bg-white text-gray-900 border-2 border-gray-100 hover:border-yellow-400 hover:text-yellow-600 dark:bg-gray-800 dark:text-white dark:border-gray-700 dark:hover:border-yellow-500"
                     }
-                  `}
-                >
-                  เลือกแพ็กเกจนี้
-                </button>
+                    `}
+                  >
+                    เลือกแพ็กเกจ
+                  </button>
+                </Link>
               </div>
             );
           })}

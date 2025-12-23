@@ -683,9 +683,11 @@ const WebsiteCostBlog = () => {
                   ประเมินงบประมาณเบื้องต้นตามฟังก์ชันที่คุณต้องการจริง ด้วยระบบ
                   Cost Estimator ของเรา
                 </p>
-                <button className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-2xl transition-all shadow-lg shadow-blue-600/20 active:scale-95">
-                  ประเมินราคาทันที
-                </button>
+                <Link href="/price-estimation">
+                  <button className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-2xl transition-all shadow-lg shadow-blue-600/20 active:scale-95">
+                    ประเมินราคาทันที
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
