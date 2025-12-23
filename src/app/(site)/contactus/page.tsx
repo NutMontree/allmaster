@@ -1,23 +1,24 @@
-"use client"; // 1. เพิ่มบรรทัดนี้
+"use client";
 
-import React, { useState } from "react"; // 2. เพิ่ม useState
+import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
 
-// หมายเหตุ: Metadata ต้องแยกไปไว้ในไฟล์ layout.tsx หรือหน้า Server Component อื่น
-// เพราะหน้าที่มี "use client" จะ export metadata ไม่ได้
+// หมายเหตุ: Metadata ต้องแยกไปไว้ในไฟล์ layout.tsx หรือหน้าอื่นๆ ที่เป็น Server Component
+// export const metadata: Metadata = { title: "Contact Us | AllMaster" };
 
 export default function ContactUs() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // 3. ฟังก์ชันสำหรับส่งข้อมูล
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     const formData = new FormData(e.currentTarget);
-    const data = {
+
+    // ดึงค่าจาก name attribute ของ input ต่างๆ
+    const payload = {
       username: formData.get("username"),
       mobile: formData.get("mobile"),
       email: formData.get("email"),
@@ -28,17 +29,20 @@ export default function ContactUs() {
       const res = await fetch("/api/send-line", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify(payload),
       });
 
-      if (res.ok) {
+      const result = await res.json();
+
+      if (res.ok && result.success) {
         alert("ส่งข้อความสำเร็จ! ขอบคุณที่ติดต่อเรา");
-        (e.target as HTMLFormElement).reset();
+        (e.target as HTMLFormElement).reset(); // ล้างข้อมูลในฟอร์ม
       } else {
-        alert("เกิดข้อผิดพลาด กรุณาลองใหม่ในภายหลัง");
+        alert(`เกิดข้อผิดพลาด: ${result.error || "กรุณาลองใหม่ในภายหลัง"}`);
       }
     } catch (error) {
-      alert("ไม่สามารถเชื่อมต่อระบบได้");
+      console.error("Submit Error:", error);
+      alert("ไม่สามารถเชื่อมต่อระบบได้ กรุณาตรวจสอบอินเทอร์เน็ต");
     } finally {
       setIsSubmitting(false);
     }
@@ -46,7 +50,6 @@ export default function ContactUs() {
 
   return (
     <div className="container max-w-8xl mx-auto px-5 2xl:px-0 pt-32 md:pt-44 pb-14 md:pb-28">
-      {/* ... โค้ดเดิมทั้งหมด ... */}
       <div className="mb-16">
         <div className="flex gap-2.5 items-center justify-center mb-3">
           <span>
@@ -75,6 +78,7 @@ export default function ContactUs() {
 
       <div className="border border-black/10 dark:border-white/10 rounded-2xl p-4 shadow-xl dark:shadow-white/10">
         <div className="flex flex-col lg:flex-row lg:items-center gap-12">
+          {/* ข้อมูลการติดต่อ (ซ้าย) */}
           <div className="relative w-fit">
             <Image
               src={"/images/contactUs/contactUs.webp"}
@@ -94,7 +98,7 @@ export default function ContactUs() {
               </p>
             </div>
             <div className="absolute bottom-6 left-6 lg:bottom-12 lg:left-12 flex flex-col gap-4 text-white">
-              <Link href={"/"} className="w-fit">
+              <Link href={"tel:0855953326"} className="w-fit">
                 <div className="flex items-center gap-4 group w-fit">
                   <Icon icon={"ph:phone"} width={32} height={32} />
                   <p className="text-sm xs:text-base mobile:text-xm font-normal group-hover:text-[#EFBF04]">
@@ -102,11 +106,11 @@ export default function ContactUs() {
                   </p>
                 </div>
               </Link>
-              <Link href={"/"} className="w-fit">
+              <Link href={"mailto:Nutmontree29@gmail.com"} className="w-fit">
                 <div className="flex items-center gap-4 group w-fit">
                   <Icon icon={"ph:envelope-simple"} width={32} height={32} />
                   <p className="text-sm xs:text-base mobile:text-xm font-normal group-hover:text-[#EFBF04]">
-                    Nutmontree29@gamil.com
+                    Nutmontree29@gmail.com
                   </p>
                 </div>
               </Link>
@@ -119,53 +123,45 @@ export default function ContactUs() {
             </div>
           </div>
 
-          <div className="flex-1/2">
-            {/* 4. เพิ่ม onSubmit */}
+          {/* ฟอร์มการติดต่อ (ขวา) */}
+          <div className="flex-1 w-full lg:w-1/2">
             <form onSubmit={handleSubmit}>
               <div className="flex flex-col gap-8">
                 <div className="flex flex-col lg:flex-row gap-6">
                   <input
                     type="text"
                     name="username"
-                    id="username"
-                    autoComplete="username"
                     placeholder="Name*"
                     required
-                    className="px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-[#EFBF04] focus:outline w-full bg-transparent"
+                    className="px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-[#EFBF04] focus:outline w-full bg-transparent dark:text-white"
                   />
                   <input
-                    type="number"
+                    type="text" // เปลี่ยนเป็น text เพื่อรองรับเลข 0 นำหน้า
                     name="mobile"
-                    id="mobile"
-                    autoComplete="mobile"
                     placeholder="Phone number*"
                     required
-                    className="px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-[#EFBF04] focus:outline w-full bg-transparent"
+                    className="px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-[#EFBF04] focus:outline w-full bg-transparent dark:text-white"
                   />
                 </div>
                 <input
                   type="email"
                   name="email"
-                  id="email"
-                  autoComplete="email"
                   placeholder="Email address*"
                   required
-                  className="px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-[#EFBF04] focus:outline bg-transparent"
+                  className="px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-full outline-[#EFBF04] focus:outline bg-transparent dark:text-white"
                 />
                 <textarea
                   rows={8}
-                  cols={50}
                   name="message"
-                  id="message"
                   placeholder="Write here your message"
                   required
-                  className="px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-2xl outline-[#EFBF04] focus:outline bg-transparent"
+                  className="px-6 py-3.5 border border-black/10 dark:border-white/10 rounded-2xl outline-[#EFBF04] focus:outline bg-transparent dark:text-white"
                 ></textarea>
 
-                {/* 5. ปุ่มรองรับสถานะ Sending */}
                 <button
+                  type="submit"
                   disabled={isSubmitting}
-                  className="px-8 py-4 rounded-full bg-[#EFBF04] text-white text-base font-semibold w-full mobile:w-fit hover:cursor-pointer hover:bg-black duration-300 disabled:bg-slate-400"
+                  className="px-8 py-4 rounded-full bg-[#EFBF04] text-white text-base font-semibold w-full mobile:w-fit hover:cursor-pointer hover:bg-black transition-colors duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? "Sending..." : "Send message"}
                 </button>

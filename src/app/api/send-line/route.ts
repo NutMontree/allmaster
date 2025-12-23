@@ -4,17 +4,28 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    // รองรับทั้งแบบส่ง message มาตรงๆ (จากหน้าคำนวณราคา)
-    // และแบบส่งแยก field (จากหน้า Contact Us)
+    // ดึงค่าทั้งหมดออกมารอไว้
+    const { username, mobile, email, message } = body;
+
     let finalMessage = "";
 
-    if (body.message) {
-      // สำหรับหน้า Price Estimation
-      finalMessage = body.message;
+    // ตรวจสอบว่าเป็นข้อมูลจากหน้า Contact Us หรือไม่ (เช็คว่ามี username ส่งมาด้วยไหม)
+    if (username) {
+      // สำหรับหน้า Contact Us: จัดฟอร์แมตข้อมูลทั้งหมด
+      finalMessage = [
+        "🚀 มีการติดต่อใหม่ (Contact Us)",
+        "━━━━━━━━━━━━━━━",
+        `👤 ชื่อ: ${username || "-"}`,
+        `📞 เบอร์โทร: ${mobile || "-"}`,
+        `📧 อีเมล: ${email || "-"}`,
+        `📝 ข้อความ: ${message || "-"}`,
+        "━━━━━━━━━━━━━━━",
+      ].join("\n");
+    } else if (message) {
+      // สำหรับหน้า Price Estimation (ส่ง message สำเร็จรูปมาแล้ว)
+      finalMessage = message;
     } else {
-      // สำหรับหน้า Contact Us (username, mobile, email, message)
-      const { username, mobile, email, message } = body;
-      finalMessage = `🚀 มีการติดต่อใหม่ (Contact Us)\n\n👤 ชื่อ: ${username}\n📞 เบอร์โทร: ${mobile}\n📧 อีเมล: ${email}\n📝 ข้อความ: ${message}`;
+      throw new Error("No data provided");
     }
 
     const LINE_API_URL = "https://api.line.me/v2/bot/message/push";
@@ -33,11 +44,11 @@ export async function POST(req: Request) {
       }),
     });
 
-    const responseData = await response.json();
-
+    // ตรวจสอบ Response จาก LINE
     if (!response.ok) {
-      console.error("LINE API Error:", responseData);
-      throw new Error("Failed to send message to LINE");
+      const responseData = await response.json();
+      console.error("LINE API Error Details:", responseData);
+      throw new Error(responseData.message || "Failed to send message to LINE");
     }
 
     return NextResponse.json({ success: true });
