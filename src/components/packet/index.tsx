@@ -136,7 +136,7 @@ export default function Packet() {
                 </ul>
 
                 {/* CTA Button */}
-                <Link href="/price-estimation">  
+                <Link href="/price-estimation">
                   <button
                     className={`
                     w-full py-4 rounded-xl font-bold text-sm tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1
@@ -214,7 +214,7 @@ export default function Packet() {
 
               {/* Messenger Button */}
               <a
-                href="https://www.facebook.com/all.m.min.2024"
+                href="https://www.facebook.com/profile.php?id=61584948345343"
                 target="_blank"
                 rel="noreferrer"
                 className="group flex items-center justify-between p-5 bg-[#0084FF]/10 hover:bg-[#0084FF] border border-[#0084FF]/20 rounded-2xl transition-all duration-300"
