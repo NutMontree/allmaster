@@ -213,11 +213,19 @@ const PriceEstimationNew = () => {
   // ฟังก์ชันส่งข้อมูลไป Line
   const handleSubmitToLine = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // ตรวจสอบเบอร์โทรอีกครั้งก่อนส่ง
+    if (customerInfo.phone.length !== 10) {
+      alert("กรุณากรอกเบอร์โทรศัพท์ให้ครบ 10 หลัก");
+      return;
+    }
+
     setIsSubmitting(true);
 
     const addonList = selectedAddonDetails
       .map((a) => `• ${a.title}`)
       .join("\n");
+
     const message = `🚀 *มีโปรเจกต์ใหม่เข้า!*\n\n👤 *ข้อมูลลูกค้า*\nชื่อ: ${
       customerInfo.name
     }\nเบอร์โทร: ${customerInfo.phone}\nLine ID: ${
@@ -227,27 +235,41 @@ const PriceEstimationNew = () => {
     }\n\n💰 *ราคารวม: ฿${totalPrice.toLocaleString()}*`;
 
     try {
-      // 1. ส่งข้อมูลเข้า Webhook / API เพื่อแจ้งเตือนเข้ากลุ่ม Line ทันที
-      await fetch("/api/send-line", {
+      const res = await fetch("/api/send-line", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message }),
       });
 
-      // 2. เปิดหน้าแชท Line OA ให้ลูกค้าทักมาหาเรา (User Experience)
-      const lineId = process.env.NEXT_PUBLIC_LINE_OA_ID;
-      const clientMessage = `สวัสดีครับ ผมสนใจ ${currentPackage?.title} ที่คำนวณไว้ครับ`;
-      //   const lineUrl = `https://line.me/ti/p/~${lineId}`;
-      const lineUrl = `https://line.me/R/oaMessage/${lineId}/?${encodeURIComponent(
-        clientMessage
-      )}`;
+      if (res.ok) {
+        // --- 1. แสดงข้อความสำเร็จ ---
+        alert(
+          "🎉 ส่งข้อมูลสำเร็จ! กำลังพาท่านไปยัง Line เพื่อคุยกับเจ้าหน้าที่"
+        );
 
-      window.open(lineUrl, "_blank");
+        // --- 2. เปิดหน้าแชท Line ---
+        const lineId = process.env.NEXT_PUBLIC_LINE_OA_ID;
+        const clientMessage = `สวัสดีครับ ผมสนใจ ${
+          currentPackage?.title
+        } ที่คำนวณราคาไว้ ฿${totalPrice.toLocaleString()} ครับ`;
+        const lineUrl = `https://line.me/R/oaMessage/${lineId}/?${encodeURIComponent(
+          clientMessage
+        )}`;
+
+        window.open(lineUrl, "_blank");
+
+        // --- 3. ล้างข้อมูลและปิด Modal ---
+        setCustomerInfo({ name: "", phone: "", line: "" });
+        setSelectedAddons([]);
+        setShowModal(false);
+      } else {
+        alert("เกิดข้อผิดพลาดจากระบบ กรุณาลองใหม่อีกครั้ง");
+      }
     } catch (err) {
       console.error("Webhook Error:", err);
+      alert("ไม่สามารถเชื่อมต่อระบบได้ กรุณาตรวจสอบอินเทอร์เน็ตของคุณ");
     } finally {
       setIsSubmitting(false);
-      setShowModal(false);
     }
   };
 
