@@ -343,9 +343,11 @@ const Categories = () => {
                   การทำเว็บไซต์เอง การจ้างทำเว็บไซต์ รวมไปถึงราคาการทำเว็บไซต์
                   เพื่อช่วยให้คุณตัดสินใจได้ง่ายขึ้น
                 </p>
-                <button className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-12 py-4 rounded-2xl font-bold text-lg transition-all shadow-xl shadow-indigo-100 active:scale-95 flex items-center gap-2">
-                  อ่านเพิ่มเติม <ChevronRight size={20} />
-                </button>
+                <Link href="/WebsiteCostBlog">
+                  <button className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-12 py-4 rounded-2xl font-bold text-lg transition-all shadow-xl shadow-indigo-100 active:scale-95 flex items-center gap-2">
+                    อ่านเพิ่มเติม <ChevronRight size={20} />
+                  </button>
+                </Link>
               </div>
 
               {/* Abstract Circle Graphics */}
