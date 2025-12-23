@@ -126,7 +126,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-6 justify-center md:justify-end">
               <Link
-                href="/termsservice"
+                href="/service"
                 className="text-xs text-slate-600 hover:text-[#EFBF04]"
               >
                 Terms of Service
