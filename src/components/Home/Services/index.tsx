@@ -33,7 +33,7 @@ const Categories = () => {
         />
       </div>
       <div></div>
-      <div className="container max-w-8xl mx-auto px-5 2xl:px-0 relative z-10">
+      <div className="container max-w-8xl mx-auto px-5 2xl:px-0 relative z-10 pt-48">
         <div className="grid grid-cols-10 sm:grid-cols-11 md:grid-cols-12 items-center gap-10">
           <div className="lg:col-span-6 col-span-10">
             <p className="text-dark/75 dark:text-white/75 text-base font-semibold flex gap-2.5">
@@ -326,7 +326,7 @@ const Categories = () => {
           </div>
 
           {/* div: CTA BANNER */}
-          <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-7xl mx-auto px-6 pb-24">
             <div
               className="relative w-full rounded-[3rem] p-10 md:p-20 overflow-hidden flex flex-col md:flex-row items-center justify-between"
               style={{
