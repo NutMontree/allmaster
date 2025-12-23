@@ -38,7 +38,7 @@ const Footer = () => {
 
         {/* Middle Section: Links & Contact CTA */}
         <div className="py-20">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-24">
+          <div className="grid grid-cols-1 ">
             {/* Branding & CTA */}
             <div className="md:col-span-6 space-y-8">
               <h2 className="text-white text-4xl md:text-5xl font-extrabold leading-[1.1] tracking-tighter">
@@ -59,7 +59,7 @@ const Footer = () => {
             </div>
 
             {/* Quick Links Group 1 */}
-            <div className="md:col-span-3 col-span-6">
+            <div className="md:col-span-3 col-span-6 pt-12">
               <h4 className="text-white font-bold mb-8 uppercase tracking-widest text-xs opacity-50">
                 Services
               </h4>
