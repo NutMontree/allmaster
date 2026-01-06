@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 import SocialSignIn from "../SocialSignIn";
-import toast, { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from "react-hot-toast";
 import AuthDialogContext from "@/app/context/AuthDialogContext";
 import Logo from "@/components/Layout/Header/BrandLogo/Logo";
 
@@ -15,9 +15,8 @@ const Signin = ({ signInOpen }: { signInOpen?: any }) => {
   const [error, setError] = useState("");
   const authDialog = useContext(AuthDialogContext);
 
-
   const handleSubmit = async (e: any) => {
-    const notify = () => toast('Here is your toast.');
+    const notify = () => toast("Here is your toast.");
     e.preventDefault();
     const result = await signIn("credentials", {
       redirect: false,
@@ -87,7 +86,6 @@ const Signin = ({ signInOpen }: { signInOpen?: any }) => {
           >
             Sign In
           </button>
-
         </div>
       </form>
 
