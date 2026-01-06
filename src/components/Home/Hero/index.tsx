@@ -66,9 +66,9 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Feature Cards Section (Bottom) */}
-        <div className="relative -mb-64 md:-mb-72 z-20">
-          <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-white/20 dark:border-slate-800 shadow-2xl rounded-[2rem] ">
-            <div className="grid grid-cols-3 sm:grid-cols-3 items-center">
+        <div className="relative -mb-48 md:-mb-64 lg:-mb-72 z-20 px-4">
+          <div className="max-w-5xl mx-auto bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-white/20 dark:border-slate-800 shadow-2xl rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden">
+            <div className="grid grid-cols-3 divide-x divide-slate-100 dark:divide-slate-800">
               {[
                 "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnVxamcxZHhpdnFtOHYzamlnem96bW92NzV0djN1azYxeXRmdHR3NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/98kcZtideBuSDrzDcR/giphy.gif",
                 "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXo0aHlsenZwcTBzem9rOWd1Y3l3eW1odmJhMmt1NHl2N2toNG9xaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/GyHvYnLiEHLjh6Chpw/giphy.gif",
@@ -76,18 +76,19 @@ const Hero: React.FC = () => {
               ].map((src, index) => (
                 <div
                   key={index}
-                  className="group flex flex-col items-center p-4 hover:bg-skyblue/5 rounded-xl transition-colors"
+                  className="group flex flex-col items-center justify-center p-4 md:p-8 hover:bg-skyblue/5 transition-colors"
                 >
-                  <div className="relative w-36 h-32 mb-4 transform group-hover:scale-110 transition-transform">
+                  {/* ปรับขนาด wrapper ของรูปภาพให้เล็กลงในมือถือ */}
+                  <div className="relative w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 mb-3 md:mb-4 transform group-hover:scale-110 transition-transform">
                     <Image
                       src={src}
-                      alt="feature"
+                      alt={`service-${index}`}
                       fill
                       className="object-contain"
                       unoptimized
                     />
                   </div>
-                  <p className="text-slate-500 dark:text-slate-400 font-medium">
+                  <p className="text-[10px] sm:text-xs md:text-base text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider text-center">
                     Service {index + 1}
                   </p>
                 </div>
