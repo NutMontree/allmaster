@@ -20,6 +20,21 @@ const font = Bricolage_Grotesque({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "AllM Master",
   description: "รับทำเว็บไซต์ ออกแบบเว็บไซต์ ด้วย Next.js โดยทีมงานมืออาชีพ",
+  openGraph: {
+    title: "AllM Master",
+    description: "รับทำเว็บไซต์ ออกแบบเว็บไซต์ ด้วย Next.js โดยทีมงานมืออาชีพ",
+    url: "https://www.allmaster.store",
+    siteName: "AllM Master",
+    images: [
+      {
+        url: "https://www.allmaster.store/logo.svg", // ใส่ URL รูปภาพจริงของคุณ
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "th_TH",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
