@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "AllM Master",
     images: [
       {
-        url: "https://www.allmaster.store/logo.svg", // ใส่ URL รูปภาพจริงของคุณ
+        url: "https://www.allmaster.store/logo.webp", // ใส่ URL รูปภาพจริงของคุณ
         width: 1200,
         height: 630,
       },
