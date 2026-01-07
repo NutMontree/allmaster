@@ -6,7 +6,6 @@ import Footer from "@/components/Layout/Footer";
 import { ThemeProvider } from "next-themes";
 import NextTopLoader from "nextjs-toploader";
 import SessionProviderComp from "@/components/nextauth/SessionProvider";
-import { Fira_Code as FontMono, Inter as FontSans } from "next/font/google";
 import { Prompt } from "next/font/google";
 
 export const prompt = Prompt({
@@ -23,7 +22,6 @@ export const metadata: Metadata = {
   description: "รับทำเว็บไซต์ ออกแบบเว็บไซต์ ด้วย Next.js โดยทีมงานมืออาชีพ",
 };
 
-// ✅ จุดที่แก้ 1: ลบ session ออกจาก Props และ Type
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,7 +31,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${font.className} bg-white dark:bg-black antialiased`}>
         <NextTopLoader color="#07be8a" />
-        {/* ✅ จุดที่แก้ 2: ลบ session={session} ออก (ให้ Provider จัดการเอง) */}
         <SessionProviderComp session={undefined}>
           <ThemeProvider
             attribute="class"
