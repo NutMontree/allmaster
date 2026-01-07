@@ -1,11 +1,11 @@
 "use client";
 import { navLinks } from "@/app/api/navlink";
 import { Icon } from "@iconify/react";
-import Link from "next/link";
 import { useEffect, useRef, useState, useCallback } from "react";
-import NavLink from "./Navigation/NavLink";
 import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
+import NavLink from "./Navigation/NavLink";
 import Image from "next/image";
 
 const Header: React.FC = () => {
@@ -13,7 +13,6 @@ const Header: React.FC = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const { theme, setTheme } = useTheme();
   const pathname = usePathname();
-
   const sideMenuRef = useRef<HTMLDivElement>(null);
 
   const handleClickOutside = (event: MouseEvent) => {
@@ -32,7 +31,6 @@ const Header: React.FC = () => {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     document.addEventListener("mousedown", handleClickOutside);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("mousedown", handleClickOutside);
@@ -43,193 +41,211 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed h-24 py-1 z-50 w-full bg-transparent transition-all duration-300 lg:px-0 px-4 ${
-        sticky ? "top-3" : "top-0"
+      className={`fixed z-50 w-full transition-all duration-500 ease-in-out ${
+        sticky ? "top-4 px-4 sm:px-8" : "top-0 px-0"
       }`}
     >
       <nav
-        className={`container mx-auto max-w-8xl flex items-center justify-between py-4 duration-300 ${
+        className={`container mx-auto max-w-7xl flex items-center justify-between transition-all duration-500 ${
           sticky
-            ? "shadow-lg bg-white dark:bg-dark rounded-full top-5 px-4 "
-            : "shadow-none top-0"
+            ? " dark:bg-transparent backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] rounded-[2.5rem] py-3 px-8 border border-white/20 dark:border-zinc-700/30"
+            : "bg-transparent py-6 px-6 border-transparent"
         }`}
       >
-        <div className="flex justify-between items-center gap-2 w-full">
-          <div className="pl-2">
-            <Link href="/">
-              <Image
-                src={"/images/header/dark-logo.svg"}
-                alt="logo"
-                width={150}
-                height={68}
-                unoptimized={true}
-                className={`${
-                  isHomepage
-                    ? sticky
-                      ? "block dark:hidden"
-                      : "hidden"
-                    : sticky
+        {/* Logo Section */}
+        <div className="flex-shrink-0">
+          <Link
+            href="/"
+            className="group block relative transition-transform duration-300 hover:scale-105"
+          >
+            <Image
+              src="/images/header/dark-logo.svg"
+              alt="logo"
+              width={140}
+              height={50}
+              className={`${
+                isHomepage
+                  ? sticky
                     ? "block dark:hidden"
-                    : "block dark:hidden"
-                }`}
-              />
-              <Image
-                src={"/images/header/logo.svg"}
-                alt="logo"
-                width={150}
-                height={68}
-                unoptimized={true}
-                className={`${
-                  isHomepage
-                    ? sticky
-                      ? "hidden dark:block"
-                      : "block"
-                    : sticky
-                    ? "dark:block hidden"
-                    : "dark:block hidden"
-                }`}
-              />
+                    : "hidden"
+                  : "block dark:hidden"
+              }`}
+            />
+            <Image
+              src="/images/header/logo.svg"
+              alt="logo"
+              width={140}
+              height={50}
+              className={`${
+                isHomepage
+                  ? sticky
+                    ? "hidden dark:block"
+                    : "block"
+                  : "dark:block hidden"
+              }`}
+            />
+          </Link>
+        </div>
+
+        {/* Action Section */}
+        <div className="flex items-center gap-3 lg:gap-6">
+          {/* Desktop Contact - พรีเมียมขึ้นด้วยการใช้สีทอง */}
+          <div className="hidden lg:flex items-center gap-4 mr-2 border-r border-gray-200 dark:border-zinc-800 pr-6">
+            <Link
+              href="tel:0855953326"
+              className={`group flex items-center gap-2 text-sm font-bold tracking-tight transition-all ${
+                isHomepage && !sticky
+                  ? "text-white"
+                  : "text-zinc-900 dark:text-white"
+              } hover:text-[#EFBF04] dark:hover:text-[#EFBF04]`}
+            >
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[#EFBF04]/10 group-hover:bg-[#EFBF04] transition-colors duration-300">
+                <Icon
+                  icon="ph:phone-fill"
+                  className="text-[#EFBF04] group-hover:text-white"
+                  width={18}
+                />
+              </div>
+              085-595-3326
             </Link>
           </div>
-          <div className="flex items-center gap-2 sm:gap-6">
-            <button
-              className="hover:cursor-pointer"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+
+          {/* Theme Toggle */}
+          <button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className={`p-2 rounded-full transition-colors hover:bg-gray-100 dark:hover:bg-zinc-800 ${
+              isHomepage && !sticky
+                ? "text-white"
+                : "text-zinc-900 dark:text-white"
+            }`}
+          >
+            <Icon
+              icon={
+                theme === "dark"
+                  ? "solar:sun-2-bold-duotone"
+                  : "solar:moon-stars-bold-duotone"
+              }
+              width={28}
+            />
+          </button>
+
+          {/* Modern Menu Button */}
+          <button
+            onClick={() => setNavbarOpen(true)}
+            className={`group flex items-center gap-2 pl-2 pr-5 py-2 rounded-full font-black text-xs tracking-widest transition-all duration-300 ${
+              isHomepage && !sticky
+                ? "bg-white text-zinc-900 hover:bg-[#EFBF04] hover:text-white"
+                : "bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 hover:bg-[#EFBF04] dark:hover:bg-[#EFBF04] dark:hover:text-white"
+            } shadow-lg hover:shadow-[#EFBF04]/30`}
+          >
+            <div
+              className={`p-2 rounded-full ${
+                isHomepage && !sticky
+                  ? "bg-zinc-100"
+                  : "bg-white/10 dark:bg-zinc-100"
+              } group-hover:rotate-90 transition-transform duration-500`}
             >
-              <Icon
-                icon={"solar:sun-bold"}
-                width={32}
-                height={32}
-                className={`dark:hidden block ${
-                  isHomepage
-                    ? sticky
-                      ? "text-dark"
-                      : "text-white"
-                    : "text-dark"
-                }`}
-              />
-              <Icon
-                icon={"solar:moon-bold"}
-                width={32}
-                height={32}
-                className="dark:block hidden text-white"
-              />
-            </button>
-            <div className={`hidden md:block`}>
-              <Link
-                href="#"
-                className={`text-base text-inherit flex items-center gap-2 border-r pr-6 ${
-                  isHomepage
-                    ? sticky
-                      ? "text-dark dark:text-white hover:text-[#EFBF04] border-dark dark:border-white"
-                      : "text-white hover:text-[#EFBF04]"
-                    : "text-dark hover:text-[#EFBF04]"
-                }`}
-              >
-                <Icon icon={"ph:phone-bold"} width={24} height={24} />
-                085-595-3326
-              </Link>
+              <Icon icon="ph:dots-nine-bold" width={20} />
             </div>
-            <div className="pr-2">
-              <button
-                onClick={() => setNavbarOpen(!navbarOpen)}
-                className={`flex items-center gap-3 p-2 sm:px-5 sm:py-3 rounded-full font-semibold hover:cursor-pointer border ${
-                  isHomepage
-                    ? sticky
-                      ? "text-white bg-dark dark:bg-white dark:text-dark dark:hover:text-white dark:hover:bg-dark hover:text-dark hover:bg-white border-dark dark:border-white"
-                      : "text-dark bg-white dark:text-dark hover:bg-transparent hover:text-white border-white"
-                    : "bg-dark text-white hover:bg-transparent hover:text-dark dark:bg-white dark:text-dark dark:hover:bg-transparent dark:hover:text-white duration-300"
-                }`}
-                aria-label="Toggle mobile menu"
-              >
-                <span>
-                  <Icon icon={"ph:list"} width={24} height={24} />
-                </span>
-                <span className="hidden sm:block">Menu</span>
-              </button>
-            </div>
-          </div>
+            MENU
+          </button>
         </div>
       </nav>
 
-      {navbarOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black/50 z-40" />
-      )}
+      {/* Side Menu Overlay */}
+      <div
+        className={`fixed inset-0 bg-zinc-950/60 backdrop-blur-sm transition-opacity duration-500 ${
+          navbarOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        } z-[60]`}
+        onClick={() => setNavbarOpen(false)}
+      />
 
+      {/* Side Menu Drawer - ออกแบบให้เหมือน Mobile App พรีเมียม */}
       <div
         ref={sideMenuRef}
-        className={`fixed top-0 right-0 h-full w-full bg-dark shadow-lg transition-transform duration-300 max-w-2xl ${
+        className={`fixed top-0 right-0 h-full w-full max-w-[450px] bg-white dark:bg-[#080808] z-[70] shadow-2xl transition-transform duration-700 cubic-bezier(0.16, 1, 0.3, 1) ${
           navbarOpen ? "translate-x-0" : "translate-x-full"
-        } z-50 px-8 overflow-auto no-scrollbar`}
+        } overflow-y-auto`}
       >
-        <div className="flex flex-col h-full justify-between">
-          <div className="">
-            <div className="flex items-center justify-start py-10">
-              <button
-                onClick={() => setNavbarOpen(false)}
-                aria-label="Close mobile menu"
-                className="bg-white p-3 rounded-full hover:cursor-pointer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="none"
-                    stroke="black"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-            <nav className="flex flex-col items-start gap-4">
-              <ul className="w-full">
-                {navLinks.map((item, index) => (
-                  <NavLink
-                    key={index}
-                    item={item}
-                    onClick={() => setNavbarOpen(false)}
-                  />
-                ))}
-                <li className="flex items-center gap-4">
-                  <Link
-                    href="/signin"
-                    className="py-4 px-8 bg-[#EFBF04] text-base leading-4 block w-fit text-white rounded-full border border-[#EFBF04] font-semibold mt-3 hover:bg-transparent hover:text-[#EFBF04] duration-300"
-                  >
-                    Sign In
-                  </Link>
-                  <Link
-                    href="/"
-                    className="py-4 px-8 bg-transparent border border-[#EFBF04] text-base leading-4 block w-fit text-[#EFBF04] rounded-full font-semibold mt-3 hover:bg-[#EFBF04] hover:text-white duration-300"
-                  >
-                    Sign up
-                  </Link>
-                </li>
-              </ul>
-            </nav>
+        <div className="flex flex-col h-full p-8 sm:p-12">
+          {/* Close Header */}
+          <div className="flex items-center justify-between mb-16">
+            <span className="text-[#EFBF04] font-black tracking-tighter text-xl italic underline decoration-2 underline-offset-8">
+              ALLM MASTER
+            </span>
+            <button
+              onClick={() => setNavbarOpen(false)}
+              className="group p-4 bg-zinc-100 dark:bg-zinc-900 rounded-2xl hover:bg-red-500 hover:text-white transition-all duration-300"
+            >
+              <Icon
+                icon="ph:x-bold"
+                width={24}
+                className="group-hover:rotate-90 transition-transform duration-300"
+              />
+            </button>
           </div>
 
-          <div className="flex flex-col gap-1 my-16 text-white">
-            <p className="text-base sm:text-xm font-normal text-white/40">
-              Contact
-            </p>
-            <Link
-              href="#"
-              className="text-base sm:text-xm font-medium text-inherit hover:text-[#EFBF04]"
-            >
-              Nutmontree29@gmail.com
-            </Link>
-            <Link
-              href="#"
-              className="text-base sm:text-xm font-medium text-inherit hover:text-[#EFBF04]"
-            >
-              085-595-3326
-            </Link>
+          {/* Navigation Items */}
+          <nav className="flex-grow">
+            <div className="text-[10px] font-bold text-zinc-400 dark:text-zinc-600 uppercase tracking-[0.3em] mb-6">
+              Navigation
+            </div>
+            <ul className="space-y-4">
+              {navLinks.map((item, index) => (
+                <div key={index} className="group">
+                  <NavLink item={item} onClick={() => setNavbarOpen(false)} />
+                </div>
+              ))}
+            </ul>
+
+            {/* Auth Actions ใน Side Menu */}
+            <div className="grid grid-cols-2 gap-4 mt-12 pt-8 border-t border-zinc-100 dark:border-zinc-900">
+              <Link
+                href="/signin"
+                className="py-4 text-center text-sm font-bold border border-zinc-200 dark:border-zinc-800 rounded-2xl hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors"
+              >
+                SIGN IN
+              </Link>
+              <Link
+                href="/price-estimation"
+                className="py-4 text-center text-sm font-bold bg-[#EFBF04] text-white rounded-2xl shadow-lg shadow-[#EFBF04]/20 hover:scale-[1.03] active:scale-95 transition-all"
+              >
+                GET STARTED
+              </Link>
+            </div>
+          </nav>
+
+          {/* Contact Details Footer */}
+          <div className="mt-auto pt-8">
+            <div className="flex flex-col gap-4">
+              <div className="space-y-1">
+                <p className="text-[10px] font-bold text-zinc-400 dark:text-zinc-600 uppercase tracking-widest">
+                  Connect with us
+                </p>
+                <Link
+                  href="mailto:Nutmontree29@gmail.com"
+                  className="text-lg font-medium text-zinc-800 dark:text-zinc-200 hover:text-[#EFBF04] transition-colors"
+                >
+                  Nutmontree29@gmail.com
+                </Link>
+              </div>
+              <div className="flex gap-4">
+                {[
+                  "facebook-logo-fill",
+                  "instagram-logo-fill",
+                  "line-segments-fill",
+                ].map((icon, i) => (
+                  <button
+                    key={i}
+                    className="w-10 h-10 flex items-center justify-center bg-zinc-100 dark:bg-zinc-900 rounded-full hover:bg-[#EFBF04] hover:text-white transition-all duration-300"
+                  >
+                    <Icon icon={`ph:${icon}`} width={20} />
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

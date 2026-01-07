@@ -38,9 +38,9 @@ const Footer = () => {
 
         {/* Middle Section: Links & Contact CTA */}
         <div className="py-20">
-          <div className="grid grid-cols-1 ">
-            {/* Branding & CTA */}
-            <div className="md:col-span-6 space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+            {/* Branding & CTA (กว้างขึ้นเป็น 8 ส่วน) */}
+            <div className="lg:col-span-8 space-y-8">
               <h2 className="text-white text-4xl md:text-5xl font-extrabold leading-[1.1] tracking-tighter">
                 เริ่มต้นความสำเร็จ <br />
                 <span className="text-[#EFBF04]">ไปกับเราได้ตั้งแต่วันนี้</span>
@@ -58,32 +58,14 @@ const Footer = () => {
               </Link>
             </div>
 
-            {/* Quick Links Group 1 */}
-            <div className="md:col-span-3 col-span-6 pt-12">
+            {/* Quick Links Group: Services (ย้ายมาไว้ข้างๆ CTA) */}
+            <div className="lg:col-span-4">
               <h4 className="text-white font-bold mb-8 uppercase tracking-widest text-xs opacity-50">
-                Services
+                Our Services
               </h4>
               <ul className="flex flex-col gap-5">
-                {FooterLinks.slice(0, 4).map((item, index) => (
-                  <li key={index}>
-                    <Link
-                      href={item.href}
-                      className="text-slate-400 hover:text-[#EFBF04] hover:translate-x-1 transition-all inline-block"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Quick Links Group 2 */}
-            <div className="md:col-span-3 col-span-6">
-              <h4 className="text-white font-bold mb-8 uppercase tracking-widest text-xs opacity-50">
-                Support
-              </h4>
-              <ul className="flex flex-col gap-5">
-                {FooterLinks.slice(4, 8).map((item, index) => (
+                {/* ดึงลิงก์จาก FooterLinks มาแสดง (ปรับจำนวน slice ตามต้องการ) */}
+                {FooterLinks.slice(0, 5).map((item, index) => (
                   <li key={index}>
                     <Link
                       href={item.href}
@@ -103,7 +85,10 @@ const Footer = () => {
           {/* Social Icons */}
           <div className="flex items-center gap-4 order-2 md:order-1">
             {[
-              { icon: "ph:facebook-logo-bold", href: "#" },
+              {
+                icon: "ph:facebook-logo-bold",
+                href: "https://www.facebook.com/profile.php?id=61584948345343",
+              },
               { icon: "ph:instagram-logo-bold", href: "#" },
               { icon: "ph:x-logo-bold", href: "#" },
               { icon: "ph:line-segments-bold", href: "#" },
@@ -132,7 +117,7 @@ const Footer = () => {
                 Terms of Service
               </Link>
               <Link
-                href="policy"
+                href="/policy"
                 className="text-xs text-slate-600 hover:text-[#EFBF04]"
               >
                 Privacy Policy

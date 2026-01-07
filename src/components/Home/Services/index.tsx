@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
@@ -13,7 +14,8 @@ import {
 
 const Categories = () => {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden bg-white dark:bg-zinc-950 transition-colors duration-300">
+      {/* Background Vectors */}
       <div className="absolute left-0 top-0">
         <Image
           src="/images/categories/Vector.svg"
@@ -32,11 +34,11 @@ const Categories = () => {
           unoptimized={true}
         />
       </div>
-      <div></div>
+
       <div className="container max-w-8xl mx-auto px-5 2xl:px-0 relative z-10 pt-48">
         <div className="grid grid-cols-10 sm:grid-cols-11 md:grid-cols-12 items-center gap-10">
           <div className="lg:col-span-6 col-span-10">
-            <p className="text-dark/75 dark:text-white/75 text-base font-semibold flex gap-2.5">
+            <p className="text-dark/75 dark:text-white/75 text-base font-semibold flex gap-2.5 items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
@@ -55,226 +57,115 @@ const Categories = () => {
               การออกแบบเว็บไซต์จะต้องคำนึงถึงหลัก UX/UI
               เข้ามาเป็นองค์ความรู้ในการออกแบบด้วย
               เพราะจะช่วยทำให้ง่ายต่อการใช้งานไม่ว่าจะจากอุปกรณ์ไหนก็ตาม
-              การมีเว็บไซต์ที่ดีสามารถช่วยเพิ่มยอดขายและช่วยทำให้ให้คนจดจำ Brand
+              การมีเว็บไซต์ที่ดีสามารถช่วยเพิ่มยอดขายและช่วยทำให้คนจดจำ Brand
               เราได้
             </p>
             <Link
-              href="/properties"
+              href="/works"
               target="_blank"
-              className="py-4 px-8 bg-[#EFBF04] text-base leading-4 block w-fit text-white rounded-full font-semibold mt-8 hover:bg-dark duration-300"
+              className="py-4 px-8 bg-[#EFBF04] text-base leading-4 block w-fit text-white rounded-full font-semibold mt-8 hover:bg-dark dark:hover:bg-white dark:hover:text-dark duration-300 shadow-lg shadow-[#EFBF04]/20"
             >
               ดูผลงานของเรา
             </Link>
           </div>
-          <div className="lg:col-span-6 col-span-10">
-            <div className="relative rounded-2xl overflow-hidden group">
-              <div>
+
+          {/* Featured Works Grids */}
+          {[
+            {
+              src: "/images/categories/m1.webp",
+              size: "lg:col-span-6 col-span-10",
+            },
+            {
+              src: "/images/categories/m2.webp",
+              size: "lg:col-span-6 col-span-10",
+            },
+            {
+              src: "/images/categories/m3.webp",
+              size: "lg:col-span-3 col-span-5",
+            },
+            {
+              src: "/images/categories/m4.webp",
+              size: "lg:col-span-3 col-span-5",
+            },
+          ].map((img, idx) => (
+            <div key={idx} className={`${img.size}`}>
+              <div className="relative rounded-2xl overflow-hidden group border border-slate-100 dark:border-zinc-800">
                 <Image
-                  // src="/images/categories/villas.jpg"
-                  src="/images/categories/m1.webp"
-                  alt="villas"
+                  src={img.src}
+                  alt="works"
                   width={680}
                   height={386}
-                  className="w-full"
+                  className="w-full transition-transform duration-500 group-hover:scale-110"
                   unoptimized={true}
                 />
-              </div>
-              <div className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0 duration-500">
-                <div className="flex justify-end mt-6 mr-6">
-                  {/* <div className="bg-white text-dark rounded-full w-fit p-4">
-                    <Icon icon="ph:arrow-right" width={24} height={24} />
-                  </div> */}
-                </div>
-                <div className="flex flex-col gap-2.5 pr-6">
-                  <h3 className="text-white text-2xl">
-                    {/* allmaster.vercel.app */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                  <h3 className="text-white text-xl font-bold">
+                    Project Overview
                   </h3>
-                  <p className="text-white/80 text-base leading-6">
-                    {/* หน้าเว็บไซต์หลักของ AllM Master ที่นำเสนอข้อมูลเกี่ยวกับบริการรับทำเว็บไซต์ ออกแบบเว็บไซต์ ด้วย Next.js โดยทีมงานมืออาชีพ */}
+                  <p className="text-white/80 text-sm mt-2">
+                    คลิกเพื่อดูรายละเอียดเพิ่มเติม
                   </p>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="lg:col-span-6 col-span-10">
-            <div className="relative rounded-2xl overflow-hidden group">
-              <div>
-                <Image
-                  src="/images/categories/m2.webp"
-                  alt="villas"
-                  width={680}
-                  height={386}
-                  className="w-full"
-                  unoptimized={true}
-                />
-              </div>
-              <div className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0 duration-500">
-                <div className="flex justify-end mt-6 mr-6">
-                  {/* <div className="bg-white text-dark rounded-full w-fit p-4">
-                    <Icon icon="ph:arrow-right" width={24} height={24} />
-                  </div> */}
-                </div>
-                <div className="flex flex-col gap-2.5 pr-6">
-                  <h3 className="text-white text-2xl">
-                    {/* ktltcp.vercel.app */}
-                  </h3>
-                  <p className="text-white/80 text-base leading-6">
-                    {/* หน้าเว็บไซต์หลักของวิทยาลัยเทคนิคกันทรลักษ์ ที่นำเสนอข้อมูลเกี่ยวกับภารกิจ การใช้เทคโนโลยีในการพัฒนาการเรียนรู้ และช่องทางการติดต่อ โดยสื่อสารผ่านช่องทางต่าง ๆ */}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="lg:col-span-3 col-span-5">
-            <div className="relative rounded-2xl overflow-hidden group">
-              <div>
-                <Image
-                  src="/images/categories/m3.webp"
-                  alt="villas"
-                  width={320}
-                  height={386}
-                  className="w-full"
-                  unoptimized={true}
-                />
-              </div>
-              <div className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0  ">
-                <div className="flex justify-end">
-                  {/* <div className="bg-white text-dark rounded-full w-fit p-4">
-                    <Icon icon="ph:arrow-right" width={24} height={24} />
-                  </div> */}
-                </div>
-                <div className="flex flex-col gap-2.5">
-                  <h3 className="text-white text-2xl">
-                    {/* ktltcp.vercel.app */}
-                  </h3>
-                  <p className="text-white/80 text-base leading-6">
-                    {/* หน้าเว็บไซต์ประจำงานวางแผนและงบประมาณ ที่ให้ข้อมูลเกี่ยวกับงานวางแผนและงบประมาณของวิทยาลัยเทคนิคกันทรลักษ์ */}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="lg:col-span-3 col-span-5">
-            <div className="relative rounded-2xl overflow-hidden group">
-              <div>
-                <Image
-                  src="/images/categories/m4.webp"
-                  alt="m3"
-                  width={320}
-                  height={386}
-                  className="w-full"
-                  unoptimized={true}
-                />
-              </div>
-              <div className="absolute w-full h-full bg-gradient-to-b from-black/0 to-black/80 top-full flex flex-col justify-between pl-4 pb-4 group-hover:top-0 duration-500">
-                <div className="flex justify-end mt-6 mr-6">
-                  {/* <div className="bg-white text-dark rounded-full w-fit p-4">
-                    <Icon icon="ph:arrow-right" width={24} height={24} />
-                  </div> */}
-                </div>
-                <div className="flex flex-col gap-2.5">
-                  <h3 className="text-white text-2xl">
-                    {/* sonklin.vercel.app */}
-                  </h3>
-                  <p className="text-white/80 text-base leading-6">
-                    {/* ร้านซ่อนกลิ่น เว็บ E-Commerce สำหรับร้านค้า ที่จำหน่าย น้ำอาหาร เครื่องดื่ม และ ขนมไทย */}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
-      <div className="bg-white pt-48 font-sans ">
+      <div className="pt-48 font-sans">
         <div className="container max-w-7xl mx-auto px-6">
-          {/* div 1: ทำความรู้จักเว็บไซต์ */}
+          {/* Section 1: Intro Cards */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#000066] mb-4">
+            <h2 className="text-4xl font-bold text-[#000066] dark:text-indigo-400 mb-4">
               ทำความรู้จักเว็บไซต์
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-            {/* Card 1 */}
-            <div className="relative p-8 border-2 border-slate-100 rounded-[2rem] hover:shadow-xl transition-all group">
-              <span className="absolute -top-10 -left-4 text-8xl font-black text-blue-600/10 italic group-hover:text-blue-600/20 transition-colors">
-                1
-              </span>
-              <h3 className="text-xl font-bold text-[#000066] mb-4">
-                บริการออกแบบเว็บไซต์คืออะไร
-              </h3>
-              <p className="text-slate-600 leading-relaxed text-sm">
-                การออกแบบเว็บไซต์ คือ การออกแบบเว็บไซต์โดยคำนึงถึง Customer
-                Journey ของกลุ่มลูกค้าผู้ใช้งานเป็นหลัก
-                ดังนั้นจะเหมือนกับการออกแบบระบบการใช้งานบนเว็บไซต์
-                โดยการออกแบบเว็บไซต์จะต้องคำนึงถึงหลัก UX/UI
-                เข้ามาเป็นองค์ความรู้ในการออกแบบด้วย
-                เพราะจะทำให้เว็บง่ายต่อการใช้งานไม่ว่าจะจากอุปกรณ์ไหนก็ตาม
-                นอกจากนี้ยังตอบโจทย์เป้าหมายของธุรกิจอีกด้วย
-              </p>
-            </div>
-
-            {/* Card 2 */}
-            <div className="relative p-8 border-2 border-slate-100 rounded-[2rem] hover:shadow-xl transition-all group">
-              <span className="absolute -top-10 -left-4 text-8xl font-black text-blue-600/10 italic group-hover:text-blue-600/20 transition-colors">
-                2
-              </span>
-              <h3 className="text-xl font-bold text-[#000066] mb-4">
-                ต่างจากการใช้ Template อย่างไร
-              </h3>
-              <p className="text-slate-600 leading-relaxed text-sm">
-                เว็บไซต์ Template คือ โครงสร้างของเว็บไซต์ที่เตรียมไว้แล้ว
-                เพื่อลดเวลาการสร้าง
-                แต่เว็บไซต์ที่ออกแบบใหม่จะผ่านการใส่ใจในทุกรายละเอียด
-                ตั้งแต่ตำแหน่งเมนูจนถึงล่างสุดของแต่ละหน้าเว็บไซต์
-                นอกจากนี้ยังสามารถออกแบบแต่ละส่วนให้มีความโดดเด่นตามความต้องการได้
-              </p>
-            </div>
-
-            {/* Card 3 */}
-            <div className="relative p-8 border-2 border-slate-100 rounded-[2rem] hover:shadow-xl transition-all group">
-              <span className="absolute -top-10 -left-4 text-8xl font-black text-blue-600/10 italic group-hover:text-blue-600/20 transition-colors">
-                3
-              </span>
-              <h3 className="text-xl font-bold text-[#000066] mb-4">
-                การออกแบบเว็บไซต์ที่ดีควรต้องคำนึงถึงอะไรบ้าง
-              </h3>
-              <p className="text-slate-600 leading-relaxed text-sm">
-                งานออกแบบเว็บไซต์ของเราทุกชิ้นจะเป็นการออกแบบโดยทีมงานผู้เชี่ยวชาญ
-                โดยใช้หลัก Customer Centric ในการออกแบบ
-                ซึ่งจะทำให้เว็บไซต์ที่ออกมานั้นตอบโจทย์การใช้งานของกลุ่มลูกค้าให้มากที่สุด
-                เพื่อเพิ่มโอกาสในการสร้างกำไรให้กับธุรกิจ
-              </p>
-            </div>
-
-            {/* Card 4 */}
-            <div className="relative p-8 border-2 border-slate-100 rounded-[2rem] hover:shadow-xl transition-all group">
-              <span className="absolute -top-10 -left-4 text-8xl font-black text-blue-600/10 italic group-hover:text-blue-600/20 transition-colors">
-                4
-              </span>
-              <h3 className="text-xl font-bold text-[#000066] mb-4">
-                บริการทำเว็บไซต์บริษัทคืออะไร
-              </h3>
-              <p className="text-slate-600 leading-relaxed text-sm">
-                การทำเว็บไซต์บริษัท คือ การทำเว็บไซต์ในรูปแบบของ Informative
-                ซึ่งจะเน้นการแสดงข้อมูลของสินค้าหรือบริการเป็นหลัก
-                โดยเป้าหมายเพื่อช่วยตอบโจทย์ธุรกิจที่หลากหลาย
-                ไม่ว่าจะเป็นการเพิ่มความน่าเชื่อถือให้กับธุรกิจ
-                การโปรโมทผ่านช่องทาง Social Media
-                และการประชาสัมพันธ์ผ่านช่องทางอื่นๆ
-              </p>
-            </div>
+            {[
+              {
+                id: 1,
+                title: "บริการออกแบบเว็บไซต์คืออะไร",
+                desc: "การออกแบบเว็บไซต์ คือ การออกแบบเว็บไซต์โดยคำนึงถึง Customer Journey ของกลุ่มลูกค้าผู้ใช้งานเป็นหลัก ดังนั้นจะเหมือนกับการออกแบบระบบการใช้งานบนเว็บไซต์ โดยการออกแบบเว็บไซต์จะต้องคำนึงถึงหลัก UX/UI เข้ามาเป็นองค์ความรู้ในการออกแบบด้วย",
+              },
+              {
+                id: 2,
+                title: "ต่างจากการใช้ Template อย่างไร",
+                desc: "เว็บไซต์ Template คือ โครงสร้างของเว็บไซต์ที่เตรียมไว้แล้ว เพื่อลดเวลาการสร้าง แต่เว็บไซต์ที่ออกแบบใหม่จะผ่านการใส่ใจในทุกรายละเอียด ตั้งแต่ตำแหน่งเมนูจนถึงล่างสุดของแต่ละหน้าเว็บไซต์",
+              },
+              {
+                id: 3,
+                title: "การออกแบบเว็บไซต์ที่ดีควรต้องคำนึงถึงอะไรบ้าง",
+                desc: "งานออกแบบเว็บไซต์ของเราทุกชิ้นจะเป็นการออกแบบโดยทีมงานผู้เชี่ยวชาญ โดยใช้หลัก Customer Centric ในการออกแบบ ซึ่งจะทำให้เว็บไซต์ที่ออกมานั้นตอบโจทย์การใช้งานของกลุ่มลูกค้าให้มากที่สุด",
+              },
+              {
+                id: 4,
+                title: "บริการทำเว็บไซต์บริษัทคืออะไร",
+                desc: "การทำเว็บไซต์บริษัท คือ การทำเว็บไซต์ในรูปแบบของ Informative ซึ่งจะเน้นการแสดงข้อมูลของสินค้าหรือบริการเป็นหลัก โดยเป้าหมายเพื่อช่วยตอบโจทย์ธุรกิจที่หลากหลาย ไม่ว่าจะเป็นการเพิ่มความน่าเชื่อถือให้กับธุรกิจ",
+              },
+            ].map((item) => (
+              <div
+                key={item.id}
+                className="relative p-8 border-2 border-slate-100 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/30 rounded-[2rem] hover:shadow-xl transition-all group overflow-hidden"
+              >
+                <span className="absolute -top-6 -left-4 text-8xl font-black text-blue-600/5 dark:text-indigo-500/10 italic group-hover:text-blue-600/10 transition-colors pointer-events-none">
+                  {item.id}
+                </span>
+                <h3 className="text-xl font-bold text-[#000066] dark:text-indigo-300 mb-4 relative z-10">
+                  {item.title}
+                </h3>
+                <p className="text-slate-600 dark:text-zinc-400 leading-relaxed text-sm relative z-10">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
           </div>
-          {/* div: เว็บไซต์ที่ดีควรมีอะไรบ้าง */}
-          <div className="max-w-7xl mx-auto py-20 border-t border-slate-50">
+
+          {/* Section 2: Features */}
+          <div className="max-w-7xl mx-auto py-20 border-t border-slate-100 dark:border-zinc-900">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-extrabold text-[#000066] mb-4">
+              <h2 className="text-4xl font-extrabold text-[#000066] dark:text-indigo-400 mb-4">
                 เว็บไซต์ที่ดีควรมีอะไรบ้าง
               </h2>
-              {/* <p className="text-slate-400 font-medium">
-                เพราะเรามีประสบการณ์มากกว่า 10 ปี
-                ในการสร้างเว็บไซต์ทุกประเภทที่ตอบโจทย์ความต้องการของลูกค้า
-              </p> */}
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-y-20 gap-x-12 text-center">
@@ -311,13 +202,13 @@ const Categories = () => {
                 },
               ].map((feature, index) => (
                 <div key={index} className="flex flex-col items-center group">
-                  <div className="mb-6 p-4 text-slate-400 group-hover:text-indigo-500 transition-colors">
+                  <div className="mb-6 p-4 text-slate-400 dark:text-zinc-500 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-colors">
                     <feature.icon size={56} strokeWidth={1.2} />
                   </div>
-                  <h4 className="text-[17px] font-bold text-[#000066] mb-3">
+                  <h4 className="text-[17px] font-bold text-[#000066] dark:text-indigo-200 mb-3">
                     {feature.title}
                   </h4>
-                  <p className="text-slate-400 text-[14px] leading-relaxed px-4">
+                  <p className="text-slate-500 dark:text-zinc-400 text-[14px] leading-relaxed px-4">
                     {feature.desc}
                   </p>
                 </div>
@@ -325,39 +216,82 @@ const Categories = () => {
             </div>
           </div>
 
-          {/* div: CTA BANNER */}
+          {/* Section 3: CTA Banner */}
           <div className="max-w-7xl mx-auto px-6 pb-24">
             <div
-              className="relative w-full rounded-[3rem] p-10 md:p-20 overflow-hidden flex flex-col md:flex-row items-center justify-between"
-              style={{
-                background: "linear-gradient(90deg, #EBF8FF 0%, #FFF5F7 100%)",
-              }}
+              className="relative w-full rounded-[2.5rem] md:rounded-[4rem] p-8 md:p-20 overflow-hidden flex flex-col md:flex-row items-center justify-between transition-all duration-500
+    /* Light Mode: พื้นหลังไล่สีสว่างสะอาดตา */
+    bg-gradient-to-br from-indigo-50 via-white to-purple-50 
+    /* Dark Mode: พื้นหลังเข้มมีมิติ */
+    dark:from-zinc-900 dark:via-zinc-900 dark:to-zinc-800
+    /* Border & Shadow */
+    border border-indigo-100/50 dark:border-zinc-700/30
+    shadow-[0_20px_50px_rgba(99,102,241,0.1)] dark:shadow-none"
             >
-              <div className="relative z-10 md:w-3/5">
-                <h2 className="text-3xl md:text-5xl font-black text-[#6366F1] leading-[1.15] mb-6">
-                  ราคาทำเว็บไซต์ปกติมีค่าใช้จ่ายอยู่ที่เท่าไร <br />
-                  บทความนี้มีคำตอบ
-                </h2>
-                <p className="text-[#93C5FD] text-lg font-medium mb-10 max-w-2xl">
-                  สำหรับบทความนี้ จะเกี่ยวกับการทำเว็บไซต์ทั้งหมด
-                  การทำเว็บไซต์เอง การจ้างทำเว็บไซต์ รวมไปถึงราคาการทำเว็บไซต์
-                  เพื่อช่วยให้คุณตัดสินใจได้ง่ายขึ้น
-                </p>
-                <Link href="/WebsiteCostBlog">
-                  <button className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-12 py-4 rounded-2xl font-bold text-lg transition-all shadow-xl shadow-indigo-100 active:scale-95 flex items-center gap-2">
-                    อ่านเพิ่มเติม <ChevronRight size={20} />
-                  </button>
-                </Link>
+              {/* Abstract Background Elements (วงกลมตกแต่งที่ดูซอฟต์ลง) */}
+              <div className="absolute right-[-5%] top-[-10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] pointer-events-none opacity-40 dark:opacity-20 blur-3xl">
+                <div className="absolute inset-0 bg-indigo-400 rounded-full translate-x-20 translate-y-10"></div>
+                <div className="absolute inset-0 bg-purple-400 rounded-full opacity-50"></div>
               </div>
 
-              {/* Abstract Circle Graphics */}
-              <div className="absolute right-[-10%] top-[-10%] w-[450px] h-[450px] pointer-events-none hidden lg:block">
-                {/* Blue Ring */}
-                <div className="absolute inset-0 border-[30px] border-[#60A5FA] rounded-full translate-x-10 translate-y-10"></div>
-                {/* Purple Ring */}
-                <div className="absolute inset-0 border-[30px] border-[#8B5CF6] rounded-full"></div>
-                {/* Yellow Ring */}
-                <div className="absolute inset-0 border-[25px] border-[#FBBF24] rounded-full translate-x-20 translate-y-32"></div>
+              <div className="relative z-10 md:w-3/5 text-center md:text-left">
+                <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-indigo-100/80 dark:bg-indigo-500/10 border border-indigo-200 dark:border-indigo-500/20">
+                  <span className="text-xs font-bold tracking-widest text-indigo-600 dark:text-indigo-400 uppercase">
+                    Knowledge Base
+                  </span>
+                </div>
+
+                <h2 className="text-3xl md:text-5xl font-black text-zinc-900 dark:text-white leading-[1.2] mb-6">
+                  ราคาทำเว็บไซต์ปกติ <br className="hidden md:block" />
+                  <span className="text-indigo-600 dark:text-indigo-400">
+                    มีค่าใช้จ่ายเท่าไร?
+                  </span>
+                </h2>
+
+                <p className="text-zinc-600 dark:text-zinc-400 text-base md:text-lg font-medium mb-10 max-w-xl leading-relaxed">
+                  เจาะลึกทุกรายละเอียดเกี่ยวกับการทำเว็บไซต์
+                  ตั้งแต่เริ่มต้นจนถึงการจ้างมืออาชีพ
+                  รวมถึงการประเมินราคาเพื่อให้คุณตัดสินใจได้อย่างแม่นยำที่สุด
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                  <Link href="/WebsiteCostBlog">
+                    <button className="group bg-zinc-900 dark:bg-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-500 text-white px-10 py-4 rounded-2xl font-bold text-base transition-all duration-300 shadow-xl shadow-indigo-200 dark:shadow-none active:scale-95 flex items-center justify-center gap-2">
+                      อ่านบทความเต็ม
+                      <ChevronRight
+                        size={18}
+                        className="group-hover:translate-x-1 transition-transform"
+                      />
+                    </button>
+                  </Link>
+
+                  {/* เพิ่มปุ่มรอง (Secondary CTA) เพื่อ UX ที่ดีขึ้น */}
+                  <Link href="/contactus">
+                    <button className="px-10 py-4 rounded-2xl font-bold text-base text-zinc-600 dark:text-zinc-300 hover:bg-white dark:hover:bg-zinc-800 transition-all border border-transparent hover:border-zinc-200 dark:hover:border-zinc-700">
+                      ปรึกษาเราฟรี
+                    </button>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Right Side Visual (Optional: สามารถใส่รูปภาพประกอบบทความหรือ Icon ขนาดใหญ่) */}
+              <div className="hidden lg:flex relative z-10 w-1/3 justify-center items-center">
+                <div className="w-64 h-64 bg-white dark:bg-zinc-800 rounded-[2.5rem] shadow-2xl rotate-12 flex items-center justify-center border border-zinc-100 dark:border-zinc-700">
+                  <Icon
+                    icon="solar:bill-list-bold-duotone"
+                    width={100}
+                    className="text-indigo-600 dark:text-indigo-400 -rotate-12"
+                  />
+                </div>
+                {/* ตกแต่งด้วยจุด (Dots) */}
+                <div className="absolute top-0 right-0 grid grid-cols-4 gap-2 opacity-20">
+                  {[...Array(16)].map((_, i) => (
+                    <div
+                      key={i}
+                      className="w-1.5 h-1.5 bg-indigo-600 rounded-full"
+                    ></div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

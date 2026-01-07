@@ -9,21 +9,21 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-skyblue/40 via-[#4298b0]/20 to-transparent dark:from-[#4298b0]/20 dark:via-black dark:to-black" />
 
       <div className="container max-w-7xl mx-auto px-6 relative z-10">
-        <div className="flex flex-col md:flex-row items-center pt-32 pb-20 md:pt-48 md:pb-56">
+        <div className="flex flex-col md:flex-row items-center pt-32 pb-20 md:pt-40 md:pb-50">
           {/* Text Content */}
           <div className="w-full md:w-1/2 text-center md:text-left mb-12 md:mb-0">
             <span className="inline-block py-1 px-4 rounded-full bg-skyblue/10 text-skyblue dark:text-skyblue-300 text-sm font-bold uppercase tracking-widest mb-6 border border-skyblue/20">
               Sisaket Kantharalak
             </span>
-            <h1 className="text-5xl lg:text-8xl font-extrabold text-slate-900 dark:text-white leading-[1.1] mb-8 tracking-tight">
+            <h1 className="text-5xl lg:text-7xl font-extrabold text-slate-900 dark:text-white leading-[1.1] mb-8 tracking-tight">
               All-in-One <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4298b0] to-skyblue">
-                Expert
+                Digital Expert
               </span>
             </h1>
             <p className="text-lg text-slate-600 dark:text-slate-400 mb-10 max-w-lg mx-auto md:mx-0">
-              ผู้เชี่ยวชาญด้านบริการแบบครบวงจร พร้อมดูแลคุณด้วยคุณภาพมาตรฐานสากล
-              ในเขตพื้นที่ศรีสะเกษและกันทรลักษ์
+              ยกระดับมาตรฐานธุรกิจคุณด้วยบริการเว็บไซต์และดีไซน์ครบวงจร
+              พร้อมดูแลอย่างใกล้ชิดในพื้นที่ศรีสะเกษและกันทรลักษ์
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
@@ -31,11 +31,14 @@ const Hero: React.FC = () => {
                 href="/contactus"
                 className="px-10 py-4 bg-[#4298b0] hover:bg-[#357a8e] text-white transition-all duration-300 shadow-lg shadow-cyan-500/25 text-lg font-bold rounded-2xl text-center"
               >
-                ติดต่อเรา
+                ปรึกษาเราตอนนี้
               </Link>
-              <button className="px-10 py-4 border-2 border-slate-200 dark:border-slate-800 hover:border-[#4298b0] dark:hover:border-[#4298b0] text-slate-700 dark:text-slate-300 transition-all duration-300 text-lg font-bold rounded-2xl">
-                ดูรายละเอียด
-              </button>
+              <Link
+                href="/price-estimation"
+                className="px-10 py-4 border-2 border-slate-200 dark:border-slate-800 hover:border-[#4298b0] dark:hover:border-[#4298b0] text-slate-700 dark:text-slate-300 transition-all duration-300 text-lg font-bold rounded-2xl"
+              >
+                ดูแพ็กเกจบริการ
+              </Link>
             </div>
           </div>
 

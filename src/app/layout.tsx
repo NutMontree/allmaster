@@ -7,6 +7,7 @@ import { ThemeProvider } from "next-themes";
 import NextTopLoader from "nextjs-toploader";
 import SessionProviderComp from "@/components/nextauth/SessionProvider";
 import { Prompt } from "next/font/google";
+import ScrollToTop from "@/components/ScrollToTop/ScrollToTop"; // เพิ่มบรรทัดนี้
 
 export const prompt = Prompt({
   subsets: ["thai"],
@@ -55,6 +56,7 @@ export default function RootLayout({
             <Header />
             {children}
             <Footer />
+            <ScrollToTop /> {/* เพิ่มปุ่ม On to Top ไว้ที่นี่ */}
           </ThemeProvider>
         </SessionProviderComp>
       </body>
