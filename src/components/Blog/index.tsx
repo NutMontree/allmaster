@@ -42,27 +42,54 @@ const BlogList: React.FC = () => {
   });
 
   return (
-    <section className="py-12 md:py-20">
-      {" "}
-      {/* เพิ่ม Padding บนล่างให้ดูโปร่งขึ้น */}
-      <div className="container max-w-7xl mx-auto px-5">
-        {/* Responsive Grid: 
-           - 1 คอลัมน์บนมือถือ (Default)
-           - 2 คอลัมน์บน Tablet (sm/md)
-           - 3 คอลัมน์บน Desktop (lg)
-        */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+    <section className="bg-[#fafafa] dark:bg-neutral-950 py-16 md:py-24">
+      <div className="container max-w-7xl mx-auto px-6">
+        {/* Header Section (Optional): เพิ่มหัวข้อเล็กๆ เพื่อบอกบริบท */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div className="space-y-2">
+            <h3 className="text-sm font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
+              Latest Articles
+            </h3>
+            <p className="text-neutral-500 dark:text-neutral-400">
+              Explore our latest thoughts on design and code.
+            </p>
+          </div>
+          <div className="h-[1px] flex-grow bg-neutral-200 dark:bg-neutral-800 hidden md:block mx-8 mb-2"></div>
+          <div className="text-sm font-medium text-neutral-400">
+            Showing {posts.length} posts
+          </div>
+        </div>
+
+        {/* Blog Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8 md:gap-x-10">
           {posts.map((blog, i) => (
-            <div key={blog.slug || i} className="w-full flex justify-center">
+            <article
+              key={blog.slug || i}
+              className="group transition-all duration-500 ease-out hover:-translate-y-2"
+            >
               <BlogCard blog={blog} />
-            </div>
+
+              {/* ตกแต่งเพิ่มเติมใต้ Card (ถ้า BlogCard ยังไม่มี) */}
+              <div className="mt-6 flex items-center gap-3">
+                <div className="h-px w-8 bg-neutral-300 group-hover:w-12 group-hover:bg-blue-500 transition-all duration-500"></div>
+                <span className="text-xs font-bold uppercase tracking-wider text-neutral-400 group-hover:text-blue-500 transition-colors">
+                  Read Article
+                </span>
+              </div>
+            </article>
           ))}
         </div>
 
-        {/* กรณีไม่มีบทความ */}
+        {/* Empty State */}
         {posts.length === 0 && (
-          <div className="text-center py-20 text-gray-500">
-            No blog posts found.
+          <div className="flex flex-col items-center justify-center py-32 border-2 border-dashed border-neutral-200 dark:border-neutral-800 rounded-3xl">
+            <div className="bg-neutral-100 dark:bg-neutral-900 p-4 rounded-full mb-4">
+              {/* ใส่ Icon หน้าเศร้าหรือกล่องว่างๆ ตรงนี้ */}
+            </div>
+            <p className="text-xl font-medium text-neutral-600">
+              No stories found yet.
+            </p>
+            <p className="text-neutral-400">Check back with us later!</p>
           </div>
         )}
       </div>
