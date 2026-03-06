@@ -217,7 +217,7 @@ const Categories = () => {
           </div>
 
           {/* Section 3: CTA Banner */}
-          <div className="max-w-7xl mx-auto px-6 pb-24">
+          <div className="max-w-7xl mx-auto pb-24">
             <div
               className="relative w-full rounded-[2.5rem] md:rounded-[4rem] p-8 md:p-20 overflow-hidden flex flex-col md:flex-row items-center justify-between transition-all duration-500
     /* Light Mode: พื้นหลังไล่สีสว่างสะอาดตา */
@@ -256,13 +256,15 @@ const Categories = () => {
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                   <Link href="/WebsiteCostBlog">
-                    <button className="group bg-zinc-900 dark:bg-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-500 text-white px-10 py-4 rounded-2xl font-bold text-base transition-all duration-300 shadow-xl shadow-indigo-200 dark:shadow-none active:scale-95 flex items-center justify-center gap-2">
-                      อ่านบทความเต็ม
-                      <ChevronRight
-                        size={18}
-                        className="group-hover:translate-x-1 transition-transform"
-                      />
-                    </button>
+                    <div className=" flex justify-center">
+                      <button className="flex justify-center group bg-zinc-900 dark:bg-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-500 text-white px-10 py-4 rounded-2xl font-bold text-base transition-all duration-300 shadow-xl shadow-indigo-200 dark:shadow-none active:scale-95 gap-2">
+                        อ่านบทความเต็ม
+                        <ChevronRight
+                          size={18}
+                          className="group-hover:translate-x-1 transition-transform"
+                        />
+                      </button>
+                    </div>
                   </Link>
 
                   {/* เพิ่มปุ่มรอง (Secondary CTA) เพื่อ UX ที่ดีขึ้น */}
