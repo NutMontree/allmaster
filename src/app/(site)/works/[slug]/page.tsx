@@ -214,14 +214,7 @@ export default function Details() {
           <div className="lg:col-span-4 col-span-12">
             <div className="sticky top-28 space-y-6">
               <div className="bg-[#EFBF04]/10 p-8 rounded-2xl relative z-10 overflow-hidden border border-[#EFBF04]/20">
-                <h4 className="text-dark text-3xl font-bold dark:text-white">
-                  ฿{item.rate}
-                </h4>
-                <p className="text-sm text-dark/50 dark:text-white/70">
-                  Estimated Project Value
-                </p>
-
-                <div className="grid gap-3 mt-8">
+                <div className="grid gap-3">
                   {item.href && (
                     <a
                       href={item.href}

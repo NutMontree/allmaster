@@ -6,7 +6,7 @@ export const workHomes: WorkHomes[] = [
     slug: "allmaster.store",
     location: "https://www.allmaster.store",
     href: "https://www.allmaster.store",
-    rate: "100,000",
+    // rate: "100,000",
     details:
       "Html, Css, Java, JavaScript, Python, TypeScript, React, Next.js, Node.js, Hook, Firebase, MySQL, MongoDB, Api, Google Ads, SEO, Social Management, Creative Content Creation, Media Design & Branding",
     contronl: "Git Hub, Vercel, Chrome Dev Tool, Postman, Figma, VS Code",
@@ -30,7 +30,7 @@ export const workHomes: WorkHomes[] = [
     slug: "ktltc.vercel.app",
     location: "https://ktltc.vercel.app",
     href: "https://ktltc.vercel.app",
-    rate: "1,900,000",
+    // rate: "1,900,000",
     images: [
       { src: "/images/works/work2/1.webp" },
       { src: "/images/works/work2/2.webp" },
@@ -57,7 +57,7 @@ export const workHomes: WorkHomes[] = [
     slug: "ktltcp.vercel.app",
     location: "https://ktltcp.vercel.app",
     href: "https://ktltcp.vercel.app",
-    rate: "10,000",
+    // rate: "10,000",
     details:
       "Html, Css, Java, JavaScript, Python, TypeScript, React, Next.js, Node.js, Hook, Firebase, MySQL, MongoDB, Api, Google Ads, SEO, Social Management, Creative Content Creation, Media Design & Branding",
     contronl: "Git Hub, Vercel, Chrome Dev Tool, Postman, Figma, VS Code",
@@ -110,7 +110,7 @@ export const workHomes: WorkHomes[] = [
     slug: "sonklin.vercel.app",
     location: "https://sonklin.vercel.app",
     href: "https://sonklin.vercel.app",
-    rate: "50,000",
+    // rate: "50,000",
     details:
       "Html, Css, Java, JavaScript, Python, TypeScript, React, Next.js, Node.js, Hook, Firebase, MySQL, MongoDB, Api, Google Ads, SEO, Social Management, Creative Content Creation, Media Design & Branding",
     contronl: "Git Hub, Vercel, Chrome Dev Tool, Postman, Figma, VS Code",

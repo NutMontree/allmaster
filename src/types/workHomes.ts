@@ -2,7 +2,7 @@ export type WorkHomes = {
   name: string;
   slug: string;
   location: string;
-  rate: string;
+  // rate: string;
   description: { title: string }[];
   details: string;
   contronl: string;

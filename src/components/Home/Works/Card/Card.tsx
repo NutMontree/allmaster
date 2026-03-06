@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 const WorksCard: React.FC<{ item: WorkHomes }> = ({ item }) => {
-  const { name, location, rate, slug, images, href, description, details } =
-    item;
+  // const { name, location, rate, slug, images, href, description, details } =
+  const { name, location, slug, images, href, description, details } = item;
   const mainImage = images[0]?.src;
 
   return (
@@ -47,9 +47,9 @@ const WorksCard: React.FC<{ item: WorkHomes }> = ({ item }) => {
                   {location}
                 </p>
               </div>
-              <button className="text-sm font-bold text-[#EFBF04] px-4 py-1.5 rounded-full bg-[#EFBF04]/10 border border-[#EFBF04]/20">
+              {/* <button className="text-sm font-bold text-[#EFBF04] px-4 py-1.5 rounded-full bg-[#EFBF04]/10 border border-[#EFBF04]/20">
                 ฿{rate}
-              </button>
+              </button> */}
             </div>
 
             {/* --- ส่วนที่เพิ่มใหม่: แสดง Description แบบย่อ --- */}
