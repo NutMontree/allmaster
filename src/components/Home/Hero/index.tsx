@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Feature Cards Section (Bottom) */}
-        <div className="relative -mb-48 md:-mb-64 lg:-mb-72 z-20 px-4">
+        <div className="relative -mb-52 md:-mb-64 lg:-mb-72 z-20 px-4">
           <div className="max-w-5xl mx-auto bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-white/20 dark:border-slate-800 shadow-2xl rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden">
             <div className="grid grid-cols-3 divide-x divide-slate-100 dark:divide-slate-800">
               {[
@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
                   className="group flex flex-col items-center justify-center p-4 md:p-8 hover:bg-skyblue/5 transition-colors"
                 >
                   {/* ปรับขนาด wrapper ของรูปภาพให้เล็กลงในมือถือ */}
-                  <div className="relative w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 mb-3 md:mb-4 transform group-hover:scale-110 transition-transform">
+                  <div className="relative w-16 h-16 sm:w-24  sm:h-24 md:w-32 md:h-32 mb-3 md:mb-4 transform group-hover:scale-110 transition-transform">
                     <Image
                       src={src}
                       alt={`service-${index}`}
@@ -92,9 +92,6 @@ const Hero: React.FC = () => {
                       unoptimized
                     />
                   </div>
-                  <p className="text-[10px] sm:text-xs md:text-base text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider text-center">
-                    Service {index + 1}
-                  </p>
                 </div>
               ))}
             </div>
